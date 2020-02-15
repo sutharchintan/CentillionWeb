@@ -77,13 +77,13 @@ const Carousel = makeCarousel(CarouselUI);
  * slider - end
  */
 
- /**
- * export the class for dashboard component
- */
+/**
+* export the class for dashboard component
+*/
 export class DashboardComponent extends React.Component<Props> {
-    render() {
+  render() {
     return (
-      
+
       <div style={{ fontFamily: "Roboto" }} >
         <Grid container >
           <Grid item xs={12} sm={6} lg={6} md={6}>
@@ -97,22 +97,22 @@ export class DashboardComponent extends React.Component<Props> {
         </Grid>
         <Grid container spacing={24} color="white" style={{ padding: "2% 5% 2% 5%", width: "100%", margin: 0 }}>
           <Grid item xs={12} sm={12} lg={6} md={6} style={{ borderRadius: 5, padding: 20 }}>
-            <CardMedia image={homeillustrationLogo} style={{ width: "100%", height: isMobile ? 260 : 583}} > </CardMedia>
+            <CardMedia image={homeillustrationLogo} style={{ width: "100%", height: isMobile ? 260 : 583 }} > </CardMedia>
 
           </Grid>
           <Grid item xs={12} sm={12} lg={6} md={6} style={{ borderRadius: 5, paddingLeft: isMobile ? "1%" : "5%" }}>
             <div style={{ borderRadius: 5 }}>
-              <CardContent style={{ minHeight: 90, paddingBottom: 1}}>
+              <CardContent style={{ minHeight: 90, paddingBottom: 1 }}>
                 <div style={{ minHeight: 50 }}>
                   <Grid item xs={2} sm={2} lg={2} md={2} style={{ float: "left" }}  >
                     <CardMedia image={masttechiconLogo} style={{ width: 40, height: 40 }} > </CardMedia>
                   </Grid>
-                  <Grid item xs={10} sm={10} lg={10} md={10} style={{ marginLeft: 50, verticalAlign:"center" }}>
-                    <Typography component="h2" style={{ fontSize: 17, fontWeight: "bold", verticalAlign:"center", fontFamily: "Roboto", color: "rgb(66, 179, 219)", padding: "3%" }}>Masterly experienced in technologies</Typography>
+                  <Grid item xs={10} sm={10} lg={10} md={10} style={{ marginLeft: 50, verticalAlign: "center" }}>
+                    <Typography component="h2" style={{ fontSize: isMobile ? 15 : 18, fontWeight: "bold", verticalAlign: "center", fontFamily: "Roboto", color: "rgb(66, 179, 219)", padding: "3%" }}>Masterly experienced in technologies</Typography>
                   </Grid>
                 </div>
                 <Grid item xs={12} sm={12} lg={12} md={12}>
-                  <Typography component="h4" style={{ lineHeight: 1.5, color: "black", fontWeight: "bold", fontFamily: "Roboto" }}>Our clients have always trusted us without any second thought because we have more than a decade of experience in delivering various successful projects.</Typography>
+                  <Typography component="h4" style={{ fontSize: isMobile ? 12 : 15, lineHeight: 1.5, color: "black", fontWeight: "bold", fontFamily: "Roboto" }}>Our clients have always trusted us without any second thought because we have more than a decade of experience in delivering various successful projects.</Typography>
                 </Grid>
               </CardContent>
             </div>
@@ -122,12 +122,12 @@ export class DashboardComponent extends React.Component<Props> {
                   <Grid item xs={2} sm={2} lg={2} md={2} style={{ float: "left" }}  >
                     <CardMedia image={multiplatformLogo} style={{ width: 40, height: 40 }} > </CardMedia>
                   </Grid>
-                  <Grid item xs={10} sm={10} lg={10} md={10} style={{ marginLeft: 50, verticalAlign:"center" }}>
-                    <Typography component="h2" style={{ fontSize: 17, fontWeight: "bold", verticalAlign:"center", fontFamily: "Roboto", color: "rgb(66, 179, 219)", padding: "3%"  }}>Expertise on Multiple Platforms</Typography>
+                  <Grid item xs={10} sm={10} lg={10} md={10} style={{ marginLeft: 50, verticalAlign: "center" }}>
+                    <Typography component="h2" style={{ fontSize: isMobile ? 15 : 18, fontWeight: "bold", verticalAlign: "center", fontFamily: "Roboto", color: "rgb(66, 179, 219)", padding: "3%" }}>Expertise on Multiple Platforms</Typography>
                   </Grid>
                 </div>
                 <Grid item xs={12} sm={12} lg={12} md={12}>
-                  <Typography component="h4" style={{ lineHeight: 1.5, color: "black", fontWeight: "bold", fontFamily: "Roboto" }}> {companyName} has elite development team which has proficient expertise on the cutting-edge technologies and tools.</Typography>
+                  <Typography component="h4" style={{ fontSize: isMobile ? 12 : 15, lineHeight: 1.5, color: "black", fontWeight: "bold", fontFamily: "Roboto" }}> {companyName} has elite development team which has proficient expertise on the cutting-edge technologies and tools.</Typography>
                 </Grid>
               </CardContent>
             </div>
@@ -137,12 +137,12 @@ export class DashboardComponent extends React.Component<Props> {
                   <Grid item xs={2} sm={2} lg={2} md={2} style={{ float: "left" }}  >
                     <CardMedia image={managementtoolLogo} style={{ width: 40, height: 40 }} > </CardMedia>
                   </Grid>
-                  <Grid item xs={10} sm={10} lg={10} md={10} style={{ marginLeft: 50, verticalAlign:"center" }}>
-                    <Typography component="h2" style={{ fontSize: 17, fontWeight: "bold", verticalAlign:"center", fontFamily: "Roboto", color: "rgb(66, 179, 219)", padding: "3%"  }}>Best Project Management Tool</Typography>
+                  <Grid item xs={10} sm={10} lg={10} md={10} style={{ marginLeft: 50, verticalAlign: "center" }}>
+                    <Typography component="h2" style={{ fontSize: isMobile ? 15 : 18, fontWeight: "bold", verticalAlign: "center", fontFamily: "Roboto", color: "rgb(66, 179, 219)", padding: "3%" }}>Best Project Management Tool</Typography>
                   </Grid>
                 </div>
                 <Grid item xs={12} sm={12} lg={12} md={12}>
-                  <Typography component="h4" style={{ lineHeight: 1.5, color: "black", fontWeight: "bold", fontFamily: "Roboto" }}>To maintain the top notch services we have hands of experience on best project management tools available in the market.</Typography>
+                  <Typography component="h4" style={{ fontSize: isMobile ? 12 : 15, lineHeight: 1.5, color: "black", fontWeight: "bold", fontFamily: "Roboto" }}>To maintain the top notch services we have hands of experience on best project management tools available in the market.</Typography>
                 </Grid>
               </CardContent>
             </div>
@@ -152,12 +152,12 @@ export class DashboardComponent extends React.Component<Props> {
                   <Grid item xs={2} sm={2} lg={2} md={2} style={{ float: "left" }}  >
                     <CardMedia image={twentyfouriconLogo} style={{ width: 40, height: 40 }} > </CardMedia>
                   </Grid>
-                  <Grid item xs={10} sm={10} lg={10} md={10} style={{ marginLeft: 50, verticalAlign:"center" }}>
-                    <Typography component="h2" style={{ fontSize: 17, fontWeight: "bold", verticalAlign:"center", fontFamily: "Roboto", color: "rgb(66, 179, 219)", padding: "3%"  }}>24×7 Availability</Typography>
+                  <Grid item xs={10} sm={10} lg={10} md={10} style={{ marginLeft: 50, verticalAlign: "center" }}>
+                    <Typography component="h2" style={{ fontSize: isMobile ? 15 : 18, fontWeight: "bold", verticalAlign: "center", fontFamily: "Roboto", color: "rgb(66, 179, 219)", padding: "3%" }}>24×7 Availability</Typography>
                   </Grid>
                 </div>
                 <Grid item xs={12} sm={12} lg={12} md={12}>
-                  <Typography component="h4" style={{ lineHeight: 1.5, color: "black", fontWeight: "bold", fontFamily: "Roboto" }}> We know that our client's time is valuable and so we strive for them to make use of their time in the most efficient manner.</Typography>
+                  <Typography component="h4" style={{ fontSize: isMobile ? 12 : 15, lineHeight: 1.5, color: "black", fontWeight: "bold", fontFamily: "Roboto" }}> We know that our client's time is valuable and so we strive for them to make use of their time in the most efficient manner.</Typography>
                 </Grid>
               </CardContent>
             </div>
@@ -167,12 +167,12 @@ export class DashboardComponent extends React.Component<Props> {
                   <Grid item xs={2} sm={2} lg={2} md={2} style={{ float: "left" }}  >
                     <CardMedia image={longtermiconLogo} style={{ width: 40, height: 40 }} > </CardMedia>
                   </Grid>
-                  <Grid item xs={10} sm={10} lg={10} md={10} style={{ marginLeft: 40, verticalAlign:"center" }}>
-                    <Typography component="h2" style={{ fontSize: 17, fontWeight: "bold", verticalAlign:"center", fontFamily: "Roboto", color: "rgb(66, 179, 219)", padding: "3%"  }}>Longterm Business Relationship</Typography>
+                  <Grid item xs={10} sm={10} lg={10} md={10} style={{ marginLeft: 40, verticalAlign: "center" }}>
+                    <Typography component="h2" style={{ fontSize: isMobile ? 15 : 18, fontWeight: "bold", verticalAlign: "center", fontFamily: "Roboto", color: "rgb(66, 179, 219)", padding: "3%" }}>Longterm Business Relationship</Typography>
                   </Grid>
                 </div>
                 <Grid item xs={12} sm={12} lg={12} md={12}>
-                  <Typography component="h4" style={{ lineHeight: 1.5, color: "black", fontWeight: "bold", fontFamily: "Roboto" }}> We strive to be your trusted long term partner and leave no stone unturned to achieve the trustworthy relationship where our client can rely on us as a trusted IT company.</Typography>
+                  <Typography component="h4" style={{ fontSize: isMobile ? 12 : 15, lineHeight: 1.5, color: "black", fontWeight: "bold", fontFamily: "Roboto" }}> We strive to be your trusted long term partner and leave no stone unturned to achieve the trustworthy relationship where our client can rely on us as a trusted IT company.</Typography>
                 </Grid>
               </CardContent>
             </div>
@@ -182,12 +182,12 @@ export class DashboardComponent extends React.Component<Props> {
                   <Grid item xs={2} sm={2} lg={2} md={2} style={{ float: "left" }}  >
                     <CardMedia image={clienticonLogo} style={{ width: 40, height: 40 }} > </CardMedia>
                   </Grid>
-                  <Grid item xs={10} sm={10} lg={10} md={10} style={{ marginLeft: 50, verticalAlign:"center" }}>
-                    <Typography component="h2" style={{ fontSize: 17, fontWeight: "bold", verticalAlign:"center", fontFamily: "Roboto", color: "rgb(66, 179, 219)", padding: "3%"  }}>We are serving best to our happy clients</Typography>
+                  <Grid item xs={10} sm={10} lg={10} md={10} style={{ marginLeft: 50, verticalAlign: "center" }}>
+                    <Typography component="h2" style={{ fontSize: isMobile ? 15 : 18, fontWeight: "bold", verticalAlign: "center", fontFamily: "Roboto", color: "rgb(66, 179, 219)", padding: "3%" }}>We are serving best to our happy clients</Typography>
                   </Grid>
                 </div>
                 <Grid item xs={12} sm={12} lg={12} md={12}>
-                  <Typography component="h4" style={{ lineHeight: 1.5, color: "black", fontWeight: "bold", fontFamily: "Roboto" }}> {companyName} is growing exponentially in its global outreach as well as quality work in all directions.</Typography>
+                  <Typography component="h4" style={{ fontSize: isMobile ? 12 : 15, lineHeight: 1.5, color: "black", fontWeight: "bold", fontFamily: "Roboto" }}> {companyName} is growing exponentially in its global outreach as well as quality work in all directions.</Typography>
                 </Grid>
               </CardContent>
             </div>
@@ -228,20 +228,19 @@ export class DashboardComponent extends React.Component<Props> {
                     <Grid item xs={12} sm={12} lg={12} md={12} style={{ padding: 20 }}>
 
                       <Avatar alt="Nicholas Hurd" src="" style={{ float: "left" }} />
-                      <Typography style={{ color: "white", fontSize: 25, fontWeight: 600, textAlign:"center"}}>Our Happy Clients</Typography>
-                     
-                     <LinesEllipsis
+                      <Typography style={{ color: "white", fontSize: isMobile ? 18 : 20, fontWeight: 600, textAlign: "center" }}>Our Happy Clients</Typography>
+
+                      {/* <LinesEllipsis
                         text='I can recommend Centillion Softech for their tenacity in solving software development problems, fast responses and all around approach to building software solutions.'
                         maxLine='1'
                         ellipsis='...'
                         trimRight
                         basedOn='letters'
                         style={{ lineHeight: 1.5, color: "white", fontSize: 20, fontStyle: "italic", paddingTop: 20}}
-                      /> 
-                      {/* <p style={{ lineHeight: 1.5, color: "white", fontStyle: "italic", paddingTop: 20, wordBreak: "break-word" }}>I can recommend {companyName} for their tenacity in solving software development problems, fast responses and all around approach to building software solutions.</p> */}
-                      {/* I am absolutely satisfied with their work as a whole for the kind of team spirit and in-sync behavior makes my work pretty much easy. */}
-                      <h4 style={{ color: "white", fontSize: 20, fontWeight: 600 }}>Nicholas Hurd</h4>
-                      <p style={{ color: "white", fontSize: 20 }}>Litening Softwares Inc.</p>
+                      />  */}
+                      <Typography style={{ fontSize: isMobile ? 12 : 15, lineHeight: 1.5, color: "white", fontStyle: "italic", paddingTop: 20, wordBreak: "break-word" }}>"I can recommend {companyName} for their tenacity in solving software development problems, fast responses and all around approach to building software solutions."</Typography>
+                      <h4 style={{ color: "white", fontSize: isMobile ? 15 : 18, fontWeight: 600 }}>Nicholas Hurd</h4>
+                      <p style={{ color: "white", fontSize: isMobile ? 15 : 18 }}>Litening Softwares Inc.</p>
                     </Grid >
                   </Grid>
                 </Paper>
@@ -255,18 +254,18 @@ export class DashboardComponent extends React.Component<Props> {
                   <Grid container style={{ backgroundColor: "rgb(66, 179, 219)", borderRadius: 5, width: "100%" }}>
                     <Grid item xs={12} sm={12} lg={12} md={12} style={{ padding: 20 }} >
                       <Avatar alt="Jagdip Joshi" src="" style={{ float: "left" }} />
-                      <Typography style={{ color: "white", fontSize: 18, fontWeight: 600, textAlign:"center" }}>Our Happy Clients</Typography>
-                      <LinesEllipsis
+                      <Typography style={{ color: "white", fontSize: isMobile ? 18 : 20, fontWeight: 600, textAlign: "center" }}>Our Happy Clients</Typography>
+                      {/* <LinesEllipsis
                         text='Very line process of functionality clarification, development, execution and delivery. Very Very Satisfied with services provided by the Centillion Softech company.'
                         maxLine='1'
                         ellipsis='...'
                         trimRight
                         basedOn='letters'
                         style={{ lineHeight: 1.5, color: "white", fontSize: 20, fontStyle: "italic", paddingTop: 20}}
-                      /> 
-                      {/* <p style={{ lineHeight: 1.5, color: "white", fontStyle: "italic", paddingTop: 20, wordBreak: "break-word" }}>Very line process of functionality clarification, development, execution and delivery. Very Very Satisfied with services provided by the {companyName}....</p> */}
-                      <h4 style={{ color: "white", fontSize: 20, fontWeight: 600 }}>Jagdip Joshi</h4>
-                      <p style={{ color: "white", fontSize: 20 }}>ExultIt</p>
+                      />  */}
+                      <Typography style={{ fontSize: isMobile ? 12 : 15, lineHeight: 1.5, color: "white", fontStyle: "italic", paddingTop: 20, wordBreak: "break-word" }}>"Very line process of functionality clarification, development, execution and delivery. Very Very Satisfied with services provided by the {companyName}."</Typography>
+                      <h4 style={{ color: "white", fontSize: isMobile ? 15 : 18, fontWeight: 600 }}>Jagdip Joshi</h4>
+                      <p style={{ color: "white", fontSize: isMobile ? 15 : 18 }}>ExultIt</p>
                     </Grid >
                   </Grid>
                 </Paper>
