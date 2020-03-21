@@ -106,12 +106,12 @@ export class TopInfoBar extends React.Component<Props> {
     render() {
         const { open } = this.state
         return (
-            <AppBar position="static" style={{ fontFamily: "Roboto" }} >
+            <AppBar position="static" style={{ fontFamily: "Roboto", position:"fixed" }} >
                 <Toolbar style={{ justifyContent: "space-between", paddingLeft: "5%", paddingRight: "5%", backgroundColor:"rgb(66, 179, 219)" }}>
                     <Grid container style={{ marginTop: 10, marginBottom: 10 }} >
                         <Grid xs={12} sm={4} lg={10} md={10}>
                             <IconButton>
-                                <img src={INLogo} style={{ height: 18, width: 25 }}></img>
+                                <img src={INLogo} style={{height: 18, width: 25}}></img>
                             </IconButton>
                             <a style={{ paddingLeft: 5 }}>{phoneNumber}</a>
                             <IconButton>

@@ -5,6 +5,7 @@ import { ButtonModel } from '../../models/ButtonModel';
 import { blue } from "@material-ui/core/colors";
 import { companyName } from '../../providers/comp-name-provider';
 import { isMobile } from "react-device-detect";
+import styled from 'styled-components';
 /**
  * interface to define properties for menu bar
  */
@@ -28,7 +29,7 @@ class MenuBar extends React.Component<Props> {
 
     render() {
         return (
-            <AppBar position="static" style={{ fontFamily: "Roboto", backgroundColor: "white" }} >
+            <AppBar position="static" style={{ fontFamily: "Roboto", backgroundColor: "white", position:"fixed", top:"68px" }} >
                 <Toolbar style={{ justifyContent: "space-between", paddingLeft: "5%", paddingRight: "5%" }}>
                     <Grid container spacing={24}>
                         <Grid item xs={12} sm={12} lg={7} md={5}>

@@ -72,7 +72,7 @@ export class aboutUsComponent extends React.Component<Props> {
     render() {
 
         return (
-            <div >
+            <div style={{fontFamily: "Roboto", position:"relative", top:"132px"}}>
                 <Grid container spacing={24} style={{ padding: "2% 5% 2% 5%", width: "100%", margin: 0 }}>
                     <Grid item xs={12} sm={12} lg={6} md={6} >
                         <h1 style={{ lineHeight: 1.7 }}>When you Hire us, You Hire Quality and Excellence</h1>
@@ -85,7 +85,7 @@ export class aboutUsComponent extends React.Component<Props> {
                     </Grid >
                 </Grid>
 
-                <Grid container style={{ padding: "3%" }}>
+                <Grid container style={{ padding: "2% 4% 13% 4%" }}>
                     <ExpansionPanel style={{ width: "100%" }}>
                         <ExpansionPanelSummary
                             expandIcon={<ExpandMoreIcon />}

@@ -7,9 +7,9 @@ import { phoneNumber } from '../../providers/phone-number-provider';
 import * as INLogo from "../../images/IndiaFlag.png";
 import { companyName } from '../../providers/comp-name-provider';
 import { isMobile } from "react-device-detect";
- /**
- * interface to define properties for contact us 
- */
+/**
+* interface to define properties for contact us 
+*/
 interface Props {
 
     currentTheme: Theme;
@@ -22,7 +22,7 @@ export class ContactUsComponent extends React.Component<Props> {
 
     render() {
         return (
-            <div style={{ fontFamily: "Roboto" }}>
+            <div style={{ fontFamily: "Roboto", position: "relative", top: "132px" }}>
                 <Grid container  >
                     <Grid item xs={12} sm={3} md={3} lg={3} style={{ padding: "2% 5% 2% 5%", backgroundColor: "rgb(245, 245, 245)" }}>
                         <h2>Chintan Suthar</h2>
@@ -33,11 +33,11 @@ export class ContactUsComponent extends React.Component<Props> {
                             </IconButton><a> {phoneNumber}</a>
                         </Grid>
                     </Grid>
-                    <Grid item xs={12} sm={9} md={9} lg={9} style={{ height: isMobile? 200 : 370 }} >
-                        <img src={ConatctUSLogo} style={{ width: "100%", height: isMobile? 200 : 370, opacity: 0.8 }}></img>
+                    <Grid item xs={12} sm={9} md={9} lg={9} style={{ height: isMobile ? 200 : 370 }} >
+                        <img src={ConatctUSLogo} style={{ width: "100%", height: isMobile ? 200 : 370, opacity: 0.8 }}></img>
                     </Grid >
                 </Grid>
-                <Grid container spacing={24} style={{ padding: "2% 5% 2% 5%" }}>
+                <Grid container spacing={24} style={{ padding: isMobile ? "2% 5% 20% 5%" : "2% 5% 13% 5%" }}>
                     <Grid item xs={12} sm={12} md={6} lg={6}>
                         <h2 style={{ color: "rgb(66, 179, 219)" }}>You have an idea or project we can help with?</h2>
                         <Paper>
@@ -79,10 +79,11 @@ export class ContactUsComponent extends React.Component<Props> {
                     </Grid>
                     <Grid item xs={12} sm={12} md={6} lg={6}>
                         <h2 style={{ textAlign: "center", color: "rgb(66, 179, 219)" }}>Understand us Better</h2>
-        <h4 style={{ textAlign: "center", color: "rgb(66, 179, 219)" }}>Watch this Video To Know {companyName}</h4>
-                        <Paper style={{ height: isMobile? 215 : 350, width: "100%", borderRadius: 5 }}>
-                            <FormGroup style={{ height: isMobile? 215 : 350, width: "100%", borderRadius: 5 }}>
-                                <CardMedia image={videologo} style={{ height: isMobile? 215 : 350, width: "100%", borderRadius: 5 }} ></CardMedia>
+                        <hr style={{ width: "100px", border: "1px gb(66, 179, 219) solid" }} ></hr>
+                        <h4 style={{ textAlign: "center", color: "rgb(66, 179, 219)" }}>Watch this Video To Know {companyName}</h4>
+                        <Paper style={{ height: isMobile ? 215 : 350, width: "100%", borderRadius: 5 }}>
+                            <FormGroup style={{ height: isMobile ? 215 : 350, width: "100%", borderRadius: 5 }}>
+                                <CardMedia image={videologo} style={{ height: isMobile ? 215 : 350, width: "100%", borderRadius: 5 }} ></CardMedia>
                             </FormGroup>
                         </Paper>
                     </Grid>

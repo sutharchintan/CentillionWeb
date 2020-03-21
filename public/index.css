@@ -3,3 +3,19 @@ body {
     padding: 0;
     font-family: Roboto;
 }
+
+.imageLogo {
+    height: 18;
+     width: 25;
+}
+
+.textBorder_class:hover {
+    background-color:rgb(66, 179, 219);
+    border: "1px #ed1212 solid";
+    cursor: pointer;
+  }
+  .textBorder_classtext:hover{
+    background-color: green;
+    border: "1px #red solid";
+    cursor: pointer;
+  }
