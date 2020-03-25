@@ -1,5 +1,5 @@
 import { connect } from "react-redux";
-import { OurProcessComponent } from "./Ourprocess-component";
+import { OurProcessComponentWithStyles } from "./Ourprocess-component";
 
 const mapStateToProps = state => {
   return {
@@ -15,4 +15,4 @@ const mapDispatchToProps = dispatch => {
 export const OurProcessContainer = connect(
   mapStateToProps,
   mapDispatchToProps
-)(OurProcessComponent);
+)(OurProcessComponentWithStyles);

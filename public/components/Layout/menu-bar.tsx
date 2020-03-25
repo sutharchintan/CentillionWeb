@@ -6,6 +6,7 @@ import { blue } from "@material-ui/core/colors";
 import { companyName } from '../../providers/comp-name-provider';
 import { isMobile } from "react-device-detect";
 import styled from 'styled-components';
+import { centillionStyles } from "../styles/CentillionStyles";
 /**
  * interface to define properties for menu bar
  */
@@ -28,14 +29,15 @@ class MenuBar extends React.Component<Props> {
     }
 
     render() {
+        const { classes } = this.props;
         return (
-            <AppBar position="static" style={{ fontFamily: "Roboto", backgroundColor: "white", position:"fixed", top:"68px" }} >
-                <Toolbar style={{ justifyContent: "space-between", paddingLeft: "5%", paddingRight: "5%" }}>
+            <AppBar position="static" style={{ fontFamily: "Roboto", backgroundColor: "white", position:"fixed", top:"68px"}}>
+                <Toolbar className={classes.footer_appbar}>
                     <Grid container spacing={24}>
-                        <Grid item xs={12} sm={12} lg={7} md={5}>
+                        <Grid item xs={12} sm={6} lg={7} md={5}>
         <span style={{ color: "rgb(66, 179, 219)", fontSize: isMobile ? 30 : 40}}>{companyName}</span>
                         </Grid>
-                        <Grid item xs={12} sm={12} lg={5} md={7} style={{ paddingTop: 18 }}>
+                        <Grid item xs={12} sm={6} lg={5} md={7} className={classes.menubar_paddingtop}>
                             {
                                 this.renderButtons()
                             }

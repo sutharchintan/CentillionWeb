@@ -18,7 +18,6 @@ import { CurrentOpeningContainer } from "../AboutUs/Currentopening-container";
 import { CaseStudiesContainer } from "../AboutUs/Casestudies-container";
 import { BlogsContainer } from "../AboutUs/Blogs-container";
 import * as grouppicLogo from "../../images/photo6.jpg";
-import { isMobile } from "react-device-detect";
 import ExpansionPanel from '@material-ui/core/ExpansionPanel';
 import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
 import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
@@ -27,6 +26,8 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import { themeProvider } from '../../providers/applicationThemeProvider';
 import * as atxBoatsImage from "../../images/atxboats.png";
 import * as niftyCartImage from "../../images/niftycart.png";
+import { centillionStyles } from "../styles/CentillionStyles";
+import * as doctymeImage from "../../images/doctyme.png";
 
 /**
  * interface to define properties for about us component
@@ -44,7 +45,7 @@ interface Props {
 /**
  * export the class for about us component
  */
-export class aboutUsComponent extends React.Component<Props> {
+class aboutUsComponent extends React.Component<Props> {
     constructor(props) {
         super(props);
 
@@ -70,117 +71,123 @@ export class aboutUsComponent extends React.Component<Props> {
 
 
     render() {
-
+        const { classes } = this.props;
         return (
-            <div style={{fontFamily: "Roboto", position:"relative", top:"132px"}}>
-                <Grid container spacing={24} style={{ padding: "2% 5% 2% 5%", width: "100%", margin: 0 }}>
+            <div className={classes.main_div}>
+                <div className={classes.hide_div}></div>
+                {/* about us first div */}
+                <Grid container spacing={24} className={classes.aboutus_first_container}>
                     <Grid item xs={12} sm={12} lg={6} md={6} >
-                        <h1 style={{ lineHeight: 1.7 }}>When you Hire us, You Hire Quality and Excellence</h1>
-                        <h3 style={{ lineHeight: 1.7, color: "rgb(66, 179, 219)" }}>No matter the Technology or Services</h3>
-                        <p style={{ color: "gray", lineHeight: 1.5, wordBreak: "break-word" }}>By entrusting your faith and time in us, {companyName} makes sure your investment is in the right hands. Showing flexibility in our work and delivering results have been the key drivers of our growth.</p>
-                        <p style={{ color: "gray", lineHeight: 1.5, wordBreak: "break-word" }}>Taking the innovative approach to transform your ideas into reality, you just have to relax and let our Professionals pave the path towards the realization of your ideas into reality!</p>
+                        <h1 className={classes.aboutus_first_h1}>When you Hire us, You Hire Quality and Excellence</h1>
+                        <h3 className={classes.aboutus_first_h3}>No matter the Technology or Services</h3>
+                        <p className={classes.aboutus_first_p}>By entrusting your faith and time in us, {companyName} makes sure your investment is in the right hands. Showing flexibility in our work and delivering results have been the key drivers of our growth.</p>
+                        <p className={classes.aboutus_first_p}>Taking the innovative approach to transform your ideas into reality, you just have to relax and let our Professionals pave the path towards the realization of your ideas into reality!</p>
                     </Grid>
                     <Grid item xs={12} sm={12} lg={6} md={6}>
-                        <CardMedia image={grouppicLogo} style={{ height: isMobile ? 200 : 360, width: "100%" }} />
+                        <CardMedia image={grouppicLogo} className={classes.aboutus_first_cardMedia} />
                     </Grid >
                 </Grid>
 
-                <Grid container style={{ padding: "2% 4% 13% 4%" }}>
-                    <ExpansionPanel style={{ width: "100%" }}>
+                <Grid container className={classes.aboutus_expension_container}>
+                    <ExpansionPanel className={classes.aboutus_expension_width}>
                         <ExpansionPanelSummary
                             expandIcon={<ExpandMoreIcon />}
                             aria-controls="panel1a-content"
                             id="panel1a-header"
-                            style={{ backgroundColor: "rgb(66, 179, 219)" }}
-                        >
-                            <Typography style={{ fontWeight: 600, color: "white", fontSize: "1.17em", fontFamily:"Roboto" }}>Point of Contact</Typography>
+                            className={classes.aboutus_expensionsummary}>
+                            <Typography className={classes.aboutus_expensionsummary_typography}>Point of Contact</Typography>
                         </ExpansionPanelSummary>
                         <ExpansionPanelDetails>
-                                <Grid container>
-                                <Grid item xs={12} sm={12} md={12} lg={12} style={{ padding: 5 }} >
-                                    <Typography style={{ fontWeight: 600, fontSize:16, fontFamily:"Roboto" }}>Chintan Suthar</Typography>
+                            <Grid container>
+                                <Grid item xs={12} sm={12} md={12} lg={12} className={classes.padding_5}>
+                                    <Typography className={classes.aboutus_expensiondetails_grid_typograpgy}>Chintan Suthar</Typography>
                                 </Grid>
-                                <Grid item xs={12} sm={12} md={12} lg={12} style={{ padding: 5 }} >
-                                <Typography style={{ paddingBottom: 10, fontSize:16, fontFamily:"Roboto" }}><IconButton>
-                                    <img src={skypeLogo} style={{ height: 20, width: 20, marginRight: 20 }}>
-                                    </img>
-                                </IconButton>chintan.suthar90</Typography>
+                                <Grid item xs={12} sm={12} md={12} lg={12} className={classes.padding_5}>
+                                    <Typography className={classes.aboutus_expensiondetails_typography}><IconButton>
+                                        <img src={skypeLogo} className={classes.aboutus_expensiondetails_typography_imge}>
+                                        </img>
+                                    </IconButton>chintan.suthar90</Typography>
                                 </Grid>
-                               
+
                             </Grid>
 
                         </ExpansionPanelDetails>
                     </ExpansionPanel>
-                    <ExpansionPanel style={{ width: "100%" }}>
+                    <ExpansionPanel className={classes.aboutus_expension_width}>
                         <ExpansionPanelSummary
                             expandIcon={<ExpandMoreIcon />}
                             aria-controls="panel2a-content"
                             id="panel2a-header">
-                            <Typography style={{ fontWeight: 600, color: "rgb(66, 179, 219)" ,fontSize: "1.17em", fontFamily:"Roboto" }}>Life at Centillion Softech</Typography>
+                            <Typography className={classes.aboutus_expensionsummary_typography_second}>Life at Centillion Softech</Typography>
                         </ExpansionPanelSummary>
-                        <ExpansionPanelDetails style={{ backgroundColor: "rgb(66, 179, 219)" }}>
+                        <ExpansionPanelDetails className={classes.aboutus_expensiondetails_second}>
                             <Grid container>
-                                <Grid item xs={12} sm={12} md={12} lg={12} style={{ padding: 5 }} >
-                                    <Typography style={{ padding: "5px 0px 5px 0px", lineHeight: 1.5, color: "white" , fontSize:16, fontFamily:"Roboto"}}>We provides flexible timing, decent pay and a healthy environment to work in {companyName}.</Typography>
+                                <Grid item xs={12} sm={12} md={12} lg={12} className={classes.padding_5}>
+                                    <Typography className={classes.aboutus_expensionsummary_grid_typography}>We provides flexible timing, decent pay and a healthy environment to work in {companyName}.</Typography>
                                 </Grid>
-                                <Grid item xs={12} sm={12} md={12} lg={12} style={{ padding: 5 }} >
-                                    <Typography style={{ padding: "5px 0px 5px 0px", lineHeight: 1.5, color: "white" , fontSize:16, fontFamily:"Roboto"}}>Our decisions and actions demonstrate Our Values – we believe in putting our Values into practice that creates long-term benefits for our customers and employees.</Typography>
+                                <Grid item xs={12} sm={12} md={12} lg={12} className={classes.padding_5}>
+                                    <Typography className={classes.aboutus_expensionsummary_grid_typography}>Our decisions and actions demonstrate Our Values – we believe in putting our Values into practice that creates long-term benefits for our customers and employees.</Typography>
                                 </Grid>
-                                <Grid item xs={12} sm={12} md={12} lg={12} style={{ padding: 5 }} >
-                                    <Typography style={{ padding: "5px 0px 5px 0px", lineHeight: 1.5, color: "white", fontSize:16, fontFamily:"Roboto" }}>Diversity at {companyName} brings together clients, employees, and partners on a common global platform. We strongly believe that diversity is critical to innovation and it is the central part of the culture across {companyName}'s family.</Typography>
+                                <Grid item xs={12} sm={12} md={12} lg={12} className={classes.padding_5}>
+                                    <Typography className={classes.aboutus_expensionsummary_grid_typography}>Diversity at {companyName} brings together clients, employees, and partners on a common global platform. We strongly believe that diversity is critical to innovation and it is the central part of the culture across {companyName}'s family.</Typography>
                                 </Grid>
-                                <Grid item xs={12} sm={12} md={12} lg={12} style={{ padding: 5 }} >
-                                    <Typography style={{ padding: "5px 0px 5px 0px", lineHeight: 1.5, color: "white", fontSize:16, fontFamily:"Roboto" }}>We learn from both our successes and our failures. Our opportunities for growth and development help expand employee’s knowledge and skill levels. We pursue growth and learning as one of our core values.</Typography>
+                                <Grid item xs={12} sm={12} md={12} lg={12} className={classes.padding_5}>
+                                    <Typography className={classes.aboutus_expensionsummary_grid_typography}>We learn from both our successes and our failures. Our opportunities for growth and development help expand employee’s knowledge and skill levels. We pursue growth and learning as one of our core values.</Typography>
                                 </Grid>
                             </Grid>
                         </ExpansionPanelDetails>
                     </ExpansionPanel>
-                    <ExpansionPanel style={{ width: "100%" }}>
+                    <ExpansionPanel className={classes.aboutus_expension_width}  >
                         <ExpansionPanelSummary
                             expandIcon={<ExpandMoreIcon />}
                             aria-controls="panel2a-content"
                             id="panel2a-header"
-                            style={{ backgroundColor: "rgb(66, 179, 219)" }}>
-                            <Typography style={{ color: "white", fontWeight: 600,fontSize: "1.17em" , fontFamily:"Roboto" }} >Blogs</Typography>
+                            className={classes.aboutus_expensionsummary}>
+                            <Typography className={classes.aboutus_expensionsummary_typography}>Blogs</Typography>
                         </ExpansionPanelSummary>
                         <ExpansionPanelDetails>
                             <Grid container>
-                                <Grid item xs={12} sm={12} md={12} lg={12} style={{ padding: 5 }} >
-                                    <Typography style={{ marginTop: 10, fontWeight:600, fontSize:16, fontFamily:"Roboto"}}>TypeScript and React</Typography>
+                                <Grid item xs={12} sm={12} md={12} lg={12} className={classes.padding_5}>
+                                    <Typography className={classes.aboutus_expensiondetails_typograpgy}>TypeScript and React</Typography>
                                 </Grid>
-                                <Grid item xs={12} sm={12} md={12} lg={12} style={{ padding: 5 }} >
-                                    <Typography style={{ padding: "5px 0px 5px 0px", lineHeight: 1.5, fontSize:16, fontFamily:"Roboto"}}> TypeScript is quickly becoming a fan favorite of the JavaScript community, adding the age old concept of types to our beloved language. While its just recently became popular it has been around since 2012  but over the past two years its popularity has risen significantly. </Typography>
+                                <Grid item xs={12} sm={12} md={12} lg={12} className={classes.padding_5}>
+                                    <Typography className={classes.aboutus_expensiondetails_typography}> TypeScript is quickly becoming a fan favorite of the JavaScript community, adding the age old concept of types to our beloved language. While its just recently became popular it has been around since 2012  but over the past two years its popularity has risen significantly. </Typography>
                                 </Grid>
-                                <Grid item xs={12} sm={12} md={12} lg={12} style={{ padding: 5 }} >
-                                    <Typography style={{ padding: "5px 0px 5px 0px", lineHeight: 1.5, fontSize:16, fontFamily:"Roboto" }}> React has also became a fan favorite in frontend community too. Out of the box, React comes pre-configured for Babel and while Facebook has its own type language, Flow, its not as popular as TypeScript and with adoption growing with TypeScript I want to talk about how to take a new or existing Babel project and convert it to TypeScript. </Typography>
+                                <Grid item xs={12} sm={12} md={12} lg={12} className={classes.padding_5}>
+                                    <Typography className={classes.aboutus_expensiondetails_typography}> React has also became a fan favorite in frontend community too. Out of the box, React comes pre-configured for Babel and while Facebook has its own type language, Flow, its not as popular as TypeScript and with adoption growing with TypeScript I want to talk about how to take a new or existing Babel project and convert it to TypeScript. </Typography>
                                 </Grid>
                             </Grid>
 
                         </ExpansionPanelDetails>
                     </ExpansionPanel>
-                    <ExpansionPanel style={{ width: "100%" }}>
+                    <ExpansionPanel className={classes.aboutus_expension_width}
+                    >
                         <ExpansionPanelSummary
                             expandIcon={<ExpandMoreIcon />}
                             aria-controls="panel2a-content"
                             id="panel2a-header">
-                            <Typography style={{ color: "rgb(66, 179, 219)", fontWeight: 600,fontSize: "1.17em", fontFamily:"Roboto"  }}>Case Studies</Typography>
+                            <Typography className={classes.aboutus_expensionsummary_typography_second}>Case Studies</Typography>
                         </ExpansionPanelSummary>
-                        <ExpansionPanelDetails style={{ backgroundColor: "rgb(66, 179, 219)" }}>
+                        <ExpansionPanelDetails className={classes.aboutus_expensiondetails_second}>
                             <Grid container>
-                                <Grid item xs={12} sm={6} md={6} lg={6} style={{ padding: 10 }} >
-                                    <CardMedia image={niftyCartImage} style={{ height: 250, width: "100%", borderRadius: 5 }} ></CardMedia>
-                                    <a style={{ fontWeight: 600, padding: "10px 0px", color: "white", fontFamily:"Roboto" }}>Nifty Cart</a>
+                                <Grid item xs={12} sm={4} md={4} lg={4} className={classes.casestudies_grid} >
+                                    <CardMedia image={niftyCartImage} className={classes.casestudies_cardMedia}></CardMedia>
+                                    <h4 className={classes.casestudies_a}>Nifty Cart</h4>
                                 </Grid>
-                                <Grid item xs={12} sm={6} md={6} lg={6} style={{ padding: 10 }} >
-                                    <CardMedia image={atxBoatsImage} style={{ height: 250, width: "100%", borderRadius: 5 }} ></CardMedia>
-                                    <a style={{ fontWeight: 600, padding: "10px 0px", color: "white", fontFamily:"Roboto" }}>ATX Surf Boats</a>
+                                <Grid item xs={12} sm={4} md={4} lg={4} className={classes.casestudies_grid}>
+                                    <CardMedia image={atxBoatsImage} className={classes.casestudies_cardMedia}></CardMedia>
+                                    <h4 className={classes.casestudies_a}>ATX Surf Boats</h4>
+                                </Grid>
+                                <Grid item xs={12} sm={4} md={4} lg={4} className={classes.casestudies_grid}>
+                                    <CardMedia image={doctymeImage} className={classes.casestudies_cardMedia}></CardMedia>
+                                    <h4 className={classes.casestudies_a}>Doctyme</h4>
                                 </Grid>
                             </Grid>
                         </ExpansionPanelDetails>
                     </ExpansionPanel>
                 </Grid>
-
-                <Grid container spacing={24} style={{ padding: "2% 5% 2% 5%", borderBottom: "1px #9E9E9E solid", display: "none" }}>
+                {/* about  second div */}
+                <Grid container spacing={24} className={classes.aboutus_third_container}>
                     <Grid item xs={12} sm={6} md={4} lg={4}  >
                         {
                             this.aboutusButtons()
@@ -309,5 +316,5 @@ const styles = {
         margin: "0px 5px 0px 5px"
     }
 }
-export const aboutUsComponentWithStyles = withStyles(styles)(aboutUsComponent)
+export const aboutUsComponentWithStyles = withStyles(centillionStyles as any, { withTheme: true })(aboutUsComponent)
 

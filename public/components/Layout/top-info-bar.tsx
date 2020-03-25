@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Fragment, Component } from "react";
-import { Button, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, FormGroup, ListItem, List, FormControl } from '@material-ui/core';
+import { Button, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, FormGroup, ListItem, List, FormControl,withStyles } from '@material-ui/core';
 import { AppBar, IconButton, Grid, Toolbar, CardMedia, Modal } from "@material-ui/core";
 import { Mail, Phone } from "@material-ui/icons";
 import TextField from '@material-ui/core/TextField';
@@ -10,7 +10,8 @@ import * as plannerLogo from "../../images/planner.png";
 import { MailModel } from "../../models/MailModel";
 import { phoneNumber } from "../../providers/phone-number-provider";
 import * as INLogo from "../../images/IndiaFlag.png";
-
+import { isMobile } from "react-device-detect";
+import { centillionStyles } from "../styles/CentillionStyles";
 /**
  * interface to define properties for top info bar
  */
@@ -18,12 +19,14 @@ interface Props {
     setCurrentComponent: (componentName: string) => void;
 
     sendEmail: (model: MailModel) => void;
+
+    classes: any;
 }
 
 /**
  * export the class for top info bar
  */
-export class TopInfoBar extends React.Component<Props> {
+class TopInfoBar extends React.Component<Props> {
 
     state = {
         open: false,
@@ -104,25 +107,26 @@ export class TopInfoBar extends React.Component<Props> {
     }
 
     render() {
-        const { open } = this.state
+        const { open } = this.state;        
+        const { classes } = this.props;
         return (
-            <AppBar position="static" style={{ fontFamily: "Roboto", position:"fixed" }} >
-                <Toolbar style={{ justifyContent: "space-between", paddingLeft: "5%", paddingRight: "5%", backgroundColor:"rgb(66, 179, 219)" }}>
-                    <Grid container style={{ marginTop: 10, marginBottom: 10 }} >
-                        <Grid xs={12} sm={4} lg={10} md={10}>
-                            <IconButton>
-                                <img src={INLogo} style={{height: 18, width: 25}}></img>
+            <AppBar position="static" style={{fontFamily: "Roboto", position:"fixed", height:"68px"}}>
+                <Toolbar className={classes.topbar_toolbar}>
+                    <Grid container className={classes.topbar_grid} >
+                        <Grid xs={12} sm={8} lg={10} md={9}>
+                            <IconButton className={classes.topbar_iconbtn}>
+                                <img src={INLogo} className={classes.contactus_firstdiv_image}></img>
                             </IconButton>
-                            <a style={{ paddingLeft: 5 }}>{phoneNumber}</a>
-                            <IconButton>
-                                <img src={skypeLogo} style={{ height: 20, width: 20 }}></img>
+                            <a className={classes.topbar_paddingleft}>{phoneNumber}</a>
+                            <IconButton className={classes.topbar_iconbtn}>
+                                <img src={skypeLogo} className={classes.topbar_logo}></img>
                             </IconButton>
-                            <a style={{ paddingLeft: 5 }}>chintan.suthar90</a>
+                            <a className={classes.topbar_paddingleft}>chintan.suthar90</a>
                         </Grid>
-                        <Grid item xs={12} sm={8} lg={2} md={2}>
-                            <FormControl style={{ paddingTop: 15, display: "inline-block", cursor: "pointer", float: "right" }} onClick={this.handleOpen}>
-                                <img src={plannerLogo} style={{ height: 20, width: 20 }}></img>
-                                <span style={{ marginLeft: 10, position:"relative", bottom: 4}}>SCHEDULE MEETING</span>
+                        <Grid item xs={12} sm={4} lg={2} md={3}>
+                            <FormControl className={classes.topbar_formctrl} onClick={this.handleOpen}>
+                                <img src={plannerLogo} className={classes.topbar_logo}></img>
+                                <span className={classes.topbar_span}>SCHEDULE MEETING</span>
                             </FormControl>
                         </Grid>
                     </Grid>
@@ -158,3 +162,5 @@ export class TopInfoBar extends React.Component<Props> {
         )
     }
 }
+
+export const TopInfoComponent = withStyles(centillionStyles as any, { withTheme: true })(TopInfoBar); 

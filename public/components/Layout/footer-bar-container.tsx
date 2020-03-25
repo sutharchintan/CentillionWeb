@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
 import { setCurrentComponentAction } from "../../actions";
-import { FooterBar } from "./footer-bar";
+import { FooterComponent } from "./footer-bar";
 
 const mapStateToProps = state => {
     return {
@@ -18,4 +18,4 @@ const mapDispatchToProps = dispatch => {
 export const FooterBarContainer = connect(
     mapStateToProps,
     mapDispatchToProps
-)(FooterBar as any);
+)(FooterComponent as any);

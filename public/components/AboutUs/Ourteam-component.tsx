@@ -1,8 +1,9 @@
 import * as React from 'react';
-import { IconButton, Theme, Grid, Paper, FormGroup, Select, MenuItem, Button, CardMedia } from "@material-ui/core";
+import { IconButton, Theme, Grid, Paper, FormGroup, withStyles, Select, MenuItem, Button, CardMedia } from "@material-ui/core";
 import { Phone } from "@material-ui/icons";
 import { phoneNumber } from '../../providers/phone-number-provider'
 import * as skypeLogo from "../../images/IconSkype.png";
+import { centillionStyles } from "../styles/CentillionStyles";
 
 /**
  * interface to define properties for our team component
@@ -12,24 +13,27 @@ interface Props {
     currentTheme: Theme;
 
     setCurrentComponent: (componentName: string) => void;
+
+    classes: any;
 }
 
 /**
  * export the class for our team component
  */
-export class OurTeamComponent extends React.Component<Props> {
+class OurTeamComponent extends React.Component<Props> {
 
     render() {
+        const { classes } = this.props;
         return (
-            <div style={{ fontFamily: "Roboto" }}>
+            <div className={classes.font_family}>
                 <Grid item xs={12} sm={12} md={12} lg={12} >
                     <Paper >
-                        <FormGroup style={{ padding: "0px 20px 20px 20px" }}>
+                        <FormGroup className={classes.formgroup_padding}>
                             <h3>Point of Contact</h3>
-                            <a style={{ fontWeight: 600 }}>Chintan Suthar </a>
+                            <a className={classes.fontWeight_600}>Chintan Suthar </a>
                             <a></a>
-                            <a style={{ paddingBottom: 10 }}><IconButton>
-                                <img src={skypeLogo} style={{ height: 20, width: 20 , marginRight:20}}>
+                            <a className={classes.paddingbottom_10}><IconButton>
+                                <img src={skypeLogo} className={classes.aboutus_expensiondetails_typography_imge}>
                                 </img>
                             </IconButton>chintan.suthar90</a>
                             {/* <a style={{ fontWeight: 600 }}>Milin Hapani </a>
@@ -57,4 +61,6 @@ export class OurTeamComponent extends React.Component<Props> {
         );
     }
 }
+
+export const OurTeamComponentWithStyles = withStyles(centillionStyles as any, { withTheme: true })(OurTeamComponent)
 

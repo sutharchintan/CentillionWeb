@@ -1,5 +1,5 @@
 import { connect } from "react-redux";
-import { ContactUsComponent } from "../ContactUs/contact-us-component";
+import { ContactUsComponentWithStyles } from "../ContactUs/contact-us-component";
 
 const mapStateToProps = state => {
   return {
@@ -15,4 +15,4 @@ const mapDispatchToProps = dispatch => {
 export const ConatactUsContainer = connect(
   mapStateToProps,
   mapDispatchToProps
-)(ContactUsComponent);
+)(ContactUsComponentWithStyles);

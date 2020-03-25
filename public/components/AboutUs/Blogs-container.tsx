@@ -1,5 +1,5 @@
 import { connect } from "react-redux"; 
-import { BlogsComponent } from "./Blogs-component";
+import { BlogsComponentWithStyles } from "./Blogs-component";
 
 const mapStateToProps = state => {
   return {
@@ -15,4 +15,4 @@ const mapDispatchToProps = dispatch => {
 export const BlogsContainer = connect(
   mapStateToProps,
   mapDispatchToProps
-)(BlogsComponent);
+)(BlogsComponentWithStyles);

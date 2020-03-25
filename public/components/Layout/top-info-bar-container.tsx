@@ -1,5 +1,5 @@
 import { connect } from "react-redux";
-import { TopInfoBar } from "./top-info-bar";
+import { TopInfoComponent } from "./top-info-bar";
 import { setCurrentComponentAction, sendEmailAction } from "../../actions";
 import { MailModel } from "../../models/MailModel";
 
@@ -22,4 +22,4 @@ const mapDispatchToProps = dispatch => {
 export const TopInfoBarContainer = connect(
     mapStateToProps,
     mapDispatchToProps
-)(TopInfoBar as any);
+)(TopInfoComponent as any);

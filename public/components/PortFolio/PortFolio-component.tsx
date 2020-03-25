@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Button, Grid, Theme, CardMedia, FormGroup, Paper, Select, MenuItem } from "@material-ui/core";
+import { Button, Grid, Theme, CardMedia, FormGroup, Paper, withStyles } from "@material-ui/core";
 import { LoadingInterface, MessageInterface } from '../../interface-properties-actions';
 import * as reactLogo from "../../images/reactnew.jpg";
 import * as csharpLogo from "../../images/csharp.jpg";
@@ -24,9 +24,9 @@ import * as lavarelLogo from "../../images/lavarelo.png";
 import * as knockoutLogo from "../../images/knockoutjs.jpg";
 import * as paythonLogo from "../../images/paython.png";
 import * as mobileappLogo from "../../images/mobileapp.jpg";
-import { BorderTop } from '@material-ui/icons';
 import { companyName } from '../../providers/comp-name-provider';
-import { isMobile } from "react-device-detect";
+import { centillionStyles } from "../styles/CentillionStyles";
+import Typography from 'material-ui/styles/typography';
 /**
  * interface to define properties for port folio
  */
@@ -40,210 +40,217 @@ interface Props extends LoadingInterface, MessageInterface {
 /**
  * export the class for portfolio component
  */
-export class PortFolioComponent extends React.Component<Props> {
+class PortFolioComponent extends React.Component<Props> {
 
     render() {
+        const { classes } = this.props;
         return (
-            <div style={{ fontFamily: "Roboto", position: "relative", top: "132px" }}>
+            <div className={classes.main_div}>
+                <div className={classes.hide_div}></div>
+                {/* portfolio first div */}
                 <Grid>
-                    <Grid item xs={12} style={{ height: isMobile ? 125 : 500 , width: "100%" }} >
-                        <img src={portfolioLogo} style={{ width: "100%",  height: isMobile ? 125 : 500 , opacity: 0.8 }}></img>
-                        <h1 style={{ color: "rgb(66, 179, 219)", textAlign: "center", position: "relative", top: -375, fontSize: 50, fontWeight: 800 }}>PORTFOLIO</h1>
-                        <p style={{ color: "rgb(66, 179, 219)", textAlign: "center", fontSize: 25, position: "relative", top: -375 }}>We make every effort to turn your idea into reality that changes user perspective. Have a look at our Portfolio</p>
+                    <Grid item xs={12} className={classes.header_cardMedia} >
+                        <img src={portfolioLogo} className={classes.portfolio_header_image}></img>
+                        <h1 className={classes.header_title_on_image}>PORTFOLIO</h1>
+                        <p className={classes.header_title_on_image_p}>We make every effort to turn your idea into reality that changes user perspective. Have a look at our Portfolio</p>
                     </Grid >
                 </Grid>
+                {/* portfolio second div */}
                 <Grid container >
-                    <Grid item xs={12} sm={12} lg={6} md={6} style={{ color: "rgb(66, 179, 219)", paddingTop: 60 }} >
-                        <h1 style={{ lineHeight: 1.3, color: "rgb(66, 179, 219)", fontSize: isMobile ? 27 : 50, fontWeight: 700, textAlign: "center" }}>Mobile App Development</h1>
-                        <hr style={{ width: "100px", border: "1px gb(66, 179, 219) solid" }} ></hr>
-                        <h3 style={{ padding: isMobile ? "3%" : "7%", lineHeight: 1.5, color: "rgb(66, 179, 219)", fontSize: 20, fontWeight: 400, margin: 10, wordBreak: "break-word", textAlign: "justify" }}>We create amazing experiences for mobile devices. Whether it's native app development across iOS & Android or cross-platform development with tools such as Phonegap we have a proven track record across a range of mobile & tablet technologies.</h3>
-                        <Button color="inherit" style={{ marginBottom: 20, color: "rgb(66, 179, 219)", border: "1px rgb(66, 179, 219) solid", height: 40, width: "150", fontWeight: 400, float: "right", marginRight: 20, MozBorderRadius: 5, boxAlign: "center" }}> Know More </Button>
+                    <Grid item xs={12} sm={12} lg={6} md={6} className={classes.portfolio_mobile_first}>
+                        <h1 className={classes.portfolio_mobile_first_h1}>Mobile App Development</h1>
+                        <hr className={classes.hr_border}></hr>
+                        <h3 className={classes.portfolio_mobile_first_h3}>We create amazing experiences for mobile devices. Whether it's native app development across iOS & Android or cross-platform development with tools such as Phonegap we have a proven track record across a range of mobile & tablet technologies.</h3>
+                        <Button color="inherit" className={classes.portfolio_mobile_button}> Know More </Button>
                     </Grid>
                     <Grid item xs={12} sm={12} lg={6} md={6} >
-                        <CardMedia image={mobileappLogo} style={{ width: "100%", height: isMobile ? 200 : 496 }} > </CardMedia>
+                        <CardMedia image={mobileappLogo} className={classes.portfolio_mobile_cardMedia}> </CardMedia>
                     </Grid>
                 </Grid>
                 <Grid container color="default">
-                    <Grid item xs={12} sm={12} lg={12} md={12} style={{ padding: "4% 5% 2% 5%", backgroundColor: "rgb(66, 179, 219)" }}>
+                    <Grid item xs={12} sm={12} lg={12} md={12} className={classes.portfolio_mobile_second}>
                         <FormGroup>
-                            <span style={{ fontSize: isMobile ? 27 : 50, lineHeight: 1, color: "white", textAlign: "center" }}>A Complete Creative Solutions Provider For Web, Mobile & Software</span>
-                            <hr style={{ width: "100px", border: "1px gb(66, 179, 219) solid", position:"relative",top:"15px" }} ></hr>
-                            <p style={{ fontSize: 20, lineHeight: isMobile ? 1.5 : 2, color: "white", wordBreak: "break-word", textAlign: "justify", margin: 20 }}>{companyName} is an offshore development outsourcing IT company. Incepted in the year 2019, {companyName} is doing an astonishing work on the ground of IT fraternity. We have the global presence in India, USA with a team of 10+ in-house talents. Our commitment and belief to achieve the best is making us the most demandable company globally. We believe in stepping into client’s shoe for building their product in more awesome ways. Our experts are talented enough to convey the best solutions. We assure clients to bring their unique thoughts in the marketplace with more intuitive manner. We believe in maintaining punctuality and quality is our key area to deliver splendid work.</p>
+                            <span className={classes.portfolio_mobile_second_span}>A Complete Creative Solutions Provider For Web, Mobile & Software</span>
+                            <hr className={classes.portfolio_mobile_second_hr} ></hr>
+                            <p className={classes.portfolio_mobile_second_p}>{companyName} is an offshore development outsourcing IT company. Incepted in the year 2019, {companyName} is doing an astonishing work on the ground of IT fraternity. We have the global presence in India, USA with a team of 10+ in-house talents. Our commitment and belief to achieve the best is making us the most demandable company globally. We believe in stepping into client’s shoe for building their product in more awesome ways. Our experts are talented enough to convey the best solutions. We assure clients to bring their unique thoughts in the marketplace with more intuitive manner. We believe in maintaining punctuality and quality is our key area to deliver splendid work.</p>
                         </FormGroup>
                     </Grid>
                 </Grid>
-                <Grid container spacing={24} style={{ padding: "2% 5% 12% 5%", borderBottom: "1px #9E9E9E solid" }}>
-                    <Grid item xs={12} sm={6} md={4} lg={3} style={{ borderRadius: 5 }}>
+                {/* portfolio third div */}
+                <Grid container spacing={24} className={classes.portfolio_mobile_third_container}>
+                    <Grid item xs={12} sm={6} md={4} lg={3} >
                         <Paper>
                             <FormGroup >
-                                <CardMedia image={reactLogo} style={{ height: 270, width: "100%", borderRadius: 5 }}></CardMedia>
-                            </FormGroup>
+                                  <CardMedia image={reactLogo} className={classes.portfolio_mobile_third_cardMedia}></CardMedia>                                
+                              </FormGroup>
                         </Paper>
-                        <h3 style={{ fontWeight: 600, marginBottom: -10 }}>React</h3>
+                        <h3 className={classes.portfolio_mobile_third_h3}>React</h3>                     
                     </Grid>
-                    <Grid item xs={12} sm={6} md={4} lg={3} style={{ borderRadius: 5 }}>
+                    <Grid item xs={12} sm={6} md={4} lg={3} className={classes.portfolio_mobile_third_grid}>
                         <Paper>
                             <FormGroup>
-                                <CardMedia image={csharpLogo} style={{ height: 270, width: "100%", borderRadius: 5 }}></CardMedia>
+                                <CardMedia image={csharpLogo} className={classes.portfolio_mobile_third_cardMedia}></CardMedia>
                             </FormGroup>
                         </Paper>
-                        <h3 style={{ fontWeight: 600, marginBottom: -10 }}>C#</h3>
+                        <h3 className={classes.portfolio_mobile_third_h3}>C#</h3>
                     </Grid>
-                    <Grid item xs={12} sm={6} md={4} lg={3} style={{ borderRadius: 5 }}>
+                    <Grid item xs={12} sm={6} md={4} lg={3} className={classes.portfolio_mobile_third_grid}>
                         <Paper>
                             <FormGroup>
-                                <CardMedia image={angularLogo} style={{ height: 270, width: "100%", borderRadius: 5 }}></CardMedia>
+                                <CardMedia image={angularLogo} className={classes.portfolio_mobile_third_cardMedia}></CardMedia>
                             </FormGroup>
                         </Paper>
-                        <h3 style={{ fontWeight: 600, marginBottom: -10 }}>Angular js</h3>
+                        <h3 className={classes.portfolio_mobile_third_h3}>Angular js</h3>
                     </Grid>
-                    <Grid item xs={12} sm={6} md={4} lg={3} style={{ borderRadius: 5 }}>
+                    <Grid item xs={12} sm={6} md={4} lg={3} className={classes.portfolio_mobile_third_grid}>
                         <Paper>
                             <FormGroup>
-                                <CardMedia image={typscriptLogo} style={{ height: 270, width: "100%", borderRadius: 5 }}></CardMedia>
+                                <CardMedia image={typscriptLogo} className={classes.portfolio_mobile_third_cardMedia}></CardMedia>
                             </FormGroup>
                         </Paper>
-                        <h3 style={{ fontWeight: 600, marginBottom: -10 }}>TypeScript</h3>
+                        <h3 className={classes.portfolio_mobile_third_h3}>TypeScript</h3>
                     </Grid>
-                    <Grid item xs={12} sm={6} md={4} lg={3} style={{ borderRadius: 5 }}>
+                    <Grid item xs={12} sm={6} md={4} lg={3} className={classes.portfolio_mobile_third_grid}>
                         <Paper>
                             <FormGroup>
-                                <CardMedia image={vbdotnetLogo} style={{ height: 270, width: "100%", borderRadius: 5 }}></CardMedia>
+                                <CardMedia image={vbdotnetLogo} className={classes.portfolio_mobile_third_cardMedia}></CardMedia>
                             </FormGroup>
                         </Paper>
-                        <h3 style={{ fontWeight: 600, marginBottom: -10 }}>VB.Net</h3>
+                        <h3 className={classes.portfolio_mobile_third_h3}>VB.Net</h3>
                     </Grid>
-                    <Grid item xs={12} sm={6} md={4} lg={3} style={{ borderRadius: 5 }}>
+                    <Grid item xs={12} sm={6} md={4} lg={3} className={classes.portfolio_mobile_third_grid}>
                         <Paper>
                             <FormGroup>
-                                <CardMedia image={phpLogo} style={{ height: 270, width: "100%", borderRadius: 5 }}></CardMedia>
+                                <CardMedia image={phpLogo} className={classes.portfolio_mobile_third_cardMedia}></CardMedia>
                             </FormGroup>
                         </Paper>
-                        <h3 style={{ fontWeight: 600, marginBottom: -10 }}>Php</h3>
+                        <h3 className={classes.portfolio_mobile_third_h3}>Php</h3>
                     </Grid>
-                    <Grid item xs={12} sm={6} md={4} lg={3} style={{ borderRadius: 5 }}>
+                    <Grid item xs={12} sm={6} md={4} lg={3} className={classes.portfolio_mobile_third_grid}>
                         <Paper>
                             <FormGroup>
-                                <CardMedia image={MssqlLogo} style={{ height: 270, width: "100%", borderRadius: 5 }}></CardMedia>
+                                <CardMedia image={MssqlLogo} className={classes.portfolio_mobile_third_cardMedia}></CardMedia>
                             </FormGroup>
                         </Paper>
-                        <h3 style={{ fontWeight: 600, marginBottom: 0 }}>SQL Server</h3>
+                        <h3 className={classes.portfolio_mobile_third_h3}>SQL Server</h3>
                     </Grid>
-                    <Grid item xs={12} sm={6} md={4} lg={3} style={{ borderRadius: 5 }}>
+                    <Grid item xs={12} sm={6} md={4} lg={3} className={classes.portfolio_mobile_third_grid}>
                         <Paper>
                             <FormGroup>
-                                <CardMedia image={mongodbLogo} style={{ height: 270, width: "100%", borderRadius: 5 }}></CardMedia>
+                                <CardMedia image={mongodbLogo} className={classes.portfolio_mobile_third_cardMedia}></CardMedia>
                             </FormGroup>
                         </Paper>
-                        <h3 style={{ fontWeight: 600, marginBottom: -10 }}>Mongo Db</h3>
+                        <h3 className={classes.portfolio_mobile_third_h3}>Mongo Db</h3>
                     </Grid>
-                    <Grid item xs={12} sm={6} md={4} lg={3} style={{ borderRadius: 5 }}>
+                    <Grid item xs={12} sm={6} md={4} lg={3} className={classes.portfolio_mobile_third_grid}>
                         <Paper>
                             <FormGroup>
-                                <CardMedia image={blockchainLogo} style={{ height: 270, width: "100%", borderRadius: 5 }}></CardMedia>
+                                <CardMedia image={blockchainLogo} className={classes.portfolio_mobile_third_cardMedia}></CardMedia>
                             </FormGroup>
                         </Paper>
-                        <h3 style={{ fontWeight: 600, marginBottom: -10 }}>Block chain technology</h3>
+                        <h3 className={classes.portfolio_mobile_third_h3}>Block chain technology</h3>
                     </Grid>
-                    <Grid item xs={12} sm={6} md={4} lg={3} style={{ borderRadius: 5 }}>
+                    <Grid item xs={12} sm={6} md={4} lg={3} className={classes.portfolio_mobile_third_grid}>
                         <Paper>
                             <FormGroup>
-                                <CardMedia image={excelLogo} style={{ height: 270, width: "100%", borderRadius: 5 }}></CardMedia>
+                                <CardMedia image={excelLogo} className={classes.portfolio_mobile_third_cardMedia}></CardMedia>
                             </FormGroup>
                         </Paper>
-                        <h3 style={{ fontWeight: 600, marginBottom: -10 }}>Excel Automation</h3>
+                        <h3 className={classes.portfolio_mobile_third_h3}>Excel Automation</h3>
                     </Grid>
-                    <Grid item xs={12} sm={6} md={4} lg={3} style={{ borderRadius: 5 }}>
+                    <Grid item xs={12} sm={6} md={4} lg={3} className={classes.portfolio_mobile_third_grid}>
                         <Paper>
                             <FormGroup>
-                                <CardMedia image={javaLogo} style={{ height: 270, width: "100%", borderRadius: 5 }}></CardMedia>
+                                <CardMedia image={javaLogo} className={classes.portfolio_mobile_third_cardMedia}></CardMedia>
                             </FormGroup>
                         </Paper>
-                        <h3 style={{ fontWeight: 600, marginBottom: -10 }}>Java</h3>
+                        <h3 className={classes.portfolio_mobile_third_h3}>Java</h3>
                     </Grid>
-                    <Grid item xs={12} sm={6} md={4} lg={3} style={{ borderRadius: 5 }}>
+                    <Grid item xs={12} sm={6} md={4} lg={3} className={classes.portfolio_mobile_third_grid}>
                         <Paper>
                             <FormGroup>
-                                <CardMedia image={awsLogo} style={{ height: 270, width: "100%", borderRadius: 5 }}></CardMedia>
+                                <CardMedia image={awsLogo} className={classes.portfolio_mobile_third_cardMedia}></CardMedia>
                             </FormGroup>
                         </Paper>
-                        <h3 style={{ fontWeight: 600, marginBottom: -10 }}>AWS services</h3>
+                        <h3 className={classes.portfolio_mobile_third_h3}>AWS services</h3>
                     </Grid>
-                    <Grid item xs={12} sm={6} md={4} lg={3} style={{ borderRadius: 5 }}>
+                    <Grid item xs={12} sm={6} md={4} lg={3} className={classes.portfolio_mobile_third_grid}>
                         <Paper>
                             <FormGroup>
-                                <CardMedia image={androidLogo} style={{ height: 270, width: "100%", borderRadius: 5 }}></CardMedia>
+                                <CardMedia image={androidLogo} className={classes.portfolio_mobile_third_cardMedia}></CardMedia>
                             </FormGroup>
                         </Paper>
-                        <h3 style={{ fontWeight: 600, marginBottom: -10 }}>Android</h3>
+                        <h3 className={classes.portfolio_mobile_third_h3}>Android</h3>
                     </Grid>
-                    <Grid item xs={12} sm={6} md={4} lg={3} style={{ borderRadius: 5 }}>
+                    <Grid item xs={12} sm={6} md={4} lg={3} className={classes.portfolio_mobile_third_grid}>
                         <Paper>
                             <FormGroup>
-                                <CardMedia image={iosLogo} style={{ height: 270, width: "100%", borderRadius: 5 }}></CardMedia>
+                                <CardMedia image={iosLogo} className={classes.portfolio_mobile_third_cardMedia}></CardMedia>
                             </FormGroup>
                         </Paper>
-                        <h3 style={{ fontWeight: 600, marginBottom: -10 }}>IOS</h3>
+                        <h3 className={classes.portfolio_mobile_third_h3}>IOS</h3>
                     </Grid>
-                    <Grid item xs={12} sm={6} md={4} lg={3} style={{ borderRadius: 5 }}>
+                    <Grid item xs={12} sm={6} md={4} lg={3} className={classes.portfolio_mobile_third_grid}>
                         <Paper>
                             <FormGroup>
-                                <CardMedia image={crystalLogo} style={{ height: 270, width: "100%", borderRadius: 5 }}></CardMedia>
+                                <CardMedia image={crystalLogo} className={classes.portfolio_mobile_third_cardMedia}></CardMedia>
                             </FormGroup>
                         </Paper>
-                        <h3 style={{ fontWeight: 600, marginBottom: -10 }}>Crystal Reports</h3>
+                        <h3 className={classes.portfolio_mobile_third_h3}>Crystal Reports</h3>
                     </Grid>
-                    <Grid item xs={12} sm={6} md={4} lg={3} style={{ borderRadius: 5 }}>
+                    <Grid item xs={12} sm={6} md={4} lg={3} className={classes.portfolio_mobile_third_grid}>
                         <Paper>
                             <FormGroup>
-                                <CardMedia image={tableauLogo} style={{ height: 270, width: "100%", borderRadius: 5 }}></CardMedia>
+                                <CardMedia image={tableauLogo} className={classes.portfolio_mobile_third_cardMedia}></CardMedia>
                             </FormGroup>
                         </Paper>
-                        <h3 style={{ fontWeight: 600, marginBottom: -10 }}>Tableau</h3>
+                        <h3 className={classes.portfolio_mobile_third_h3}>Tableau</h3>
                     </Grid>
-                    <Grid item xs={12} sm={6} md={4} lg={3} style={{ borderRadius: 5 }}>
+                    <Grid item xs={12} sm={6} md={4} lg={3} className={classes.portfolio_mobile_third_grid}>
                         <Paper>
                             <FormGroup>
-                                <CardMedia image={telerikLogo} style={{ height: 270, width: "100%", borderRadius: 5 }}></CardMedia>
+                                <CardMedia image={telerikLogo} className={classes.portfolio_mobile_third_cardMedia}></CardMedia>
                             </FormGroup>
                         </Paper>
-                        <h3 style={{ fontWeight: 600, marginBottom: -10 }}>Telerik controls</h3>
+                        <h3 className={classes.portfolio_mobile_third_h3}>Telerik controls</h3>
                     </Grid>
-                    <Grid item xs={12} sm={6} md={4} lg={3} style={{ borderRadius: 5 }}>
+                    <Grid item xs={12} sm={6} md={4} lg={3} className={classes.portfolio_mobile_third_grid}>
                         <Paper>
                             <FormGroup>
-                                <CardMedia image={VueLogo} style={{ height: 270, width: "100%", borderRadius: 5 }}></CardMedia>
+                                <CardMedia image={VueLogo} className={classes.portfolio_mobile_third_cardMedia}></CardMedia>
                             </FormGroup>
                         </Paper>
-                        <h3 style={{ fontWeight: 600, marginBottom: -10 }}>Vue js</h3>
+                        <h3 className={classes.portfolio_mobile_third_h3}>Vue js</h3>
                     </Grid>
-                    <Grid item xs={12} sm={6} md={4} lg={3} style={{ borderRadius: 5 }}>
+                    <Grid item xs={12} sm={6} md={4} lg={3} className={classes.portfolio_mobile_third_grid}>
                         <Paper>
                             <FormGroup>
-                                <CardMedia image={lavarelLogo} style={{ height: 270, width: "100%", borderRadius: 5 }}></CardMedia>
+                                <CardMedia image={lavarelLogo} className={classes.portfolio_mobile_third_cardMedia}></CardMedia>
                             </FormGroup>
                         </Paper>
-                        <h3 style={{ fontWeight: 600, marginBottom: -10 }}>Lavarel js</h3>
+                        <h3 className={classes.portfolio_mobile_third_h3}>Lavarel js</h3>
                     </Grid>
-                    <Grid item xs={12} sm={6} md={4} lg={3} style={{ borderRadius: 5 }}>
+                    <Grid item xs={12} sm={6} md={4} lg={3} className={classes.portfolio_mobile_third_grid}>
                         <Paper>
                             <FormGroup>
-                                <CardMedia image={knockoutLogo} style={{ height: 270, width: "100%", borderRadius: 5 }}></CardMedia>
+                                <CardMedia image={knockoutLogo} className={classes.portfolio_mobile_third_cardMedia}></CardMedia>
                             </FormGroup>
                         </Paper>
-                        <h3 style={{ fontWeight: 600, marginBottom: -10 }}>Knockout js</h3>
+                        <h3 className={classes.portfolio_mobile_third_h3}>Knockout js</h3>
                     </Grid>
-                    <Grid item xs={12} sm={6} md={4} lg={3} style={{ borderRadius: 5 }}>
+                    <Grid item xs={12} sm={6} md={4} lg={3} className={classes.portfolio_mobile_third_grid}>
                         <Paper>
                             <FormGroup>
-                                <CardMedia image={paythonLogo} style={{ height: 270, width: "100%", borderRadius: 5 }}></CardMedia>
+                                <CardMedia image={paythonLogo} className={classes.portfolio_mobile_third_cardMedia}></CardMedia>
                             </FormGroup>
                         </Paper>
-                        <h3 style={{ fontWeight: 600, marginBottom: -10 }}>Paython</h3>
+                        <h3 className={classes.portfolio_mobile_third_h3}>Paython</h3>
                     </Grid>
                 </Grid>
             </div>
         );
     }
 }
+
+export const PortFolioComponentWithStyles = withStyles(centillionStyles as any, { withTheme: true })(PortFolioComponent)
 

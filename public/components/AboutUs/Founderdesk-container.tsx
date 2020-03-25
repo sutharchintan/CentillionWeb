@@ -1,5 +1,5 @@
 import { connect } from "react-redux"; 
-import { FounderDeskComponent } from "./Founderdesk-component";
+import { FounderDeskComponentWithStyles } from "./Founderdesk-component";
 
 const mapStateToProps = state => {
   return {
@@ -15,4 +15,4 @@ const mapDispatchToProps = dispatch => {
 export const FounderDeskContainer = connect(
   mapStateToProps,
   mapDispatchToProps
-)(FounderDeskComponent);
+)(FounderDeskComponentWithStyles);

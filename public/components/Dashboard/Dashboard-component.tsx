@@ -21,8 +21,9 @@ import Slide from 'react-reveal/Slide';
 import styled, { css } from 'styled-components';
 import { companyName } from '../../providers/comp-name-provider';
 import { isMobile } from "react-device-detect";
-import { borderStyles } from "../styles/borderStyles";
+import { centillionStyles } from "../styles/CentillionStyles";
 import Flippy, { FrontSide, BackSide } from 'react-flippy';
+
 
 // import { MDBMask, MDBView, MDBContainer, MDBRow, MDBCol } from "mdbreact";
 /**
@@ -119,29 +120,25 @@ class DashboardComponentList extends React.Component<Props> {
   render() {
     const { classes } = this.props;
     const classesStyles = useStyles;
+
     return (
 
-      <div style={{ fontFamily: "Roboto", position: "relative"}} >
-        <div style={{height: "132px" }}>
-
-        </div>
+      <div className={classes.main_div}>
+        <div className={classes.hide_div}></div>
+        {/* Dashboard Slider */}
         <Grid container >
           <Carousel defaultWait={10000} /*wait for 1000 milliseconds*/ >
             <Slide right>
               <div>
-                <Grid container spacing={24} style={{ width: "100%", margin: 0, textAlign: "left", display: "block" }}>
+                <Grid container spacing={24} className={classes.carousel_main_grid}>
                   <Paper>
-                    <Grid container style={{ backgroundColor: "rgb(66, 179, 219)", width: "100%" }}>
-
+                    <Grid container className={classes.carousel_paper_grid}>
                       <Grid item xs={12} sm={12} lg={12} md={12} >
-
                         <Grid item xs={12} sm={6} lg={6} md={6}>
-                          <Typography style={{ lineHeight: 2, color: "white", position: "absolute", paddingTop: isMobile ? "5%" : "10%", paddingLeft: "5%", fontFamily: "Roboto", fontSize: isMobile ? 15 : 35, maxWidth: isMobile ? 162 : 550 }}>A Complete Creative Solutions Provider For Web, Mobile & Software.</Typography>
-                          {/* <Typography component="h1" style={{ lineHeight: 1.5, color: "white", position: "absolute", paddingTop: "10%", paddingLeft: "5%", fontFamily: "Roboto" }}>When you Hire us, You Hire Quality and Excellence.</Typography>
-            <Typography component="h1" style={{ lineHeight: 1.5, color: "white", position: "absolute", paddingTop: "18%", paddingLeft: "5%", fontFamily: "Roboto" }}>No matter the Technology or Services.</Typography>*/}
+                          <Typography className={classes.carousel_paper_grid_typography}>A Complete Creative Solutions Provider For Web, Mobile & Software.</Typography>
                         </Grid>
                         <Grid item xs={12} sm={12} lg={12} md={12} >
-                          <CardMedia image={landingoneLogo} style={{ width: "100%", height: isMobile ? 125 : 500 }} > </CardMedia>
+                          <CardMedia image={landingoneLogo} className={classes.header_cardMedia}> </CardMedia>
                         </Grid>
                       </Grid >
                     </Grid>
@@ -151,19 +148,15 @@ class DashboardComponentList extends React.Component<Props> {
             </Slide>
             <Slide right>
               <div>
-                <Grid container spacing={24} style={{ width: "100%", margin: 0, textAlign: "left", display: "block" }}>
+                <Grid container spacing={24} className={classes.carousel_main_grid}>
                   <Paper>
-                    <Grid container style={{ backgroundColor: "rgb(66, 179, 219)", width: "100%" }}>
-
+                    <Grid container className={classes.carousel_paper_grid}>
                       <Grid item xs={12} sm={12} lg={12} md={12} >
-
                         <Grid item xs={12} sm={6} lg={6} md={6}>
-                          <Typography style={{ lineHeight: 2, color: "white", position: "absolute", paddingTop: isMobile ? "5%" : "10%", paddingLeft: "5%", fontFamily: "Roboto", fontSize: isMobile ? 15 : 35, maxWidth: isMobile ? 162 : 550 }}>When you Hire us, You Hire Quality and Excellence.</Typography>
-                          {/* <Typography component="h1" style={{ lineHeight: 1.5, color: "white", position: "absolute", paddingTop: "10%", paddingLeft: "5%", fontFamily: "Roboto" }}>A Complete Creative Solutions Provider For Web, Mobile & Software.</Typography>
-            <Typography component="h1" style={{ lineHeight: 1.5, color: "white", position: "absolute", paddingTop: "18%", paddingLeft: "5%", fontFamily: "Roboto" }}>No matter the Technology or Services.</Typography>*/}
+                          <Typography className={classes.carousel_paper_grid_typography}>When you Hire us, You Hire Quality and Excellence.</Typography>
                         </Grid>
                         <Grid item xs={12} sm={12} lg={12} md={12} >
-                          <CardMedia image={landingoneLogo} style={{ width: "100%", height: isMobile ? 125 : 500 }} > </CardMedia>
+                          <CardMedia image={landingoneLogo} className={classes.header_cardMedia}> </CardMedia>
                         </Grid>
                       </Grid >
                     </Grid>
@@ -173,212 +166,155 @@ class DashboardComponentList extends React.Component<Props> {
             </Slide>
           </Carousel>
         </Grid>
-
-
-
-
-
-        <Grid container spacing={24} style={{ padding: "2% 5% 2% 5%", width: "100%", margin: 0 }}>
+        {/* Dashboard second div */}
+        <Grid container spacing={24} className={classes.grid_dashboard_second}>
           <Grid item xs={12}>
-            <h1 style={{ fontSize: isMobile ? 25 : 40, textAlign: "center", color: "rgb(66, 179, 219)" }}>Perfect Products are Reflection of Organised Efforts</h1>
-            <hr style={{ width: "100px", border: "1px gb(66, 179, 219) solid" }} ></hr>
-            <h3 style={{ fontSize: isMobile ? 12 : 20, textAlign: "center", color: "rgb(66, 179, 219)" }}>Our rich portfolio justifies the fact that {companyName} functions as a World-Class Software Development Company.</h3>
+            <h1 className={classes.grid_dash_second_h1}>Perfect Products are Reflection of Organised Efforts</h1>
+            <hr className={classes.hr_border}></hr>
+            <h3 className={classes.grid_dash_second_h3}>Our rich portfolio justifies the fact that {companyName} functions as a World-Class Software Development Company.</h3>
           </Grid>
-
-         
-
-          <Grid style={{width:"12%"}}></Grid>
+          <Grid className={classes.grid_dash_second_main}></Grid>
           <Grid item xs={12} sm={6} lg={3} md={3}>
-            <Paper style={{ borderRadius: "100%" }}>
+            <Paper className={classes.grid_dash_second_main_paper}>
               <FormGroup>
-                <CardMedia image={niftyCartImage} className={classes.imagePerfect}> </CardMedia>
+                <CardMedia image={niftyCartImage} className={classes.image_perfect}> </CardMedia>
               </FormGroup>
             </Paper>
-            <h2 style={{ color: "black", textAlign: "center" }}>Nifty Cart</h2>
-          </Grid>
-
-          <Grid item xs={12} sm={6} lg={3} md={3}>
-            <Paper style={{ borderRadius: "100%" }}>
-              <FormGroup>
-                <CardMedia image={atxBoatsImage} className={classes.imagePerfect}> </CardMedia>
-              </FormGroup>
-            </Paper>
-            <h2 style={{ color: "black", textAlign: "center" }}>ATX Boat</h2>
+            <h2 className={classes.grid_Dash_second_main_h2}>Nifty Cart</h2>
           </Grid>
           <Grid item xs={12} sm={6} lg={3} md={3}>
-            <Paper style={{ borderRadius: "100%" }}>
+            <Paper className={classes.grid_dash_second_main_paper}>
               <FormGroup>
-                <CardMedia image={doctymeImage} className={classes.imagePerfect}> </CardMedia>
+                <CardMedia image={atxBoatsImage} className={classes.image_perfect}> </CardMedia>
               </FormGroup>
             </Paper>
-            <h2 style={{ color: "black", textAlign: "center" }}>Doctyme</h2>
+            <h2 className={classes.grid_Dash_second_main_h2}>ATX Boat</h2>
           </Grid>
-          <Grid style={{width:"12%"}}></Grid>
-         
+          <Grid item xs={12} sm={6} lg={3} md={3}>
+            <Paper className={classes.grid_dash_second_main_paper}>
+              <FormGroup>
+                <CardMedia image={doctymeImage} className={classes.image_perfect}> </CardMedia>
+              </FormGroup>
+            </Paper>
+            <h2 className={classes.grid_Dash_second_main_h2}>Doctyme</h2>
+          </Grid>
+          <Grid style={{ width: "12%" }}></Grid>
+        </Grid>
+        {/* Dashboard third div */}
+        <Grid className={classes.grid_dash_third}>
+          <Typography className={classes.grid_dash_third_typography} >Why Work with Centillion Softech?</Typography>
         </Grid>
 
-<Grid style={{background: 'linear-gradient(45deg, rgb(66, 179, 219) 30%, rgba(66, 179, 219, 0.23) 90%)', height:200}}>
-  <Typography style={{fontSize:50, color:"rgb(255, 255, 255)", textAlign:"center", padding:"5%"}} >Why Work with Centillion Softech?</Typography>
-</Grid>
-
-        <Grid container style={{ padding: "2% 5% 5% 5%", width: "100%", margin: 0, height: 480 }}>
-          <Grid style={{ width:"32.33%" , padding:"0.5%"}}>
-            <Flippy
-              flipOnHover={true} // default false
-              flipOnClick={false} // default false
-              flipDirection="horizontal" // horizontal or vertical
-            // ref={(r) => this.flippy = r} // to use toggle method like this.flippy.toggle()
-            // if you pass isFlipped prop component will be controlled component.
-            // and other props, which will go to div
-             style={{height: '200px' }} /// these are optional style, it is not necessary
-            >
-              <FrontSide style={{ backgroundColor: '#ffffff' }} >
-                <CardMedia image={masttechiconLogo} style={{ width: 100, height: 100, margin: "0px auto" }} > </CardMedia>
-                <hr style={{ width: "100px", border: "1px rgb(66, 179, 219) solid" }} ></hr>
-                <Typography style={{ fontSize: isMobile ? 15 : 18, fontWeight: "bold", textAlign: "center", fontFamily: "Roboto", color: "rgb(66, 179, 219)" }}>Masterly experienced in technologies</Typography>
+        <Grid container spacing={24} className={classes.grid_dash_third_main}>
+          <Grid item xs={12} sm={4} lg={4} md={4} className={classes.grid_dash_third_main_grid}>
+            <Flippy flipOnHover={true} flipOnClick={false} flipDirection="horizontal" className={classes.grid_dash_flippy_height}>
+              <FrontSide className={classes.grid_dash_flippy_front} >
+                <CardMedia image={masttechiconLogo} className={classes.grid_dash_flippy_front_cardMedia}> </CardMedia>
+                <hr className={classes.hr_border}></hr>
+                <Typography className={classes.grid_dash_flippy_front_title}>Masterly experienced in technologies</Typography>
               </FrontSide>
-              <BackSide style={{ backgroundColor: 'rgb(66, 179, 219)' }}>
+              <BackSide className={classes.grid_dash_flippy_back}>
                 <Grid>
-                  <Typography style={{ fontSize: isMobile ? 15 : 18, fontWeight: "bold", fontFamily: "Roboto", color: "rgb(255, 255, 255)", textAlign: "center", padding: "3%" }}>Masterly experienced in technologies</Typography>
+                  <Typography className={classes.grid_dash_flippy_back_header}>Masterly experienced in technologies</Typography>
                 </Grid>
-                <hr style={{ width: "100px", border: "1px rgb(255, 255, 255) solid" }} ></hr>
+                <hr className={classes.hr_border}></hr>
                 <Grid>
-                  <Typography component="h4" style={{ fontSize: isMobile ? 12 : 15, lineHeight: 1.5, color: "rgb(255, 255, 255)", fontFamily: "Roboto" }}>Our clients have always trusted us without any second thought because we have more than a decade of experience in delivering various successful projects.</Typography>
+                  <Typography component="h4" className={classes.grid_dash_flippy_back_div}>Our clients have always trusted us without any second thought because we have more than a decade of experience in delivering various successful projects.</Typography>
                 </Grid>
               </BackSide>
             </Flippy>
           </Grid>
 
-          <Grid style={{ width:"32.33%" , padding:"0.5%"}}>
-            <Flippy
-              flipOnHover={true} // default false
-              flipOnClick={false} // default false
-              flipDirection="horizontal" // horizontal or vertical
-            // ref={(r) => this.flippy = r} // to use toggle method like this.flippy.toggle()
-            // if you pass isFlipped prop component will be controlled component.
-            // and other props, which will go to div
-            style={{height: '200px' }} /// these are optional style, it is not necessary
-            >
-              <FrontSide style={{ backgroundColor: '#ffffff' }}>
-                <CardMedia image={multiplatformLogo} style={{ width: 100, height: 100, margin: "0px auto" }} > </CardMedia>
-                <hr style={{ width: "100px", border: "1px rgb(66, 179, 219) solid" }} ></hr>
-                <Typography style={{ fontSize: isMobile ? 15 : 18, fontWeight: "bold", textAlign: "center", fontFamily: "Roboto", color: "rgb(66, 179, 219)" }}>Expertise on Multiple Platforms</Typography>
+          <Grid item xs={12} sm={4} lg={4} md={4} className={classes.grid_dash_third_main_grid}>
+            <Flippy flipOnHover={true} flipOnClick={false} flipDirection="horizontal" className={classes.grid_dash_flippy_height}>
+              <FrontSide className={classes.grid_dash_flippy_front} >
+                <CardMedia image={multiplatformLogo} className={classes.grid_dash_flippy_front_cardMedia}> </CardMedia>
+                <hr className={classes.hr_border}></hr>
+                <Typography className={classes.grid_dash_flippy_front_title}>Expertise on Multiple Platforms</Typography>
               </FrontSide>
-              <BackSide style={{ backgroundColor: 'rgb(66, 179, 219)' }}>
+              <BackSide className={classes.grid_dash_flippy_back}>
                 <Grid>
-                  <Typography style={{ fontSize: isMobile ? 15 : 18, fontWeight: "bold", fontFamily: "Roboto", color: "rgb(255, 255, 255)", textAlign: "center", padding: "3%" }}>Expertise on Multiple Platforms</Typography>
+                  <Typography className={classes.grid_dash_flippy_back_header}>Expertise on Multiple Platforms</Typography>
                 </Grid>
-                <hr style={{ width: "100px", border: "1px rgb(255, 255, 255) solid" }} ></hr>
+                <hr className={classes.hr_border}></hr>
                 <Grid>
-                  <Typography component="h4" style={{ fontSize: isMobile ? 12 : 15, lineHeight: 1.5, color: "rgb(255, 255, 255)", fontFamily: "Roboto" }}>{companyName} has elite development team which has proficient expertise on the cutting-edge technologies and tools.</Typography>
+                  <Typography component="h4" className={classes.grid_dash_flippy_back_div}>{companyName} has elite development team which has proficient expertise on the cutting-edge technologies and tools.</Typography>
                 </Grid>
               </BackSide>
             </Flippy>
           </Grid>
 
-          <Grid style={{ width:"32.33%" , padding:"0.5%"}}>
-            <Flippy
-              flipOnHover={true} // default false
-              flipOnClick={false} // default false
-              flipDirection="horizontal" // horizontal or vertical
-            // ref={(r) => this.flippy = r} // to use toggle method like this.flippy.toggle()
-            // if you pass isFlipped prop component will be controlled component.
-            // and other props, which will go to div
-            style={{height: '200px' }} /// these are optional style, it is not necessary
-            >
-              <FrontSide style={{ backgroundColor: '#ffffff' }}>
-                <CardMedia image={managementtoolLogo} style={{ width: 100, height: 100, margin: "0px auto" }} > </CardMedia>
-                <hr style={{ width: "100px", border: "1px rgb(66, 179, 219) solid" }} ></hr>
-                <Typography style={{ fontSize: isMobile ? 15 : 18, fontWeight: "bold", textAlign: "center", fontFamily: "Roboto", color: "rgb(66, 179, 219)" }}>Best Project Management Tool</Typography>
+          <Grid item xs={12} sm={4} lg={4} md={4} className={classes.grid_dash_third_main_grid}>
+            <Flippy flipOnHover={true} flipOnClick={false} flipDirection="horizontal" className={classes.grid_dash_flippy_height}>
+              <FrontSide className={classes.grid_dash_flippy_front} >
+                <CardMedia image={managementtoolLogo} className={classes.grid_dash_flippy_front_cardMedia}> </CardMedia>
+                <hr className={classes.hr_border}></hr>
+                <Typography className={classes.grid_dash_flippy_front_title}>Best Project Management Tool</Typography>
               </FrontSide>
-              <BackSide style={{ backgroundColor: 'rgb(66, 179, 219)' }}>
+              <BackSide className={classes.grid_dash_flippy_back}>
                 <Grid>
-                  <Typography style={{ fontSize: isMobile ? 15 : 18, fontWeight: "bold", fontFamily: "Roboto", color: "rgb(255, 255, 255)", textAlign: "center", padding: "3%" }}>Best Project Management Tool</Typography>
+                  <Typography className={classes.grid_dash_flippy_back_header}>Best Project Management Tool</Typography>
                 </Grid>
-                <hr style={{ width: "100px", border: "1px rgb(255, 255, 255) solid" }} ></hr>
+                <hr className={classes.hr_border}></hr>
                 <Grid>
-                  <Typography component="h4" style={{ fontSize: isMobile ? 12 : 15, lineHeight: 1.5, color: "rgb(255, 255, 255)", fontFamily: "Roboto" }}>To maintain the top notch services we have hands of experience on best project management tools available in the market.</Typography>
+                  <Typography component="h4" className={classes.grid_dash_flippy_back_div}>To maintain the top notch services we have hands of experience on best project management tools available in the market.</Typography>
                 </Grid>
               </BackSide>
             </Flippy>
           </Grid>
 
-          <Grid style={{ width:"32.33%" , padding:"0.5%"}}>
-            <Flippy
-              flipOnHover={true} // default false
-              flipOnClick={false} // default false
-              flipDirection="horizontal" // horizontal or vertical
-            // ref={(r) => this.flippy = r} // to use toggle method like this.flippy.toggle()
-            // if you pass isFlipped prop component will be controlled component.
-            // and other props, which will go to div
-            style={{height: '200px' }} /// these are optional style, it is not necessary
-            >
-              <FrontSide style={{ backgroundColor: '#ffffff' }}>
-                <CardMedia image={twentyfouriconLogo} style={{ width: 100, height: 100, margin: "0px auto" }} > </CardMedia>
-                <hr style={{ width: "100px", border: "1px rgb(66, 179, 219) solid" }} ></hr>
-                <Typography style={{ fontSize: isMobile ? 15 : 18, fontWeight: "bold", textAlign: "center", fontFamily: "Roboto", color: "rgb(66, 179, 219)" }}>24×7 Availability</Typography>
+          <Grid item xs={12} sm={4} lg={4} md={4} className={classes.grid_dash_third_main_grid}>
+            <Flippy flipOnHover={true} flipOnClick={false} flipDirection="horizontal" className={classes.grid_dash_flippy_height}>
+              <FrontSide className={classes.grid_dash_flippy_front}>
+                <CardMedia image={twentyfouriconLogo} className={classes.grid_dash_flippy_front_cardMedia}> </CardMedia>
+                <hr className={classes.hr_border}></hr>
+                <Typography className={classes.grid_dash_flippy_front_title}>24×7 Availability</Typography>
               </FrontSide>
-              <BackSide style={{ backgroundColor: 'rgb(66, 179, 219)' }}>
+              <BackSide className={classes.grid_dash_flippy_back}>
                 <Grid>
-                  <Typography style={{ fontSize: isMobile ? 15 : 18, fontWeight: "bold", fontFamily: "Roboto", color: "rgb(255, 255, 255)", textAlign: "center", padding: "3%" }}>24×7 Availability</Typography>
+                  <Typography className={classes.grid_dash_flippy_back_header}>24×7 Availability</Typography>
                 </Grid>
-                <hr style={{ width: "100px", border: "1px rgb(255, 255, 255) solid" }} ></hr>
+                <hr className={classes.hr_border}></hr>
                 <Grid>
-                  <Typography component="h4" style={{ fontSize: isMobile ? 12 : 15, lineHeight: 1.5, color: "rgb(255, 255, 255)", fontFamily: "Roboto" }}>We know that our client's time is valuable and so we strive for them to make use of their time in the most efficient manner.</Typography>
+                  <Typography component="h4" className={classes.grid_dash_flippy_back_div}>We know that our client's time is valuable and so we strive for them to make use of their time in the most efficient manner.</Typography>
                 </Grid>
               </BackSide>
             </Flippy>
           </Grid>
 
-          <Grid style={{width:"32.33%" , padding:"0.5%"}}>
-            <Flippy
-              flipOnHover={true} // default false
-              flipOnClick={false} // default false
-              flipDirection="horizontal" // horizontal or vertical
-            // ref={(r) => this.flippy = r} // to use toggle method like this.flippy.toggle()
-            // if you pass isFlipped prop component will be controlled component.
-            // and other props, which will go to div
-            style={{height: '200px' }} /// these are optional style, it is not necessary
-            >
-              <FrontSide style={{ backgroundColor: '#ffffff' }}>
-                <CardMedia image={longtermiconLogo} style={{ width: 100, height: 100, margin: "0px auto" }} > </CardMedia>
-                <hr style={{ width: "100px", border: "1px rgb(66, 179, 219) solid" }} ></hr>
-                <Typography style={{ fontSize: isMobile ? 15 : 18, fontWeight: "bold", textAlign: "center", fontFamily: "Roboto", color: "rgb(66, 179, 219)" }}>Longterm Business Relationship</Typography>
+          <Grid item xs={12} sm={4} lg={4} md={4} className={classes.grid_dash_third_main_grid}>
+            <Flippy flipOnHover={true} flipOnClick={false} flipDirection="horizontal" className={classes.grid_dash_flippy_height}>
+              <FrontSide className={classes.grid_dash_flippy_front}>
+                <CardMedia image={longtermiconLogo} className={classes.grid_dash_flippy_front_cardMedia}> </CardMedia>
+                <hr className={classes.hr_border}></hr>
+                <Typography className={classes.grid_dash_flippy_front_title}>Longterm Business Relationship</Typography>
               </FrontSide>
-              <BackSide style={{ backgroundColor: 'rgb(66, 179, 219)' }}>
+              <BackSide className={classes.grid_dash_flippy_back}>
                 <Grid>
-                  <Typography style={{ fontSize: isMobile ? 15 : 18, fontWeight: "bold", fontFamily: "Roboto", color: "rgb(255, 255, 255)", textAlign: "center", padding: "3%" }}>Longterm Business Relationship</Typography>
+                  <Typography className={classes.grid_dash_flippy_back_header}>Longterm Business Relationship</Typography>
                 </Grid>
-                <hr style={{ width: "100px", border: "1px rgb(255, 255, 255) solid" }} ></hr>
+                <hr className={classes.hr_border}></hr>
                 <Grid >
-                  <Typography component="h4" style={{ fontSize: isMobile ? 12 : 15, lineHeight: 1.5, color: "rgb(255, 255, 255)", fontFamily: "Roboto" }}>We strive to be your trusted long term partner and leave no stone unturned to achieve the trustworthy relationship where our client can rely on us as a trusted IT company.</Typography>
+                  <Typography component="h4" className={classes.grid_dash_flippy_back_div}>We strive to be your trusted long term partner and leave no stone unturned to achieve the trustworthy relationship where our client can rely on us as a trusted IT company.</Typography>
                 </Grid>
               </BackSide>
             </Flippy>
           </Grid>
 
-          <Grid style={{ width:"32.33%" , padding:"0.5%"}}>
-            <Flippy
-              flipOnHover={true} // default false
-              flipOnClick={false} // default false
-              flipDirection="horizontal" // horizontal or vertical
-            // ref={(r) => this.flippy = r} // to use toggle method like this.flippy.toggle()
-            // if you pass isFlipped prop component will be controlled component.
-            // and other props, which will go to div
-            style={{height: '200px' }}/// these are optional style, it is not necessary
-            >
-              <FrontSide style={{ backgroundColor: '#ffffff' }}>
-                <CardMedia image={clienticonLogo} style={{ width: 100, height: 100, margin: "0px auto" }} > </CardMedia>
-                <hr style={{ width: "100px", border: "1px rgb(66, 179, 219) solid" }} ></hr>
-                <Typography style={{ fontSize: isMobile ? 15 : 18, fontWeight: "bold", textAlign: "center", fontFamily: "Roboto", color: "rgb(66, 179, 219)" }}>We are serving best to our happy clients</Typography>
+          <Grid item xs={12} sm={4} lg={4} md={4} className={classes.grid_dash_third_main_grid}>
+            <Flippy flipOnHover={true} flipOnClick={false} flipDirection="horizontal" className={classes.grid_dash_flippy_height}>
+              <FrontSide className={classes.grid_dash_flippy_front}>
+                <CardMedia image={clienticonLogo} className={classes.grid_dash_flippy_front_cardMedia}> </CardMedia>
+                <hr className={classes.hr_border}></hr>
+                <Typography className={classes.grid_dash_flippy_front_title}>We are serving best to our happy clients</Typography>
               </FrontSide>
-              <BackSide style={{ backgroundColor: 'rgb(66, 179, 219)' }}>
+              <BackSide className={classes.grid_dash_flippy_back}>
                 <Grid>
-                  <Typography style={{ fontSize: isMobile ? 15 : 18, fontWeight: "bold", fontFamily: "Roboto", color: "rgb(255, 255, 255)", textAlign: "center", padding: "3%" }}>We are serving best to our happy clients</Typography>
+                  <Typography className={classes.grid_dash_flippy_back_header}>We are serving best to our happy clients</Typography>
                 </Grid>
-                <hr style={{ width: "100px", border: "1px rgb(255, 255, 255) solid" }} ></hr>
+                <hr className={classes.hr_border}></hr>
                 <Grid >
-                  <Typography component="h4" style={{ fontSize: isMobile ? 12 : 15, lineHeight: 1.5, color: "rgb(255, 255, 255)", fontFamily: "Roboto" }}>{companyName} is growing exponentially in its global outreach as well as quality work in all directions.</Typography>
+                  <Typography component="h4" className={classes.grid_dash_flippy_back_div}>{companyName} is growing exponentially in its global outreach as well as quality work in all directions.</Typography>
                 </Grid>
               </BackSide>
             </Flippy>
@@ -395,4 +331,4 @@ class DashboardComponentList extends React.Component<Props> {
   }
 }
 
-export const DashboardComponent = withStyles(borderStyles as any, { withTheme: true })(DashboardComponentList); 
+export const DashboardComponent = withStyles(centillionStyles as any, { withTheme: true })(DashboardComponentList); 

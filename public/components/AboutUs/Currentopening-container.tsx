@@ -1,5 +1,5 @@
 import { connect } from "react-redux"; 
-import { CurrentOpeningComponent } from "./Currentopening-component";
+import { CurrentOpeningComponentWithStyles } from "./Currentopening-component";
 
 const mapStateToProps = state => {
   return {
@@ -15,4 +15,4 @@ const mapDispatchToProps = dispatch => {
 export const CurrentOpeningContainer = connect(
   mapStateToProps,
   mapDispatchToProps
-)(CurrentOpeningComponent);
+)(CurrentOpeningComponentWithStyles);

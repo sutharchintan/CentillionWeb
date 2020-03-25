@@ -1,5 +1,5 @@
 import { connect } from "react-redux"; 
-import { LifeAtCentillionSofttechComponent } from "./Lifeatcentillionsoftech-component";
+import { LifeAtCentillionSofttechComponentWithStyles } from "./Lifeatcentillionsoftech-component";
 
 const mapStateToProps = state => {
   return {
@@ -15,4 +15,4 @@ const mapDispatchToProps = dispatch => {
 export const LifeAtCentillionSofttechContainer = connect(
   mapStateToProps,
   mapDispatchToProps
-)(LifeAtCentillionSofttechComponent);
+)(LifeAtCentillionSofttechComponentWithStyles);

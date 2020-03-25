@@ -1,5 +1,5 @@
 import { connect } from "react-redux";
-import { OurTeamComponent } from "./Ourteam-component";
+import { OurTeamComponentWithStyles } from "./Ourteam-component";
 import { setCurrentComponentAction } from "../../actions";
 
 const mapStateToProps = state => {
@@ -19,4 +19,4 @@ const mapDispatchToProps = dispatch => {
 export const OurTeamContainer = connect(
   mapStateToProps,
   mapDispatchToProps
-)(OurTeamComponent);
+)(OurTeamComponentWithStyles);

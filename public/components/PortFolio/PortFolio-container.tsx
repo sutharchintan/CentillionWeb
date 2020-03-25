@@ -1,5 +1,5 @@
 import { connect } from "react-redux";
-import { PortFolioComponent } from "../PortFolio/PortFolio-component";
+import { PortFolioComponentWithStyles } from "../PortFolio/PortFolio-component";
 
 const mapStateToProps = state => {
   return {
@@ -14,4 +14,4 @@ const mapDispatchToProps = dispatch => {
 export const PortFolioContainer = connect(
   mapStateToProps,
   mapDispatchToProps
-)(PortFolioComponent as any);
+)(PortFolioComponentWithStyles as any);

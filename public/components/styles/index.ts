@@ -1,1 +1,1 @@
-export { borderStyles } from "./borderStyles";
+export { centillionStyles } from "./CentillionStyles";
