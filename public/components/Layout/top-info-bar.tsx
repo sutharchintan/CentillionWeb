@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Fragment, Component } from "react";
-import { Button, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, FormGroup, ListItem, List, FormControl,withStyles } from '@material-ui/core';
+import { Button, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, FormGroup, ListItem, List, FormControl, withStyles } from '@material-ui/core';
 import { AppBar, IconButton, Grid, Toolbar, CardMedia, Modal } from "@material-ui/core";
 import { Mail, Phone } from "@material-ui/icons";
 import TextField from '@material-ui/core/TextField';
@@ -107,21 +107,23 @@ class TopInfoBar extends React.Component<Props> {
     }
 
     render() {
-        const { open } = this.state;        
+        const { open } = this.state;
         const { classes } = this.props;
         return (
-            <AppBar position="static" style={{fontFamily: "Roboto", position:"fixed", height:"68px"}}>
+            <AppBar position="static" style={{ fontFamily: "Roboto", position: "fixed", height: "68px" }}>
                 <Toolbar className={classes.topbar_toolbar}>
                     <Grid container className={classes.topbar_grid} >
                         <Grid xs={12} sm={8} lg={10} md={9}>
                             <IconButton className={classes.topbar_iconbtn}>
-                                <img src={INLogo} className={classes.contactus_firstdiv_image}></img>
+                                <img src={INLogo} className={classes.contactus_firstdiv_image} />
                             </IconButton>
                             <a className={classes.topbar_paddingleft}>{phoneNumber}</a>
                             <IconButton className={classes.topbar_iconbtn}>
-                                <img src={skypeLogo} className={classes.topbar_logo}></img>
+
+                            <a  href="skype:chintan.suthar90?chat" >
+                                <img src={skypeLogo} className={classes.contactus_skype_logo} /></a>
                             </IconButton>
-                            <a className={classes.topbar_paddingleft}>chintan.suthar90</a>
+                            <a className={classes.topbar_paddingleft}> Chintan Suthar</a>
                         </Grid>
                         <Grid item xs={12} sm={4} lg={2} md={3}>
                             <FormControl className={classes.topbar_formctrl} onClick={this.handleOpen}>

@@ -24,6 +24,19 @@ import * as lavarelLogo from "../../images/lavarelo.png";
 import * as knockoutLogo from "../../images/knockoutjs.jpg";
 import * as paythonLogo from "../../images/paython.png";
 import * as mobileappLogo from "../../images/mobileapp.jpg";
+import * as windowsLogo from "../../images/windows_logos.png";
+import * as nodejsLogo from "../../images/nodejs.png";
+import * as html5Logo from "../../images/html5.png";
+import * as css3Logo from "../../images/css3.png";
+import * as mvs5Logo from "../../images/mvc5.jpg";
+import * as coreLogo from "../../images/core.png";
+import * as linuxLogo from "../../images/linux.png";
+import * as odooLogo from "../../images/odoo.png";
+import * as nopecommerceLogo from "../../images/nopecommerce.jpg";
+import * as graphicsLogo from "../../images/graphics.jpg";
+import * as paypalLogo from "../../images/paypal.png";
+import * as stripeLogo from "../../images/stripe.png";
+import * as braintreeLogo from "../../images/braintree.png";
 import { companyName } from '../../providers/comp-name-provider';
 import { centillionStyles } from "../styles/CentillionStyles";
 import Typography from 'material-ui/styles/typography';
@@ -245,6 +258,110 @@ class PortFolioComponent extends React.Component<Props> {
                             </FormGroup>
                         </Paper>
                         <h3 className={classes.portfolio_mobile_third_h3}>Paython</h3>
+                    </Grid>
+                    <Grid item xs={12} sm={6} md={4} lg={3} className={classes.portfolio_mobile_third_grid}>
+                        <Paper>
+                            <FormGroup>
+                                <CardMedia image={windowsLogo} className={classes.portfolio_mobile_third_cardMedia}></CardMedia>
+                            </FormGroup>
+                        </Paper>
+                        <h3 className={classes.portfolio_mobile_third_h3}>Windows</h3>
+                    </Grid>
+                    <Grid item xs={12} sm={6} md={4} lg={3} className={classes.portfolio_mobile_third_grid}>
+                        <Paper>
+                            <FormGroup>
+                                <CardMedia image={nodejsLogo} className={classes.portfolio_mobile_third_cardMedia}></CardMedia>
+                            </FormGroup>
+                        </Paper>
+                        <h3 className={classes.portfolio_mobile_third_h3}>Node.js</h3>
+                    </Grid>
+                    <Grid item xs={12} sm={6} md={4} lg={3} className={classes.portfolio_mobile_third_grid}>
+                        <Paper>
+                            <FormGroup>
+                                <CardMedia image={html5Logo} className={classes.portfolio_mobile_third_cardMedia}></CardMedia>
+                            </FormGroup>
+                        </Paper>
+                        <h3 className={classes.portfolio_mobile_third_h3}>HTML 5</h3>
+                    </Grid>
+                    <Grid item xs={12} sm={6} md={4} lg={3} className={classes.portfolio_mobile_third_grid}>
+                        <Paper>
+                            <FormGroup>
+                                <CardMedia image={css3Logo} className={classes.portfolio_mobile_third_cardMedia}></CardMedia>
+                            </FormGroup>
+                        </Paper>
+                        <h3 className={classes.portfolio_mobile_third_h3}>CSS 3</h3>
+                    </Grid>
+                    <Grid item xs={12} sm={6} md={4} lg={3} className={classes.portfolio_mobile_third_grid}>
+                        <Paper>
+                            <FormGroup>
+                                <CardMedia image={mvs5Logo} className={classes.portfolio_mobile_third_cardMedia}></CardMedia>
+                            </FormGroup>
+                        </Paper>
+                        <h3 className={classes.portfolio_mobile_third_h3}>Asp.net MVC 5</h3>
+                    </Grid>
+                    <Grid item xs={12} sm={6} md={4} lg={3} className={classes.portfolio_mobile_third_grid}>
+                        <Paper>
+                            <FormGroup>
+                                <CardMedia image={coreLogo} className={classes.portfolio_mobile_third_cardMedia}></CardMedia>
+                            </FormGroup>
+                        </Paper>
+                        <h3 className={classes.portfolio_mobile_third_h3}>Asp.net Core</h3>
+                    </Grid>
+                    <Grid item xs={12} sm={6} md={4} lg={3} className={classes.portfolio_mobile_third_grid}>
+                        <Paper>
+                            <FormGroup>
+                                <CardMedia image={linuxLogo} className={classes.portfolio_mobile_third_cardMedia}></CardMedia>
+                            </FormGroup>
+                        </Paper>
+                        <h3 className={classes.portfolio_mobile_third_h3}>Linux Server</h3>
+                    </Grid>
+                    <Grid item xs={12} sm={6} md={4} lg={3} className={classes.portfolio_mobile_third_grid}>
+                        <Paper>
+                            <FormGroup>
+                                <CardMedia image={odooLogo} className={classes.portfolio_mobile_third_cardMedia}></CardMedia>
+                            </FormGroup>
+                        </Paper>
+                        <h3 className={classes.portfolio_mobile_third_h3}>Odoo</h3>
+                    </Grid>
+                    <Grid item xs={12} sm={6} md={4} lg={3} className={classes.portfolio_mobile_third_grid}>
+                        <Paper>
+                            <FormGroup>
+                                <CardMedia image={nopecommerceLogo} className={classes.portfolio_mobile_third_cardMedia}></CardMedia>
+                            </FormGroup>
+                        </Paper>
+                        <h3 className={classes.portfolio_mobile_third_h3}>Nope Commerce</h3>
+                    </Grid>
+                    <Grid item xs={12} sm={6} md={4} lg={3} className={classes.portfolio_mobile_third_grid}>
+                        <Paper>
+                            <FormGroup>
+                                <CardMedia image={graphicsLogo} className={classes.portfolio_mobile_third_cardMedia}></CardMedia>
+                            </FormGroup>
+                        </Paper>
+                        <h3 className={classes.portfolio_mobile_third_h3}>Graphic Design</h3>
+                    </Grid>
+                    <Grid item xs={12} sm={6} md={4} lg={3} className={classes.portfolio_mobile_third_grid}>
+                        <Paper>
+                            <FormGroup>
+                                <CardMedia image={paypalLogo} className={classes.portfolio_mobile_third_cardMedia}></CardMedia>
+                            </FormGroup>
+                        </Paper>
+                        <h3 className={classes.portfolio_mobile_third_h3}>Paypal</h3>
+                    </Grid>
+                    <Grid item xs={12} sm={6} md={4} lg={3} className={classes.portfolio_mobile_third_grid}>
+                        <Paper>
+                            <FormGroup>
+                                <CardMedia image={stripeLogo} className={classes.portfolio_mobile_third_cardMedia}></CardMedia>
+                            </FormGroup>
+                        </Paper>
+                        <h3 className={classes.portfolio_mobile_third_h3}>Stripe</h3>
+                    </Grid>
+                    <Grid item xs={12} sm={6} md={4} lg={3} className={classes.portfolio_mobile_third_grid}>
+                        <Paper>
+                            <FormGroup>
+                                <CardMedia image={braintreeLogo} className={classes.portfolio_mobile_third_cardMedia}></CardMedia>
+                            </FormGroup>
+                        </Paper>
+                        <h3 className={classes.portfolio_mobile_third_h3}>Braintree</h3>
                     </Grid>
                 </Grid>
             </div>

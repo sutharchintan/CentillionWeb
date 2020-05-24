@@ -7,7 +7,7 @@ import { ComponentNames } from '../enums/component-names';
 export const getMenuItems = () => {
 
     const buttonList = [];
-    
+
     /**
      * get the contact us menu
      */

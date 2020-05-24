@@ -1,6 +1,6 @@
 
 import * as React from "react";
-import { AppBar, Toolbar, Button, Grid, IconButton, CardMedia,withStyles } from "@material-ui/core";
+import { AppBar, Toolbar, Button, Grid, IconButton, CardMedia,withStyles, Theme } from "@material-ui/core";
 import { Mail, Phone, Room } from "@material-ui/icons";
 import { ComponentNames } from "../../enums/component-names";
 import * as facebookLogo from "../../images/facebook.png";
@@ -21,20 +21,32 @@ import { phoneNumber } from "../../providers/phone-number-provider";
 import * as INLogo from "../../images/IndiaFlag.png";
 import { companyName } from '../../providers/comp-name-provider';
 import { centillionStyles } from "../styles/CentillionStyles";
+import { getFooterItems } from '../../providers/footer-items-provider';
+import { ButtonModel } from '../../models/ButtonModel';
+
+import { isMobile } from "react-device-detect";
+import { consolidateStreamedStyles } from "styled-components";
 
 /**
  * interface to define properties for footer
  */
 interface Props {
+
+    currentTheme: Theme;
+    
     setCurrentComponent: (componentName: string) => void;
 
     classes: any;
+
 }
 
 /**
  * export the class for footer bar
  */
 export class FooterBar extends React.Component<Props> {
+  state = {
+        buttons: getFooterItems() as ButtonModel[]
+    }
 
     render() {
         const { classes } = this.props;
@@ -75,10 +87,13 @@ export class FooterBar extends React.Component<Props> {
                                 <img src={twitterLogo} className={classes.footer_grd3_img} />
                             </Grid>
                             <Grid item xs={12} sm={12} md={6} lg={6} className={classes.footer_grd4}>
-                                <span>Sitemap</span>
+                                {/* <span>Sitemap</span>
                                 <span className={classes.footer_grd4_span}>Privacy Policy</span>
                                 <span className={classes.footer_grd4_span}>Disclaimer</span>
-                                <span className={classes.footer_grd4_span}>Careers</span>
+                                <span className={classes.footer_grd4_span}>Careers</span> */}
+                                {
+                                this.renderButtons()
+                            }
                             </Grid>
                             <Grid item xs={12} sm={12} md={6} lg={6} className={classes.footer_grd5}>
                                 © 2019 {companyName}. All Rights Reserved.
@@ -88,6 +103,37 @@ export class FooterBar extends React.Component<Props> {
                 </AppBar>
             </div>
         )
+    }
+
+    renderButtons() {
+        const { classes } = this.props;
+        return (
+            this.state.buttons.map((button, index) =>
+                <span
+                    color="inherit"
+                    className={classes.career_menu_buttons}
+                    key={index}
+                    onClick={() => { this.handleselectedcomponent(button) }} >
+                    {button.Text}
+                </span>
+            )
+        )
+    }
+
+    
+    handleselectedcomponent = (selectedcomponent: ButtonModel) => {
+        const buttons = this.state.buttons;
+        buttons.forEach((button: ButtonModel) => {
+            if (button.Text === selectedcomponent.Text) {
+                button.Active = true;
+            }
+            else {
+                button.Active = false;
+            }
+        });
+        const newButtons = Object.assign([], buttons);
+        this.setState({ buttons: newButtons });
+        this.props.setCurrentComponent(selectedcomponent.Component);
     }
 }
 

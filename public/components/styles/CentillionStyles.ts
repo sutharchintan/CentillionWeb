@@ -5,6 +5,36 @@ import * as reactLogo from "../../images/reactnew.jpg";
  * @param theme 
  */
 export const centillionStyles = theme => ({
+
+    upload_btn_wrapper:{
+        position: "relative",
+        overflow: "hidden",
+        display: "inlineBlock"
+      },
+      
+      btnfileSelect:{
+        padding: "8px 20px",
+        fontSize:isMobile ? "20px" : "15px",
+        fontWeight: "bold",
+        height: 50,
+        width: isMobile ? "97%" : "100%",
+        border: "1px rgb(221, 221, 221) solid",
+        backgroundColor: "rgb(221, 221, 221)",
+        color: "rgb(73, 80, 87)"
+      },
+      
+     inputblock:{
+        fontSize: "100px",
+        position: "absolute",
+        left: 0,
+        top: 0,
+        opacity: 0
+      },
+
+
+    grid_Dash_second_main_p: {
+        textAlign: 'justify'
+    },
     image_perfect: {
         height: 250,
         width: "100%",
@@ -92,7 +122,7 @@ export const centillionStyles = theme => ({
         padding: "0.5%"
     },
     grid_dash_flippy_height: {
-        height: '220px' 
+        height: '220px'
     },
     grid_dash_flippy_front: {
         backgroundColor: '#ffffff'
@@ -134,16 +164,16 @@ export const centillionStyles = theme => ({
         color: "rgb(66, 179, 219)",
         textAlign: "center",
         position: "relative",
-        top: -375,
-        fontSize: 50,
+        top: isMobile ? -123 : -375,
+        fontSize: isMobile ? 18 : 50,
         fontWeight: 800
     },
     header_title_on_image_p: {
         color: "rgb(66, 179, 219)",
         textAlign: "center",
-        fontSize: 25,
+        fontSize: isMobile ? 12 : 25,
         position: "relative",
-        top: -375
+        top: isMobile ? -110 : -375
     },
     portfolio_mobile_first: {
         color: "rgb(66, 179, 219)",
@@ -210,18 +240,18 @@ export const centillionStyles = theme => ({
         padding: "2% 5% 5% 5%"
     },
     portfolio_mobile_third_grid: {
-        borderRadius: 5        
+        borderRadius: 5
     },
     portfolio_mobile_third_cardMedia: {
         height: 270,
         width: "100%",
-        opacity:0.4,
+        opacity: 0.4,
         borderRadius: 5,
         backgroundImage: `url(${reactLogo})`,
-        "&:hover":{
-            opacity:1,
+        "&:hover": {
+            opacity: 1,
             boxShadow: "0 0 2px 4px rgba(66, 179, 219, 0.5)",
-        }       
+        }
     },
     // portfolio_paper:{
     //     "&:hover":{         
@@ -229,7 +259,7 @@ export const centillionStyles = theme => ({
     //       }
     // },
     portfolio_mobile_third_h3: {
-        fontWeight: 600        
+        fontWeight: 600
     },
     aboutus_first_container: {
         padding: "2% 5% 2% 5%",
@@ -369,16 +399,21 @@ export const centillionStyles = theme => ({
         height: 18,
         width: 25
     },
+    contactus_skype_logo: {
+        width: 18,
+        height: 18
+    },
     contactus_firstdiv_imgGrid: {
-        height: isMobile ? 200 : 370
+        height: isMobile ? 125 : 500,
+        opacity: 0.8
     },
     contactus_firstdiv_grid_image: {
         width: "100%",
-        height: isMobile ? 200 : 370,
+        height: isMobile ? 125 : 500,
         opacity: 0.8
     },
     contactus_seconddiv_padding: {
-        padding: isMobile ? "2% 5% 20% 5%" : "2% 5% 5% 5%"
+        padding: isMobile ? "2% 5% 20% 5%" : "2% 25% 5% 25%"
     },
     contactus_seconddiv_color: {
         color: "rgb(66, 179, 219)"
@@ -386,34 +421,46 @@ export const centillionStyles = theme => ({
     contactus_seconddiv_formgrp_grid: {
         paddingTop: 20,
         paddingLeft: 20,
-        paddingRight: 10
+        paddingRight: 10,
+        maxWidth: isMobile ? "100%" : "50%",
+        flexBasis: isMobile ? "100%" : "50%"
     },
     contactus_seconddiv_formgrp_input: {
         paddingLeft: 20,
         height: 40,
-        width: "85%",
-        border: "1px gray solid",
-        borderRadius: 5
+        width: isMobile? "90%" : "85%",
+        border: "1px rgb(221, 221, 221) solid",
+        backgroundColor: "rgb(221, 221, 221)",
+        color: "rgb(73, 80, 87)"
+    },
+    contactus_seconddiv_file_uploader_btn: {
+        border: '2px solid gray',
+        color: 'gray',
+        backgroundColor: 'white',
+        padding: '8px 20px',
+        borderRadius: '8px',
+        fontSize: '20px',
+        fontWeight: 'bold'
     },
     contactus_seconddiv_formgrp_select: {
         paddingLeft: 20,
-        paddingTop: 8,
-        width: "92.5%",
-        height: 35,
-        borderTop: "1px #9E9E9E solid",
-        borderLeft: "1px #9E9E9E solid",
-        borderRight: "1px #9E9E9E solid",
-        borderRadius: 5,
-        fontSize: 12,
-        color: "gray"
+        width: isMobile ? "97%" : "92%",
+        height: 45,
+        borderTop: "1px rgb(221, 221, 221)  solid",
+        borderBottom: "1px rgb(221, 221, 221) solid",
+        borderLeft: "1px rgb(221, 221, 221) solid",
+        borderRight: "1px rgb(221, 221, 221) solid",
+        color: "rgb(73, 80, 87)",
+        backgroundColor: "rgb(221, 221, 221)"
     },
     contactus_seconddiv_formgrp_txtarea: {
         paddingTop: 10,
         paddingLeft: 20,
         height: 100,
-        width: "92.5%",
-        border: "1px gray solid",
-        borderRadius: 5
+        width: isMobile ? "90%" : "92.5%",
+        border: "1px rgb(221, 221, 221) solid",
+        backgroundColor: "rgb(221, 221, 221)",
+        color: "rgb(73, 80, 87)"
     },
     contactus_seconddiv_formgrp_grid2: {
         paddingTop: 20,
@@ -428,15 +475,15 @@ export const centillionStyles = theme => ({
         height: 40,
         MozBorderRadius: 5
     },
-    contactus_seconddiv_formgrp_grid3_h2: {
-        textAlign: "center",
-        color: "rgb(66, 179, 219)"
-    },
-    contactus_seconddiv_formgrp_grid3_formgrp: {
-        height: isMobile ? 215 : 350,
-        width: "100%",
-        borderRadius: 5
-    },
+    // contactus_seconddiv_formgrp_grid3_h2: {
+    //     textAlign: "center",
+    //     color: "rgb(66, 179, 219)"
+    // },
+    // contactus_seconddiv_formgrp_grid3_formgrp: {
+    //     height: isMobile ? 215 : 350,
+    //     width: "100%",
+    //     borderRadius: 5
+    // },
     footer_appbar: {
         justifyContent: "space-between",
         paddingLeft: "5%",
@@ -459,89 +506,126 @@ export const centillionStyles = theme => ({
         marginLeft: 10,
         marginTop: -14
     },
-    footer_grd2_a:{
-        color: "white", 
-        paddingLeft: 10 
+    footer_grd2_a: {
+        color: "white",
+        paddingLeft: 10
     },
-    footer_grd3:{
-        marginTop:40, 
-        marginBottom:20
+    footer_grd3: {
+        marginTop: 40,
+        marginBottom: 20
     },
-    footer_grd3_h3:{
-        fontWeight: 500, 
-        color: "white", 
+    footer_grd3_h3: {
+        fontWeight: 500,
+        color: "white",
         margin: 20
     },
-    footer_grd3_img:{
-        height: 25, 
-        width: 25, 
-        paddingLeft: 20, 
-        paddingTop: 15 
+    footer_grd3_img: {
+        height: 25,
+        width: 25,
+        paddingLeft: 20,
+        paddingTop: 15
     },
-    footer_grd4:{
-        paddingBottom: 10, 
-        paddingTop: 10, 
-        marginTop:20
+    footer_grd4: {
+        paddingBottom: 10,
+        paddingTop: 10,
+        marginTop: 20
     },
-    footer_grd4_span:{
+    footer_grd4_span: {
         paddingLeft: "5%"
     },
-    footer_grd5:{
-        textAlign: "right", 
-        paddingBottom: 10, 
-        marginTop:30
+    footer_grd5: {
+        textAlign: "right",
+        paddingBottom: 10,
+        marginTop: 30
     },
-    menubar_appbar:{
-        fontFamily: "Roboto", 
-        backgroundColor: "white", 
-        position:"fixed", 
-        top:"68px",
-        marginTop:68
+    menubar_appbar: {
+        fontFamily: "Roboto",
+        backgroundColor: "white",
+        position: "fixed",
+        top: "68px",
+        marginTop: 68
     },
-    menubar_span:{
-        color: "rgb(66, 179, 219)", 
+    menubar_span: {
+        color: "rgb(66, 179, 219)",
         fontSize: isMobile ? 30 : 40
     },
-    menubar_paddingtop:{
+    menubar_paddingtop: {
         paddingTop: 18
     },
-    topbar_appbar:{
-        fontFamily: "Roboto", 
-        position:"fixed" , 
-        height:"68px" 
+    topbar_appbar: {
+        fontFamily: "Roboto",
+        position: "fixed",
+        height: "68px"
     },
-    topbar_toolbar:{
-        justifyContent: "space-between", 
-        backgroundColor:"rgb(66, 179, 219)" 
+    topbar_toolbar: {
+        justifyContent: "space-between",
+        backgroundColor: "rgb(66, 179, 219)"
     },
-    topbar_grid:{
-        marginTop: 10, 
+    topbar_grid: {
+        marginTop: 10,
         marginBottom: 10
     },
-    topbar_iconbtn:{
-        height: isMobile ? "31px" :"48px"
+    topbar_iconbtn: {
+        height: isMobile ? "31px" : "48px"
     },
-    topbar_logo:{
-        height: 20, 
+    topbar_logo: {
+        height: 20,
         width: 20
     },
-    topbar_paddingleft:{
+    topbar_paddingleft: {
         paddingLeft: 5
     },
-    topbar_formctrl:{
-        paddingTop: isMobile? 7 : 15, 
-        display: "inline-block", 
-        cursor: "pointer", 
+    topbar_formctrl: {
+        paddingTop: isMobile ? 7 : 15,
+        display: "inline-block",
+        cursor: "pointer",
         float: "right"
     },
-    topbar_span:{
-        marginLeft: 10, 
-        position:"relative", 
+    topbar_span: {
+        marginLeft: 10,
+        position: "relative",
         bottom: 4
+    },
+    footer_seconddiv_padding: {
+        padding: isMobile ? "2% 5% 20% 5%" : "2% 5% 5% 5%"
+    },
+    
+    desclaimer_seconddiv_padding: {
+        padding: isMobile ? "8%" : "2% 5% 5% 5%"
+    },
+    sitemap_heading: {
+        width: "200px",
+        /* height: 40px; */
+        /* margin: 0 auto; */
+        backgroundColor: "rgb(66, 179, 219)",
+        color: "rgb(255, 255, 255)",
+        padding: "4%",
+        borderRadius: "5px"
+    },
+
+    career_icon_perfect: {
+        height: 100,
+        width: 100,
+        margin: "0px auto",
+
+    },
+    career_grid_dash_second_main_paper: {
+        minHeight: 275,
+        padding: 27,
+    },
+    career_menu_buttons: {
+        paddingLeft: isMobile ? 2 : 5,
+        paddingRight: isMobile ? 2 : 5,
+        marginLeft: isMobile ? 2 : 5,
+        marginRight: isMobile ? 2 : 5,
+        marginBottom: 15,
+        fontSize: isMobile ? 12 : 16,
+        minHeight: isMobile ? 30 : 36,
+        minWidth: isMobile ? 76 : 88,
+        "&:hover": {
+            cursor: "pointer"
+        }
     }
-
-
-
     //   root: {
     //     background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)',
     //     border: 0,

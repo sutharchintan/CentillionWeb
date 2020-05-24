@@ -21,4 +21,20 @@ export class NavigationPaths {
      * navigate to portfolio
      */
     public static readonly PortFolio = "PortFolio";
+    /**
+     * navigate to career
+     */
+    public static readonly Career = "Career";
+    /**
+     * navigate to Dasclaimer
+     */
+    public static readonly Desclaimer = "Desclaimer";
+    /**
+     * navigate to privacy policy
+     */
+    public static readonly PrivacyPolicy = "PrivacyPolicy";
+    /**
+     * navigate to Site map
+     */
+    public static readonly Sitemap = "Sitemap";
 }

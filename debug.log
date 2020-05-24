@@ -662,3 +662,10 @@
 [0505/152712.792:ERROR:process_memory_win.cc(73)] ReadMemory at 0x7fffe832dbe8 of 48 bytes failed: Only part of a ReadProcessMemory or WriteProcessMemory request was completed. (0x12B)
 [0505/152712.792:ERROR:process_memory_win.cc(73)] ReadMemory at 0x7fffe8330320 of 64 bytes failed: Only part of a ReadProcessMemory or WriteProcessMemory request was completed. (0x12B)
 [0505/152712.795:ERROR:scoped_process_suspend.cc(40)] NtResumeProcess: An attempt was made to access an exiting process. (0xc000010a)
+[0331/213137.536:ERROR:file_io.cc(89)] ReadExactly: expected 36, observed 0
+[0508/212450.098:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[0508/212450.098:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[0508/212450.505:ERROR:exception_snapshot_win.cc(98)] thread ID 7056 not found in process
+[0508/212450.505:ERROR:exception_snapshot_win.cc(98)] thread ID 6996 not found in process
+[0508/212450.098:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[0508/212450.505:ERROR:exception_snapshot_win.cc(98)] thread ID 7812 not found in process

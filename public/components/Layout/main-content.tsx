@@ -4,6 +4,10 @@ import { AboutusContainer } from "../AboutUs/About-us-container";
 import { PortFolioContainer } from "../PortFolio/PortFolio-container";
 import { DashboardContainer } from "../Dashboard/Dashboard-container";
 import { ConatactUsContainer } from "../ContactUs/contact-us-container";
+import { DesclaimerContainer } from "../Desclaimer/desclaimer-container";
+import { SitemapContainer } from "../Sitemap/sitemap-container";
+import { PrivacyPolicyContainer } from "../PrivacyPolicy/privacypolicy-container";
+import { CareerContainer } from "../Career/career-container";
 
 /**
  * interface to define properties for main content
@@ -43,6 +47,22 @@ export class MainContent extends React.Component<Props> {
 
             case ComponentNames.Port_Folio:
                 component = <PortFolioContainer />
+                break;
+
+                case ComponentNames.Career:
+                component = <CareerContainer />
+                break;
+
+                case ComponentNames.Sitemap:
+                component = <SitemapContainer />
+                break;
+
+                case ComponentNames.Privacy_Policy:
+                component = <PrivacyPolicyContainer />
+                break;
+
+                case ComponentNames.Desclaimer:
+                component = <DesclaimerContainer />
                 break;
         }
         return component;
