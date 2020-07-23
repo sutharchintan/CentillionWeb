@@ -61,7 +61,7 @@ class ThemeProvider {
         themeOptions.palette = {} as PaletteOptions;
         themeOptions.palette.type = this.baseThemeType as PaletteType;
         this.theme = createMuiTheme(themeOptions);
-        this.theme.palette.primary.main = "rgb(66, 179, 219)";
+        this.theme.palette.primary.main = "#5f9ea0";
         this.theme.palette.primary.light = "#82B1FF";
         this.theme.palette.primary.dark = "#2196f3";
         this.theme.palette.primary.contrastText = "#ffffff";

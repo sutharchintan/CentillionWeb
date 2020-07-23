@@ -1,10 +1,10 @@
 import * as React from 'react';
-import { Button, Grid, Theme, withStyles, CardMedia, FormGroup, Paper, CardContent, Typography, Avatar } from "@material-ui/core";
+import {IconButton, Button, Grid, Theme, withStyles, CardMedia, FormGroup, Paper, CardContent, Typography, Avatar } from "@material-ui/core";
 import { LoadingInterface, MessageInterface } from '../../interface-properties-actions';
-import * as landingoneLogo from "../../images/softwarelandingpage.png";
-import * as masttechiconLogo from "../../images/materltytechiconlightblue.png";
-import * as multiplatformLogo from "../../images/multipleplaticonpnglightblue.png";
-import * as managementtoolLogo from "../../images/managementtooliconlightblue.png";
+import * as landingoneLogo from "../../images/main-banner-1.jpg";
+import * as headeroneLogo from "../../images/headerone.png";
+import * as headertwoLogo from "../../images/business-development-service-banner.jpg";
+import * as headerthreeLogo from "../../images/website-development-banner.png";
 import * as twentyfouriconLogo from "../../images/twentyfourlightblue.png";
 import * as longtermiconLogo from "../../images/longtermrelationiconlightblue.png";
 import * as clienticonLogo from "../../images/clienticonlightblue.png";
@@ -22,7 +22,8 @@ import styled, { css } from 'styled-components';
 import { companyName } from '../../providers/comp-name-provider';
 import { isMobile } from "react-device-detect";
 import { centillionStyles } from "../styles/CentillionStyles";
-import Flippy, { FrontSide, BackSide } from 'react-flippy';
+import { Computer , Build, PanTool, Code, AccessTime, Business, SupervisorAccount} from "@material-ui/icons";
+import "../../style.css";
 
 
 // import { MDBMask, MDBView, MDBContainer, MDBRow, MDBCol } from "mdbreact";
@@ -55,7 +56,7 @@ const Dot = styled.span`
   cursor: pointer;
   user-select: none;
   backgroundColor: rgba(74, 196, 243, 0.9);
-  color: rgb(66, 179, 219);
+  color: #5f9ea0;
 `;
 const Dots = styled.span`
   text-align: center;
@@ -64,8 +65,8 @@ const Dots = styled.span`
   left: 48%;
   position: relative;    
   bottom: 30px;
-  backgroundColor: rgb(66, 179, 219);
-  color: rgb(66, 179, 219);
+  backgroundColor: #5f9ea0;
+  color: #5f9ea0;
 `;
 
 const CarouselUI = ({ position, total, handleClick, children }) => <Container>
@@ -173,156 +174,105 @@ class DashboardComponentList extends React.Component<Props> {
             <hr className={classes.hr_border}></hr>
             <h3 className={classes.grid_dash_second_h3}>Our rich portfolio justifies the fact that {companyName} functions as a World-Class Software Development Company.</h3>
           </Grid>
-          <Grid className={classes.grid_dash_second_main}></Grid>
-          <Grid item xs={12} sm={6} lg={3} md={3}>
-            <Paper className={classes.grid_dash_second_main_paper}>
+        </Grid>
+        <Grid container spacing={24} className="grid_dashboard_second-two">
+          {/* <Grid className={classes.grid_dash_second_main}></Grid> */}
+          <Grid item xs={12} sm={6} lg={4} md={4} className="grid-dash-second-main-paper">
+            <Paper>
               <FormGroup>
-                <CardMedia image={niftyCartImage} className={classes.image_perfect}> </CardMedia>
+                <CardMedia image={niftyCartImage} className="image-perfect"> </CardMedia>
+                <div className="image-perfect-div">
+                  <div className="grid-Dash-second-main-h2">Nifty Cart</div>
+                </div>
               </FormGroup>
             </Paper>
-            <h2 className={classes.grid_Dash_second_main_h2}>Nifty Cart</h2>
           </Grid>
-          <Grid item xs={12} sm={6} lg={3} md={3}>
-            <Paper className={classes.grid_dash_second_main_paper}>
+          <Grid item xs={12} sm={6} lg={4} md={4} className="grid-dash-second-main-paper">
+            <Paper>
               <FormGroup>
-                <CardMedia image={atxBoatsImage} className={classes.image_perfect}> </CardMedia>
+                <CardMedia image={atxBoatsImage} className="image-perfect"> </CardMedia>
+                <div className="image-perfect-div">
+                  <div className="grid-Dash-second-main-h2">ATX Boat</div>
+                </div>
               </FormGroup>
             </Paper>
-            <h2 className={classes.grid_Dash_second_main_h2}>ATX Boat</h2>
           </Grid>
-          <Grid item xs={12} sm={6} lg={3} md={3}>
-            <Paper className={classes.grid_dash_second_main_paper}>
+          <Grid item xs={12} sm={6} lg={4} md={4} className="grid-dash-second-main-paper">
+            <Paper>
               <FormGroup>
-                <CardMedia image={doctymeImage} className={classes.image_perfect}> </CardMedia>
+                <CardMedia image={doctymeImage} className="image-perfect"> </CardMedia>
+                <div className="image-perfect-div">
+                  <div className="grid-Dash-second-main-h2">Doctyme</div>
+                </div>
               </FormGroup>
             </Paper>
-            <h2 className={classes.grid_Dash_second_main_h2}>Doctyme</h2>
           </Grid>
-          <Grid style={{ width: "12%" }}></Grid>
+          {/* <Grid style={{ width: "12%" }}></Grid> */}
         </Grid>
         {/* Dashboard third div */}
-        <Grid className={classes.grid_dash_third}>
-          <Typography className={classes.grid_dash_third_typography} >Why Work with Centillion Softech?</Typography>
+        <div className="bg-black">
+        <Grid >
+          <Typography component="h1" className="grid-dash-third-typography" >Why Work with Centillion Softech?</Typography>
         </Grid>
+<div className={classes.grid_dash_third_main}>
+        <Grid container spacing={24} >       
 
-        <Grid container spacing={24} className={classes.grid_dash_third_main}>
-          <Grid item xs={12} sm={4} lg={4} md={4} className={classes.grid_dash_third_main_grid}>
-            <Flippy flipOnHover={true} flipOnClick={false} flipDirection="horizontal" className={classes.grid_dash_flippy_height}>
-              <FrontSide className={classes.grid_dash_flippy_front} >
-                <CardMedia image={masttechiconLogo} className={classes.grid_dash_flippy_front_cardMedia}> </CardMedia>
-                <hr className={classes.hr_border}></hr>
-                <Typography className={classes.grid_dash_flippy_front_title}>Masterly experienced in technologies</Typography>
-              </FrontSide>
-              <BackSide className={classes.grid_dash_flippy_back}>
-                <Grid>
-                  <Typography className={classes.grid_dash_flippy_back_header}>Masterly experienced in technologies</Typography>
-                </Grid>
-                <hr className={classes.hr_border}></hr>
-                <Grid>
-                  <Typography component="h4" className={classes.grid_dash_flippy_back_div}>Our clients have always trusted us without any second thought because we have more than a decade of experience in delivering various successful projects.</Typography>
-                </Grid>
-              </BackSide>
-            </Flippy>
+        
+          <Grid item xs={12} sm={4} lg={6} md={6} className="why-work-main-div">
+            <div>
+            <IconButton title="Computer" > <Computer className="why-work-image-div"/> </IconButton>
+            <hr className="why-work-border"></hr>
+              <Typography component="h3" className="grid-dash-flippy-front-title">Masterly experienced in technologies</Typography>
+              <Typography component="h4" className="grid-dash-flippy-front-h4">Our clients have always trusted us without any second thought because we have more than a decade of experience in delivering various successful projects.</Typography>
+            </div>
           </Grid>
-
-          <Grid item xs={12} sm={4} lg={4} md={4} className={classes.grid_dash_third_main_grid}>
-            <Flippy flipOnHover={true} flipOnClick={false} flipDirection="horizontal" className={classes.grid_dash_flippy_height}>
-              <FrontSide className={classes.grid_dash_flippy_front} >
-                <CardMedia image={multiplatformLogo} className={classes.grid_dash_flippy_front_cardMedia}> </CardMedia>
-                <hr className={classes.hr_border}></hr>
-                <Typography className={classes.grid_dash_flippy_front_title}>Expertise on Multiple Platforms</Typography>
-              </FrontSide>
-              <BackSide className={classes.grid_dash_flippy_back}>
-                <Grid>
-                  <Typography className={classes.grid_dash_flippy_back_header}>Expertise on Multiple Platforms</Typography>
-                </Grid>
-                <hr className={classes.hr_border}></hr>
-                <Grid>
-                  <Typography component="h4" className={classes.grid_dash_flippy_back_div}>{companyName} has elite development team which has proficient expertise on the cutting-edge technologies and tools.</Typography>
-                </Grid>
-              </BackSide>
-            </Flippy>
+          <Grid item xs={12} sm={4} lg={6} md={6} className="why-work-main-div">
+            <div>
+            <IconButton title="Code" > <Code  className="why-work-image-div"/> </IconButton>
+            <hr className="why-work-border"></hr>
+              <Typography component="h3" className="grid-dash-flippy-front-title">Expertise on Multiple Platforms</Typography>
+              <Typography component="h4" className="grid-dash-flippy-front-h4">{companyName} has elite development team which has proficient expertise on the cutting-edge technologies and tools.</Typography>
+            </div>
           </Grid>
-
-          <Grid item xs={12} sm={4} lg={4} md={4} className={classes.grid_dash_third_main_grid}>
-            <Flippy flipOnHover={true} flipOnClick={false} flipDirection="horizontal" className={classes.grid_dash_flippy_height}>
-              <FrontSide className={classes.grid_dash_flippy_front} >
-                <CardMedia image={managementtoolLogo} className={classes.grid_dash_flippy_front_cardMedia}> </CardMedia>
-                <hr className={classes.hr_border}></hr>
-                <Typography className={classes.grid_dash_flippy_front_title}>Best Project Management Tool</Typography>
-              </FrontSide>
-              <BackSide className={classes.grid_dash_flippy_back}>
-                <Grid>
-                  <Typography className={classes.grid_dash_flippy_back_header}>Best Project Management Tool</Typography>
-                </Grid>
-                <hr className={classes.hr_border}></hr>
-                <Grid>
-                  <Typography component="h4" className={classes.grid_dash_flippy_back_div}>To maintain the top notch services we have hands of experience on best project management tools available in the market.</Typography>
-                </Grid>
-              </BackSide>
-            </Flippy>
+          
+          <Grid item xs={12} sm={4} lg={6} md={6} className="why-work-main-div">
+            <div>
+            <IconButton title="Build" > <Build className="why-work-image-div" /> </IconButton>
+            <hr className="why-work-border"></hr>
+              <Typography component="h3" className="grid-dash-flippy-front-title">Best Project Management Tool</Typography>
+              <Typography component="h4" className="grid-dash-flippy-front-h4">To maintain the top notch services we have hands of experience on best project management tools available in the market.</Typography>
+            </div>
           </Grid>
-
-          <Grid item xs={12} sm={4} lg={4} md={4} className={classes.grid_dash_third_main_grid}>
-            <Flippy flipOnHover={true} flipOnClick={false} flipDirection="horizontal" className={classes.grid_dash_flippy_height}>
-              <FrontSide className={classes.grid_dash_flippy_front}>
-                <CardMedia image={twentyfouriconLogo} className={classes.grid_dash_flippy_front_cardMedia}> </CardMedia>
-                <hr className={classes.hr_border}></hr>
-                <Typography className={classes.grid_dash_flippy_front_title}>24×7 Availability</Typography>
-              </FrontSide>
-              <BackSide className={classes.grid_dash_flippy_back}>
-                <Grid>
-                  <Typography className={classes.grid_dash_flippy_back_header}>24×7 Availability</Typography>
-                </Grid>
-                <hr className={classes.hr_border}></hr>
-                <Grid>
-                  <Typography component="h4" className={classes.grid_dash_flippy_back_div}>We know that our client's time is valuable and so we strive for them to make use of their time in the most efficient manner.</Typography>
-                </Grid>
-              </BackSide>
-            </Flippy>
+          <Grid item xs={12} sm={4} lg={6} md={6} className="why-work-main-div">
+            <div>
+              
+            <IconButton title="AccessTime" > <AccessTime className="why-work-image-div"/> </IconButton>
+            <hr className="why-work-border"></hr>
+              <Typography component="h3" className="grid-dash-flippy-front-title">24×7 Availability</Typography>
+              <Typography component="h4" className="grid-dash-flippy-front-h4">We know that our client's time is valuable and so we strive for them to make use of their time in the most efficient manner.</Typography>
+            </div>
           </Grid>
-
-          <Grid item xs={12} sm={4} lg={4} md={4} className={classes.grid_dash_third_main_grid}>
-            <Flippy flipOnHover={true} flipOnClick={false} flipDirection="horizontal" className={classes.grid_dash_flippy_height}>
-              <FrontSide className={classes.grid_dash_flippy_front}>
-                <CardMedia image={longtermiconLogo} className={classes.grid_dash_flippy_front_cardMedia}> </CardMedia>
-                <hr className={classes.hr_border}></hr>
-                <Typography className={classes.grid_dash_flippy_front_title}>Longterm Business Relationship</Typography>
-              </FrontSide>
-              <BackSide className={classes.grid_dash_flippy_back}>
-                <Grid>
-                  <Typography className={classes.grid_dash_flippy_back_header}>Longterm Business Relationship</Typography>
-                </Grid>
-                <hr className={classes.hr_border}></hr>
-                <Grid >
-                  <Typography component="h4" className={classes.grid_dash_flippy_back_div}>We strive to be your trusted long term partner and leave no stone unturned to achieve the trustworthy relationship where our client can rely on us as a trusted IT company.</Typography>
-                </Grid>
-              </BackSide>
-            </Flippy>
+         
+          <Grid item xs={12} sm={4} lg={6} md={6} className="why-work-main-div">
+            <div>
+            <IconButton title="Business"> <Business  className="why-work-image-div"/> </IconButton>
+            <hr className="why-work-border"></hr>
+              <Typography component="h3" className="grid-dash-flippy-front-title">Longterm Business Relationship</Typography>
+              <Typography component="h4" className="grid-dash-flippy-front-h4">We strive to be your trusted long term partner and leave no stone unturned to achieve the trustworthy relationship where our client can rely on us as a trusted IT company.</Typography>
+            </div>
           </Grid>
-
-          <Grid item xs={12} sm={4} lg={4} md={4} className={classes.grid_dash_third_main_grid}>
-            <Flippy flipOnHover={true} flipOnClick={false} flipDirection="horizontal" className={classes.grid_dash_flippy_height}>
-              <FrontSide className={classes.grid_dash_flippy_front}>
-                <CardMedia image={clienticonLogo} className={classes.grid_dash_flippy_front_cardMedia}> </CardMedia>
-                <hr className={classes.hr_border}></hr>
-                <Typography className={classes.grid_dash_flippy_front_title}>We are serving best to our happy clients</Typography>
-              </FrontSide>
-              <BackSide className={classes.grid_dash_flippy_back}>
-                <Grid>
-                  <Typography className={classes.grid_dash_flippy_back_header}>We are serving best to our happy clients</Typography>
-                </Grid>
-                <hr className={classes.hr_border}></hr>
-                <Grid >
-                  <Typography component="h4" className={classes.grid_dash_flippy_back_div}>{companyName} is growing exponentially in its global outreach as well as quality work in all directions.</Typography>
-                </Grid>
-              </BackSide>
-            </Flippy>
+          <Grid item xs={12} sm={4} lg={6} md={6} className="why-work-main-div">
+            <div>
+            <IconButton title="SupervisorAccount" > <SupervisorAccount  className="why-work-image-div"/> </IconButton>
+            <hr className="why-work-border"></hr>
+              <Typography component="h3" className="grid-dash-flippy-front-title">We are serving best to our happy clients</Typography>
+              <Typography component="h4" className="grid-dash-flippy-front-h4">{companyName} is growing exponentially in its global outreach as well as quality work in all directions.</Typography>
+            </div>
           </Grid>
-
+          
         </Grid>
-
-
+</div>
+        </div>
 
 
 

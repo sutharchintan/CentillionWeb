@@ -10,7 +10,7 @@ body {
 }
 
 .textBorder_class:hover {
-    background-color:rgb(66, 179, 219);
+    background-color: #5f9ea0;
     border: "1px #ed1212 solid";
     cursor: pointer;
   }

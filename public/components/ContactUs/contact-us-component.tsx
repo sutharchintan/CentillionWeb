@@ -9,6 +9,7 @@ import { companyName } from '../../providers/comp-name-provider';
 import { isMobile } from "react-device-detect";
 import { centillionStyles } from "../styles/CentillionStyles";
 import { DropDownMenu } from 'material-ui';
+import "../../style.css";
 /**
 * interface to define properties for contact us 
 */
@@ -135,7 +136,7 @@ class ContactUsComponent extends React.Component<Props> {
                                         <textarea placeholder="Share your thoughts on your project" onChange={this.handleChangeProject} className={classes.contactus_seconddiv_formgrp_txtarea}></textarea>
                                     </Grid>
                                     <Grid item xs={12} className={classes.contactus_seconddiv_formgrp_grid2}>
-                                        <Button color="inherit" className={classes.contactus_seconddiv_formgrp_grid2_btn}>
+                                        <Button color="inherit" className="contactus-seconddiv-formgrp-grid2-btn">
                                             Send us your inquiry
                                              </Button>
                                     </Grid>

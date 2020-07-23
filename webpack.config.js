@@ -26,12 +26,7 @@ module.exports = {
         port: 2020,
         stats: 'errors-only',
     },
-
     module: {
-        loaders: [{
-            test: /\.css$/,
-            loader: "style-loader!css-loader"
-        }, ],
         rules: [{
                 test: /\.(ts|tsx)$/,
                 exclude: /node_modules/,
@@ -51,7 +46,14 @@ module.exports = {
                         loader: 'css-loader',
                     },
                 }),
-            },
+            }, 
+            {
+                // Preprocess your css files
+                // you can add additional loaders here (e.g. sass/less etc.)
+                test: /\.css$/,
+                exclude: /node_modules/,
+                use: ['style-loader', 'css-loader'],
+            },              
             // Loading glyphicons => https://github.com/gowravshekar/bootstrap-webpack
             // Using here url-loader and file-loader
             {

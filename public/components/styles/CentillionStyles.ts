@@ -38,11 +38,11 @@ export const centillionStyles = theme => ({
     image_perfect: {
         height: 250,
         width: "100%",
-        borderRadius: "100%",
+        // borderRadius: "100%",
         transition: "transform .2s",
         margin: "0px auto",
-        "&:hover": {
-            transform: "scale(1.1)"
+         "&:hover": {
+             transform: "scale(1.0)"
         }
     },
     main_div: {
@@ -59,7 +59,7 @@ export const centillionStyles = theme => ({
         display: "block"
     },
     carousel_paper_grid: {
-        backgroundColor: "rgb(66, 179, 219)",
+        backgroundColor: "#5f9ea0",
         width: "100%"
     },
     carousel_paper_grid_typography: {
@@ -84,39 +84,43 @@ export const centillionStyles = theme => ({
     grid_dash_second_h1: {
         fontSize: isMobile ? 25 : 40,
         textAlign: "center",
-        color: "rgb(66, 179, 219)"
+        color: "#343639",
+        textTransform: "uppercase"
     },
     hr_border: {
         width: "100px",
-        border: "1px gb(66, 179, 219) solid"
+        border: "0px",
+        height: "1px",
+        backgroundColor: "#5f9ea0"
     },
     grid_dash_second_h3: {
         fontSize: isMobile ? 12 : 20,
         textAlign: "center",
-        color: "rgb(66, 179, 219)"
+        color: "#343639"
     },
     grid_dash_second_main: {
         width: "12%"
     },
     grid_dash_second_main_paper: {
-        borderRadius: "100%"
+        // borderRadius: "100%",
+        padding: "0px"
     },
     grid_Dash_second_main_h2: {
         color: "black",
         textAlign: "center"
     },
     grid_dash_third: {
-        background: 'linear-gradient(45deg, rgb(66, 179, 219) 30%, rgba(66, 179, 219, 0.23) 90%)',
+        background: 'linear-gradient(45deg, #5f9ea0 30%, rgba(66, 179, 219, 0.23) 90%)',
         height: isMobile ? 100 : 200
     },
     grid_dash_third_typography: {
         fontSize: isMobile ? 20 : 50, color: "rgb(255, 255, 255)", textAlign: "center", padding: isMobile ? "9%" : "4%"
     },
     grid_dash_third_main: {
-        padding: isMobile ? "5%" : "2% 5%",
-        width: "100%",
-        margin: 0,
-        height: isMobile ? "1395px" : "500px"
+       
+        width: 1000,
+        margin: "0px auto",
+        height: isMobile ? "1395px" : "700px"
     },
     grid_dash_third_main_grid: {
         padding: "0.5%"
@@ -137,10 +141,10 @@ export const centillionStyles = theme => ({
         fontWeight: "bold",
         textAlign: "center",
         fontFamily: "Roboto",
-        color: "rgb(66, 179, 219)"
+        color: "#5f9ea0"
     },
     grid_dash_flippy_back: {
-        backgroundColor: 'rgb(66, 179, 219)'
+        backgroundColor: '#5f9ea0'
     },
     grid_dash_flippy_back_header: {
         fontSize: isMobile ? 15 : 18,
@@ -161,7 +165,7 @@ export const centillionStyles = theme => ({
         opacity: 0.8
     },
     header_title_on_image: {
-        color: "rgb(66, 179, 219)",
+        color: "#5f9ea0",
         textAlign: "center",
         position: "relative",
         top: isMobile ? -123 : -375,
@@ -169,27 +173,21 @@ export const centillionStyles = theme => ({
         fontWeight: 800
     },
     header_title_on_image_p: {
-        color: "rgb(66, 179, 219)",
+        color: "#5f9ea0",
         textAlign: "center",
         fontSize: isMobile ? 12 : 25,
         position: "relative",
         top: isMobile ? -110 : -375
     },
     portfolio_mobile_first: {
-        color: "rgb(66, 179, 219)",
-        paddingTop: 60
+        color: "#5f9ea0",
+        padding: 60
     },
-    portfolio_mobile_first_h1: {
-        lineHeight: 1.3,
-        color: "rgb(66, 179, 219)",
-        fontSize: isMobile ? 27 : 50,
-        fontWeight: 700,
-        textAlign: "center"
-    },
+  
     portfolio_mobile_first_h3: {
         padding: isMobile ? "3%" : "7%",
         lineHeight: 1.5,
-        color: "rgb(66, 179, 219)",
+        color: "#5f9ea0",
         fontSize: 20,
         fontWeight: 400,
         margin: 10,
@@ -198,8 +196,8 @@ export const centillionStyles = theme => ({
     },
     portfolio_mobile_button: {
         marginBottom: 20,
-        color: "rgb(66, 179, 219)",
-        border: "1px rgb(66, 179, 219) solid",
+        color: "#5f9ea0",
+        border: "1px #5f9ea0 solid",
         height: 40,
         width: "150",
         fontWeight: 400,
@@ -214,7 +212,7 @@ export const centillionStyles = theme => ({
     },
     portfolio_mobile_second: {
         padding: "4% 5% 2% 5%",
-        backgroundColor: "rgb(66, 179, 219)"
+        backgroundColor: "#5f9ea0"
     },
     portfolio_mobile_second_span: {
         fontSize: isMobile ? 27 : 50,
@@ -224,7 +222,7 @@ export const centillionStyles = theme => ({
     },
     portfolio_mobile_second_hr: {
         width: "100px",
-        border: "1px rgb(66, 179, 219) solid",
+        border: "1px #5f9ea0 solid",
         position: "relative",
         top: "15px"
     },
@@ -245,12 +243,11 @@ export const centillionStyles = theme => ({
     portfolio_mobile_third_cardMedia: {
         height: 270,
         width: "100%",
-        opacity: 0.4,
         borderRadius: 5,
         backgroundImage: `url(${reactLogo})`,
         "&:hover": {
             opacity: 1,
-            boxShadow: "0 0 2px 4px rgba(66, 179, 219, 0.5)",
+            boxShadow: "0 0 2px 4px rgba(95, 158, 160, 0.5)",
         }
     },
     // portfolio_paper:{
@@ -271,7 +268,7 @@ export const centillionStyles = theme => ({
     },
     aboutus_first_h3: {
         lineHeight: 1.7,
-        color: "rgb(66, 179, 219)"
+        color: "#5f9ea0"
     },
     aboutus_first_: {
         color: "gray",
@@ -289,7 +286,7 @@ export const centillionStyles = theme => ({
         width: "100%"
     },
     aboutus_expensionsummary: {
-        backgroundColor: "rgb(66, 179, 219)"
+        backgroundColor: "#5f9ea0"
     },
     aboutus_expensionsummary_typography: {
         color: "white",
@@ -317,12 +314,12 @@ export const centillionStyles = theme => ({
     },
     aboutus_expensionsummary_typography_second: {
         fontWeight: 600,
-        color: "rgb(66, 179, 219)",
+        color: "#5f9ea0",
         fontSize: "1.17em",
         fontFamily: "Roboto"
     },
     aboutus_expensiondetails_second: {
-        backgroundColor: "rgb(66, 179, 219)"
+        backgroundColor: "#5f9ea0"
     },
     aboutus_expensionsummary_grid_typography: {
         padding: "5px 0px 5px 0px",
@@ -416,7 +413,7 @@ export const centillionStyles = theme => ({
         padding: isMobile ? "2% 5% 20% 5%" : "2% 25% 5% 25%"
     },
     contactus_seconddiv_color: {
-        color: "rgb(66, 179, 219)"
+        color: "#5f9ea0"
     },
     contactus_seconddiv_formgrp_grid: {
         paddingTop: 20,
@@ -470,14 +467,14 @@ export const centillionStyles = theme => ({
         textAlign: "center"
     },
     contactus_seconddiv_formgrp_grid2_btn: {
-        color: "rgb(66, 179, 219)",
-        border: "1px rgb(66, 179, 219) solid",
+        color: "#5f9ea0",
+        border: "1px #5f9ea0 solid",
         height: 40,
         MozBorderRadius: 5
     },
     // contactus_seconddiv_formgrp_grid3_h2: {
     //     textAlign: "center",
-    //     color: "rgb(66, 179, 219)"
+    //     color: "#5f9ea0"
     // },
     // contactus_seconddiv_formgrp_grid3_formgrp: {
     //     height: isMobile ? 215 : 350,
@@ -487,7 +484,9 @@ export const centillionStyles = theme => ({
     footer_appbar: {
         justifyContent: "space-between",
         paddingLeft: "5%",
-        paddingRight: "5%"
+        paddingRight: "5%",
+        backgroundColor:"#3c3c3c",
+        paddingTop:"30px"
     },
     footer_h3: {
         fontWeight: 500,
@@ -546,7 +545,7 @@ export const centillionStyles = theme => ({
         marginTop: 68
     },
     menubar_span: {
-        color: "rgb(66, 179, 219)",
+        color: "#5f9ea0",
         fontSize: isMobile ? 30 : 40
     },
     menubar_paddingtop: {
@@ -559,7 +558,7 @@ export const centillionStyles = theme => ({
     },
     topbar_toolbar: {
         justifyContent: "space-between",
-        backgroundColor: "rgb(66, 179, 219)"
+        backgroundColor: "#5f9ea0"
     },
     topbar_grid: {
         marginTop: 10,
@@ -597,7 +596,7 @@ export const centillionStyles = theme => ({
         width: "200px",
         /* height: 40px; */
         /* margin: 0 auto; */
-        backgroundColor: "rgb(66, 179, 219)",
+        backgroundColor: "#5f9ea0",
         color: "rgb(255, 255, 255)",
         padding: "4%",
         borderRadius: "5px"

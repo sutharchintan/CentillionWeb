@@ -669,3 +669,4 @@
 [0508/212450.505:ERROR:exception_snapshot_win.cc(98)] thread ID 6996 not found in process
 [0508/212450.098:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
 [0508/212450.505:ERROR:exception_snapshot_win.cc(98)] thread ID 7812 not found in process
+[0619/211403.434:ERROR:file_io.cc(89)] ReadExactly: expected 36, observed 0

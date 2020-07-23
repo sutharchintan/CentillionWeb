@@ -23,7 +23,7 @@ import * as VueLogo from "../../images/vue.png";
 import * as lavarelLogo from "../../images/lavarelo.png";
 import * as knockoutLogo from "../../images/knockoutjs.jpg";
 import * as paythonLogo from "../../images/paython.png";
-import * as mobileappLogo from "../../images/mobileapp.jpg";
+import * as mobileappLogo from "../../images/pngtreemobileapp.png";
 import * as windowsLogo from "../../images/windows_logos.png";
 import * as nodejsLogo from "../../images/nodejs.png";
 import * as html5Logo from "../../images/html5.png";
@@ -40,6 +40,7 @@ import * as braintreeLogo from "../../images/braintree.png";
 import { companyName } from '../../providers/comp-name-provider';
 import { centillionStyles } from "../styles/CentillionStyles";
 import Typography from 'material-ui/styles/typography';
+import "../../style.css";
 /**
  * interface to define properties for port folio
  */
@@ -69,23 +70,23 @@ class PortFolioComponent extends React.Component<Props> {
                     </Grid >
                 </Grid>
                 {/* portfolio second div */}
-                <Grid container >
+                <Grid container className="margin-bottom-50 ">
                     <Grid item xs={12} sm={12} lg={6} md={6} className={classes.portfolio_mobile_first}>
-                        <h1 className={classes.portfolio_mobile_first_h1}>Mobile App Development</h1>
+                        <h1 className="portfolio_mobile-first-h1">Mobile App Development</h1>
                         <hr className={classes.hr_border}></hr>
-                        <h3 className={classes.portfolio_mobile_first_h3}>We create amazing experiences for mobile devices. Whether it's native app development across iOS & Android or cross-platform development with tools such as Phonegap we have a proven track record across a range of mobile & tablet technologies.</h3>
-                        <Button color="inherit" className={classes.portfolio_mobile_button}> Know More </Button>
+                        <h3 className="portfolio-mobile-first-h3">We create amazing experiences for mobile devices. Whether it's native app development across iOS & Android or cross-platform development with tools such as Phonegap we have a proven track record across a range of mobile & tablet technologies.</h3>
+                        <span className="portfolio-mobile-button"> Know More </span> 
                     </Grid>
                     <Grid item xs={12} sm={12} lg={6} md={6} >
                         <CardMedia image={mobileappLogo} className={classes.portfolio_mobile_cardMedia}> </CardMedia>
                     </Grid>
                 </Grid>
-                <Grid container color="default">
-                    <Grid item xs={12} sm={12} lg={12} md={12} className={classes.portfolio_mobile_second}>
+                <Grid container color="default" className="bg-black" >
+                    <Grid item xs={12} sm={12} lg={12} md={12} className="portfolio-mobile-second">
                         <FormGroup>
-                            <span className={classes.portfolio_mobile_second_span}>A Complete Creative Solutions Provider For Web, Mobile & Software</span>
+                            <span className="portfolio-mobile-second-span">A Complete Creative Solutions Provider For Web, Mobile & Software</span>
                             <hr className={classes.portfolio_mobile_second_hr} ></hr>
-                            <p className={classes.portfolio_mobile_second_p}>{companyName} is an offshore development outsourcing IT company. Incepted in the year 2019, {companyName} is doing an astonishing work on the ground of IT fraternity. We have the global presence in India, USA with a team of 10+ in-house talents. Our commitment and belief to achieve the best is making us the most demandable company globally. We believe in stepping into client’s shoe for building their product in more awesome ways. Our experts are talented enough to convey the best solutions. We assure clients to bring their unique thoughts in the marketplace with more intuitive manner. We believe in maintaining punctuality and quality is our key area to deliver splendid work.</p>
+                            <p className="portfolio-mobile-second-p">{companyName} is an offshore development outsourcing IT company. Incepted in the year 2019, {companyName} is doing an astonishing work on the ground of IT fraternity. We have the global presence in India, USA with a team of 10+ in-house talents. Our commitment and belief to achieve the best is making us the most demandable company globally. We believe in stepping into client’s shoe for building their product in more awesome ways. Our experts are talented enough to convey the best solutions. We assure clients to bring their unique thoughts in the marketplace with more intuitive manner. We believe in maintaining punctuality and quality is our key area to deliver splendid work.</p>
                         </FormGroup>
                     </Grid>
                 </Grid>

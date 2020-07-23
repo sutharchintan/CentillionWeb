@@ -35,7 +35,7 @@ class MenuBar extends React.Component<Props> {
                 <Toolbar className={classes.footer_appbar}>
                     <Grid container spacing={24}>
                         <Grid item xs={12} sm={6} lg={7} md={5}>
-        <span style={{ color: "rgb(66, 179, 219)", fontSize: isMobile ? 30 : 40}}>{companyName}</span>
+        <span style={{ color: "#5f9ea0", fontSize: isMobile ? 30 : 40}}>{companyName}</span>
                         </Grid>
                         <Grid item xs={12} sm={6} lg={5} md={7} className={classes.menubar_paddingtop}>
                             {
@@ -52,21 +52,18 @@ class MenuBar extends React.Component<Props> {
         return (
             this.state.buttons.map((button, index) =>
                 <Button
-                    color="inherit"
-                    variant="outlined"
                     style={{
                         float: "right",
-                        borderColor: this.props.currentTheme.palette.primary.main,
-                        backgroundColor: button.Active ? this.props.currentTheme.palette.primary.main : "white",
-                        color: button.Active ? "white" : this.props.currentTheme.palette.primary.main,
+                        color: button.Active ? "#ffec17" : this.props.currentTheme.palette.primary.main,
                         paddingLeft: isMobile ? 2 : 5,
                         paddingRight: isMobile ? 2 : 5,
                         marginLeft: isMobile ? 2 :5,
                         marginRight: isMobile ? 2 :5,
-                        marginBottom: 15,
+                        marginTop: isMobile ? 2: 5,
                         fontSize: isMobile ? 11: 13,
                         minHeight:isMobile ? 30 : 36,
-                        minWidth:isMobile ? 76 : 88
+                        minWidth:isMobile ? 76 : 88,
+                        fontWeight: 600
                     }}
                     key={index}
                     onClick={() => { this.handleselectedcomponent(button) }} >
@@ -94,13 +91,11 @@ class MenuBar extends React.Component<Props> {
 
 const styles = {
     selectButton: {
-        backgroundColor: "rgb(66, 179, 219)",
         color: "#ffffff",
         margin: "0px 5px 0px 5px"
     },
     button: {
-        backgroundColor: "#ffffff",
-        color: "rgb(66, 179, 219)",
+        color: "#5f9ea0",
         margin: "0px 5px 0px 5px"
     }
 }

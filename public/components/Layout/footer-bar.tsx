@@ -26,6 +26,7 @@ import { ButtonModel } from '../../models/ButtonModel';
 
 import { isMobile } from "react-device-detect";
 import { consolidateStreamedStyles } from "styled-components";
+import "../../style.css";
 
 /**
  * interface to define properties for footer
@@ -51,7 +52,7 @@ export class FooterBar extends React.Component<Props> {
     render() {
         const { classes } = this.props;
         return (
-            <div>
+            <div className="bg-black">
                 <AppBar position="static">
                     <Toolbar className={classes.footer_appbar}>
                         <Grid container >
