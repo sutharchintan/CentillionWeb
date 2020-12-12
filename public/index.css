@@ -10,12 +10,12 @@ body {
 }
 
 .textBorder_class:hover {
-    background-color: #5f9ea0;
+    background-color: #2a2f35;
     border: "1px #ed1212 solid";
     cursor: pointer;
   }
   .textBorder_classtext:hover{
-    background-color: green;
+    background-color: #b7c500;
     border: "1px #red solid";
     cursor: pointer;
   }

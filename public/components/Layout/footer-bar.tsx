@@ -77,7 +77,7 @@ export class FooterBar extends React.Component<Props> {
                             </Grid>
                             <Grid item xs={12} sm={6} md={4} lg={4}>
                             </Grid>
-                            <Grid item xs={12} sm={12} md={4} lg={4} className={classes.footer_grd3}>
+                            <Grid item xs={12} sm={12} md={4} lg={4} >
                                 <h3 className={classes.footer_grd3_h3}>Follow Us</h3>
                                 <img src={facebookLogo} className={classes.footer_grd3_img} />
                                 <img src={skypeLogo} className={classes.footer_grd3_img} />

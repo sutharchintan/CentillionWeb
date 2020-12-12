@@ -2,6 +2,7 @@ import * as React from 'react';
 import { IconButton, Theme, Grid, Paper, FormGroup, withStyles, Select, MenuItem, Button, CardMedia } from "@material-ui/core";
 import { Phone } from "@material-ui/icons";
 import * as ConatctUSLogo from "../../images/contact-us.jpg";
+import * as clientQuatationLogo from "../../images/Client_Quotation.jpg";
 import * as videologo from "../../images/office.jpg";
 import { phoneNumber } from '../../providers/phone-number-provider';
 import * as INLogo from "../../images/IndiaFlag.png";
@@ -109,30 +110,31 @@ class ContactUsComponent extends React.Component<Props> {
                     </Grid >
                 </Grid>
                 {/* contact us second div */}
-                <Grid container spacing={24} className={classes.contactus_seconddiv_padding}>
-                    <Grid item xs={12} sm={12} md={12} lg={12}>
-                        <h2 className={classes.contactus_seconddiv_color}>You have an idea or project we can help with?</h2>
-                        <Paper>
+                <Grid container spacing={24} className="margin-0">
+                    <Grid item xs={12} sm={12} md={6} lg={6} className="height-500 padding-0 margin-0">
+                    <CardMedia image={clientQuatationLogo} className="contact-images"> </CardMedia>
+                        <Paper className="contact-sec-div">
                             <FormGroup>
                                 <Grid container>
-                                    <Grid item xs={6} className={classes.contactus_seconddiv_formgrp_grid}>
+                                
+                                    <Grid item xs={6} className="carrer-seconddiv-formgrp-grid">
                                         <input placeholder="Your Name" className={classes.contactus_seconddiv_formgrp_input} onChange={this.handleChangeName}></input>
                                     </Grid>
-                                    <Grid item xs={6} className={classes.contactus_seconddiv_formgrp_grid}>
+                                    <Grid item xs={6} className="carrer-seconddiv-formgrp-grid1">
                                         <input placeholder="Your Email" className={classes.contactus_seconddiv_formgrp_input}  onChange={this.handleChangeEmail}></input>
                                     </Grid>
-                                    <Grid item xs={6} className={classes.contactus_seconddiv_formgrp_grid}>
+                                    <Grid item xs={6} className="carrer-seconddiv-formgrp-grid">
                                         <input placeholder="Company" className={classes.contactus_seconddiv_formgrp_input} onChange={this.handleChangeCompany}></input>
                                     </Grid>
-                                    <Grid item xs={6} className={classes.contactus_seconddiv_formgrp_grid}>
+                                    <Grid item xs={6} className="carrer-seconddiv-formgrp-grid1">
                                         <input placeholder="Phone Number" className={classes.contactus_seconddiv_formgrp_input} onChange={this.handleChangePhoneNumber}></input>
                                     </Grid>
-                                    <Grid item xs={12} className={classes.contactus_seconddiv_formgrp_grid}>
+                                    <Grid item xs={12} className={classes.contactus_seconddiv_formgrp_grid_100}>
                                         <select className={classes.contactus_seconddiv_formgrp_select} onChange={this.handleChangeBudget}>
                                             {budgetlist}
                                         </select>
                                     </Grid>
-                                    <Grid item xs={12} className={classes.contactus_seconddiv_formgrp_grid}>
+                                    <Grid item xs={12} className={classes.contactus_seconddiv_formgrp_grid_100}>
                                         <textarea placeholder="Share your thoughts on your project" onChange={this.handleChangeProject} className={classes.contactus_seconddiv_formgrp_txtarea}></textarea>
                                     </Grid>
                                     <Grid item xs={12} className={classes.contactus_seconddiv_formgrp_grid2}>
@@ -144,8 +146,9 @@ class ContactUsComponent extends React.Component<Props> {
                             </FormGroup>
                         </Paper>
                     </Grid>
-                    <Grid item xs={12} sm={12} md={6} lg={6}>
-
+                    <Grid item xs={12} sm={12} md={6} lg={6} className="height-500 height-325 bg-b7c500 padding-0 margin-0">
+                    <h2 className="contactus-seconddiv-color">You have an idea or project we can help with?</h2>
+                       
                     </Grid>
                 </Grid>
             </div>

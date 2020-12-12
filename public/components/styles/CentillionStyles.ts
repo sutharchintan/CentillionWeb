@@ -6,17 +6,13 @@ import * as reactLogo from "../../images/reactnew.jpg";
  */
 export const centillionStyles = theme => ({
 
-    upload_btn_wrapper:{
-        position: "relative",
-        overflow: "hidden",
-        display: "inlineBlock"
-      },
+    
       
       btnfileSelect:{
         padding: "8px 20px",
         fontSize:isMobile ? "20px" : "15px",
         fontWeight: "bold",
-        height: 50,
+        height: 100,
         width: isMobile ? "97%" : "100%",
         border: "1px rgb(221, 221, 221) solid",
         backgroundColor: "rgb(221, 221, 221)",
@@ -50,7 +46,7 @@ export const centillionStyles = theme => ({
         position: "relative"
     },
     hide_div: {
-        height: isMobile ? "175px" : "132px"
+        height: isMobile ? "157px" : "114px"
     },
     carousel_main_grid: {
         width: "100%",
@@ -59,7 +55,7 @@ export const centillionStyles = theme => ({
         display: "block"
     },
     carousel_paper_grid: {
-        backgroundColor: "#5f9ea0",
+        backgroundColor: "#2a2f35",
         width: "100%"
     },
     carousel_paper_grid_typography: {
@@ -76,27 +72,32 @@ export const centillionStyles = theme => ({
         width: "100%",
         height: isMobile ? 125 : 500
     },
-    grid_dashboard_second: {
-        padding: "2% 5% 2% 5%",
-        width: "100%",
-        margin: 0
-    },
     grid_dash_second_h1: {
         fontSize: isMobile ? 25 : 40,
         textAlign: "center",
-        color: "#343639",
+        color: "#ffffff",
         textTransform: "uppercase"
     },
     hr_border: {
         width: "100px",
         border: "0px",
         height: "1px",
-        backgroundColor: "#5f9ea0"
+        backgroundColor: "#b7c500"
+    },
+    grid_dash_second_h3_career:{        
+        fontSize: isMobile ? 12 : 20,
+        textAlign: "center",
+        color: "#343639"
     },
     grid_dash_second_h3: {
         fontSize: isMobile ? 12 : 20,
         textAlign: "center",
-        color: "#343639"
+        color: "#b7c500"
+    },
+    grid_dash_second_h3_home: {
+        fontSize: isMobile ? 12 : 20,
+        textAlign: "center",
+        color: "#ffffff"
     },
     grid_dash_second_main: {
         width: "12%"
@@ -110,18 +111,13 @@ export const centillionStyles = theme => ({
         textAlign: "center"
     },
     grid_dash_third: {
-        background: 'linear-gradient(45deg, #5f9ea0 30%, rgba(66, 179, 219, 0.23) 90%)',
+        background: 'linear-gradient(45deg, #2a2f35 30%, rgba(66, 179, 219, 0.23) 90%)',
         height: isMobile ? 100 : 200
     },
     grid_dash_third_typography: {
         fontSize: isMobile ? 20 : 50, color: "rgb(255, 255, 255)", textAlign: "center", padding: isMobile ? "9%" : "4%"
     },
-    grid_dash_third_main: {
-       
-        width: 1000,
-        margin: "0px auto",
-        height: isMobile ? "1395px" : "700px"
-    },
+    
     grid_dash_third_main_grid: {
         padding: "0.5%"
     },
@@ -141,10 +137,10 @@ export const centillionStyles = theme => ({
         fontWeight: "bold",
         textAlign: "center",
         fontFamily: "Roboto",
-        color: "#5f9ea0"
+        color: "#2a2f35"
     },
     grid_dash_flippy_back: {
-        backgroundColor: '#5f9ea0'
+        backgroundColor: '#2a2f35'
     },
     grid_dash_flippy_back_header: {
         fontSize: isMobile ? 15 : 18,
@@ -165,7 +161,7 @@ export const centillionStyles = theme => ({
         opacity: 0.8
     },
     header_title_on_image: {
-        color: "#5f9ea0",
+        color: "#2a2f35",
         textAlign: "center",
         position: "relative",
         top: isMobile ? -123 : -375,
@@ -173,21 +169,18 @@ export const centillionStyles = theme => ({
         fontWeight: 800
     },
     header_title_on_image_p: {
-        color: "#5f9ea0",
+        color: "#2a2f35",
         textAlign: "center",
         fontSize: isMobile ? 12 : 25,
         position: "relative",
         top: isMobile ? -110 : -375
     },
-    portfolio_mobile_first: {
-        color: "#5f9ea0",
-        padding: 60
-    },
+    
   
     portfolio_mobile_first_h3: {
         padding: isMobile ? "3%" : "7%",
         lineHeight: 1.5,
-        color: "#5f9ea0",
+        color: "#2a2f35",
         fontSize: 20,
         fontWeight: 400,
         margin: 10,
@@ -196,8 +189,8 @@ export const centillionStyles = theme => ({
     },
     portfolio_mobile_button: {
         marginBottom: 20,
-        color: "#5f9ea0",
-        border: "1px #5f9ea0 solid",
+        color: "#2a2f35",
+        border: "1px #2a2f35 solid",
         height: 40,
         width: "150",
         fontWeight: 400,
@@ -212,7 +205,7 @@ export const centillionStyles = theme => ({
     },
     portfolio_mobile_second: {
         padding: "4% 5% 2% 5%",
-        backgroundColor: "#5f9ea0"
+        backgroundColor: "#2a2f35"
     },
     portfolio_mobile_second_span: {
         fontSize: isMobile ? 27 : 50,
@@ -220,12 +213,7 @@ export const centillionStyles = theme => ({
         color: "white",
         textAlign: "center"
     },
-    portfolio_mobile_second_hr: {
-        width: "100px",
-        border: "1px #5f9ea0 solid",
-        position: "relative",
-        top: "15px"
-    },
+    
     portfolio_mobile_second_p: {
         fontSize: 20,
         lineHeight: isMobile ? 1.5 : 2,
@@ -247,7 +235,7 @@ export const centillionStyles = theme => ({
         backgroundImage: `url(${reactLogo})`,
         "&:hover": {
             opacity: 1,
-            boxShadow: "0 0 2px 4px rgba(95, 158, 160, 0.5)",
+            boxShadow: "0 0 5px 5px rgba(183, 197, 00, 0.6)",
         }
     },
     // portfolio_paper:{
@@ -268,7 +256,7 @@ export const centillionStyles = theme => ({
     },
     aboutus_first_h3: {
         lineHeight: 1.7,
-        color: "#5f9ea0"
+        color: "#151515"
     },
     aboutus_first_: {
         color: "gray",
@@ -286,7 +274,7 @@ export const centillionStyles = theme => ({
         width: "100%"
     },
     aboutus_expensionsummary: {
-        backgroundColor: "#5f9ea0"
+        backgroundColor: "#2a2f35"
     },
     aboutus_expensionsummary_typography: {
         color: "white",
@@ -314,12 +302,12 @@ export const centillionStyles = theme => ({
     },
     aboutus_expensionsummary_typography_second: {
         fontWeight: 600,
-        color: "#5f9ea0",
+        color: "#2a2f35",
         fontSize: "1.17em",
         fontFamily: "Roboto"
     },
     aboutus_expensiondetails_second: {
-        backgroundColor: "#5f9ea0"
+        background: "#2a2f35"
     },
     aboutus_expensionsummary_grid_typography: {
         padding: "5px 0px 5px 0px",
@@ -361,7 +349,7 @@ export const centillionStyles = theme => ({
         padding: 10
     },
     casestudies_cardMedia: {
-        height: 250,
+        height: 180,
         width: "100%",
         borderRadius: 5,
         transition: "transform .1s",
@@ -370,7 +358,8 @@ export const centillionStyles = theme => ({
         }
     },
     casestudies_a: {
-        fontWeight: 600
+        fontWeight: 600,
+        color:"#ffffff"
     },
     casestudies_h3: {
         paddingRight: 200
@@ -409,23 +398,19 @@ export const centillionStyles = theme => ({
         height: isMobile ? 125 : 500,
         opacity: 0.8
     },
-    contactus_seconddiv_padding: {
-        padding: isMobile ? "2% 5% 20% 5%" : "2% 25% 5% 25%"
-    },
-    contactus_seconddiv_color: {
-        color: "#5f9ea0"
-    },
-    contactus_seconddiv_formgrp_grid: {
+    
+   
+    contactus_seconddiv_formgrp_grid_100: {
         paddingTop: 20,
         paddingLeft: 20,
         paddingRight: 10,
-        maxWidth: isMobile ? "100%" : "50%",
-        flexBasis: isMobile ? "100%" : "50%"
+        maxWidth: "100%",
+        flexBasis: "100%"
     },
     contactus_seconddiv_formgrp_input: {
         paddingLeft: 20,
         height: 40,
-        width: isMobile? "90%" : "85%",
+        width: isMobile? "90%" : "92%",
         border: "1px rgb(221, 221, 221) solid",
         backgroundColor: "rgb(221, 221, 221)",
         color: "rgb(73, 80, 87)"
@@ -441,7 +426,7 @@ export const centillionStyles = theme => ({
     },
     contactus_seconddiv_formgrp_select: {
         paddingLeft: 20,
-        width: isMobile ? "97%" : "92%",
+        width: "98.5%",
         height: 45,
         borderTop: "1px rgb(221, 221, 221)  solid",
         borderBottom: "1px rgb(221, 221, 221) solid",
@@ -454,7 +439,7 @@ export const centillionStyles = theme => ({
         paddingTop: 10,
         paddingLeft: 20,
         height: 100,
-        width: isMobile ? "90%" : "92.5%",
+        width: isMobile ? "92%" :"95%",
         border: "1px rgb(221, 221, 221) solid",
         backgroundColor: "rgb(221, 221, 221)",
         color: "rgb(73, 80, 87)"
@@ -466,15 +451,15 @@ export const centillionStyles = theme => ({
         paddingBottom: 20,
         textAlign: "center"
     },
-    contactus_seconddiv_formgrp_grid2_btn: {
-        color: "#5f9ea0",
-        border: "1px #5f9ea0 solid",
-        height: 40,
-        MozBorderRadius: 5
-    },
+    // contactus_seconddiv_formgrp_grid2_btn: {
+    //     color: "#2a2f35",
+    //     border: "1px #2a2f35 solid",
+    //     height: 40,
+    //     MozBorderRadius: 5
+    // },
     // contactus_seconddiv_formgrp_grid3_h2: {
     //     textAlign: "center",
-    //     color: "#5f9ea0"
+    //     color: "#2a2f35"
     // },
     // contactus_seconddiv_formgrp_grid3_formgrp: {
     //     height: isMobile ? 215 : 350,
@@ -485,12 +470,12 @@ export const centillionStyles = theme => ({
         justifyContent: "space-between",
         paddingLeft: "5%",
         paddingRight: "5%",
-        backgroundColor:"#3c3c3c",
+        backgroundColor:"#151515",
         paddingTop:"30px"
     },
     footer_h3: {
         fontWeight: 500,
-        color: "white",
+        color: "#b7c500",
         margin: 20
     },
     footer_iconbtn_grd1: {
@@ -509,13 +494,9 @@ export const centillionStyles = theme => ({
         color: "white",
         paddingLeft: 10
     },
-    footer_grd3: {
-        marginTop: 40,
-        marginBottom: 20
-    },
     footer_grd3_h3: {
         fontWeight: 500,
-        color: "white",
+        color: "#b7c500",
         margin: 20
     },
     footer_grd3_img: {
@@ -535,7 +516,8 @@ export const centillionStyles = theme => ({
     footer_grd5: {
         textAlign: "right",
         paddingBottom: 10,
-        marginTop: 30
+        marginTop: 30,
+        paddingRight: isMobile ? "0px" : "20px"
     },
     menubar_appbar: {
         fontFamily: "Roboto",
@@ -545,7 +527,7 @@ export const centillionStyles = theme => ({
         marginTop: 68
     },
     menubar_span: {
-        color: "#5f9ea0",
+        color: "#2a2f35",
         fontSize: isMobile ? 30 : 40
     },
     menubar_paddingtop: {
@@ -558,11 +540,8 @@ export const centillionStyles = theme => ({
     },
     topbar_toolbar: {
         justifyContent: "space-between",
-        backgroundColor: "#5f9ea0"
-    },
-    topbar_grid: {
-        marginTop: 10,
-        marginBottom: 10
+        backgroundColor: "#2a2f35",
+        minHeight:"50px"
     },
     topbar_iconbtn: {
         height: isMobile ? "31px" : "48px"
@@ -570,9 +549,6 @@ export const centillionStyles = theme => ({
     topbar_logo: {
         height: 20,
         width: 20
-    },
-    topbar_paddingleft: {
-        paddingLeft: 5
     },
     topbar_formctrl: {
         paddingTop: isMobile ? 7 : 15,
@@ -596,7 +572,7 @@ export const centillionStyles = theme => ({
         width: "200px",
         /* height: 40px; */
         /* margin: 0 auto; */
-        backgroundColor: "#5f9ea0",
+        background: "linear-gradient(to left, #ffffff 0%, #b7c500 100%)",
         color: "rgb(255, 255, 255)",
         padding: "4%",
         borderRadius: "5px"
@@ -611,6 +587,7 @@ export const centillionStyles = theme => ({
     career_grid_dash_second_main_paper: {
         minHeight: 275,
         padding: 27,
+        background: "linear-gradient(to bottom, #ffffff 0%, #b7c500 100%)"
     },
     career_menu_buttons: {
         paddingLeft: isMobile ? 2 : 5,
@@ -622,7 +599,8 @@ export const centillionStyles = theme => ({
         minHeight: isMobile ? 30 : 36,
         minWidth: isMobile ? 76 : 88,
         "&:hover": {
-            cursor: "pointer"
+            cursor: "pointer",
+            borderBottom: "1px #ffffff solid"
         }
     }
     //   root: {

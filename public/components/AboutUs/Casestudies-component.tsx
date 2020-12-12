@@ -40,7 +40,7 @@ class CaseStudiesComponent extends React.Component<Props> {
                                 <Grid item xs={12} sm={4} md={4} lg={4} className={classes.casestudies_grid}>
                                     <CardMedia image={doctymeImage} className={classes.casestudies_cardMedia}></CardMedia>
                                     <h4 className={classes.casestudies_a}>Doctyme</h4>
-                                </Grid>
+                                </Grid>                               
                             </Grid>
                         </FormGroup>
                     </Paper>

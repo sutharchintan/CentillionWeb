@@ -25,6 +25,11 @@ import * as atxBoatsImage from "../../images/atxboats.png";
 import * as niftyCartImage from "../../images/niftycart.png";
 import { centillionStyles } from "../styles/CentillionStyles";
 import * as doctymeImage from "../../images/doctyme.png";
+import * as labcantonImage from "../../images/labcanton.png";
+import * as exultitImage from "../../images/exultit.png";
+import * as fyuzeImage from "../../images/fyuzeapp.png";
+import * as memoImage from "../../images/memomaker.png";
+import * as eventalogImage from "../../images/eventalog.png";
 
 /**
  * interface to define properties for about us component
@@ -75,7 +80,7 @@ class aboutUsComponent extends React.Component<Props> {
                 {/* about us first div */}
                 <Grid container spacing={24} className={classes.aboutus_first_container}>
                     <Grid item xs={12} sm={12} lg={6} md={6} >
-                        <h1 className={classes.aboutus_first_h1}>When you Hire us, You Hire Quality and Excellence</h1>
+                        <h1 className={classes.aboutus_first_h1}>When you <span className="color-1e99d4">Hire us</span>, You Hire <span className="color-1e99d4">Quality and Excellence</span></h1>
                         <h3 className={classes.aboutus_first_h3}>No matter the Technology or Services</h3>
                         <p className={classes.aboutus_first_p}>By entrusting your faith and time in us, {companyName} makes sure your investment is in the right hands. Showing flexibility in our work and delivering results have been the key drivers of our growth.</p>
                         <p className={classes.aboutus_first_p}>Taking the innovative approach to transform your ideas into reality, you just have to relax and let our Professionals pave the path towards the realization of your ideas into reality!</p>
@@ -88,7 +93,7 @@ class aboutUsComponent extends React.Component<Props> {
                 <Grid container className={classes.aboutus_expension_container}>
                     <ExpansionPanel className={classes.aboutus_expension_width}>
                         <ExpansionPanelSummary
-                            expandIcon={<ExpandMoreIcon />}
+                            expandIcon={<ExpandMoreIcon className="color-white" />}
                             aria-controls="panel1a-content"
                             id="panel1a-header"
                             className={classes.aboutus_expensionsummary}>
@@ -112,7 +117,7 @@ class aboutUsComponent extends React.Component<Props> {
                     </ExpansionPanel>
                     <ExpansionPanel className={classes.aboutus_expension_width}>
                         <ExpansionPanelSummary
-                            expandIcon={<ExpandMoreIcon />}
+                            expandIcon={<ExpandMoreIcon className="color-black" />}
                             aria-controls="panel2a-content"
                             id="panel2a-header">
                             <Typography className={classes.aboutus_expensionsummary_typography_second}>Life at Centillion Softech</Typography>
@@ -136,7 +141,7 @@ class aboutUsComponent extends React.Component<Props> {
                     </ExpansionPanel>
                     <ExpansionPanel className={classes.aboutus_expension_width}  >
                         <ExpansionPanelSummary
-                            expandIcon={<ExpandMoreIcon />}
+                            expandIcon={<ExpandMoreIcon className="color-white"  />}
                             aria-controls="panel2a-content"
                             id="panel2a-header"
                             className={classes.aboutus_expensionsummary}>
@@ -160,7 +165,7 @@ class aboutUsComponent extends React.Component<Props> {
                     <ExpansionPanel className={classes.aboutus_expension_width}
                     >
                         <ExpansionPanelSummary
-                            expandIcon={<ExpandMoreIcon />}
+                            expandIcon={<ExpandMoreIcon className="color-black" />}
                             aria-controls="panel2a-content"
                             id="panel2a-header">
                             <Typography className={classes.aboutus_expensionsummary_typography_second}>Case Studies</Typography>
@@ -178,6 +183,26 @@ class aboutUsComponent extends React.Component<Props> {
                                 <Grid item xs={12} sm={4} md={4} lg={4} className={classes.casestudies_grid}>
                                     <CardMedia image={doctymeImage} className={classes.casestudies_cardMedia}></CardMedia>
                                     <h4 className={classes.casestudies_a}>Doctyme</h4>
+                                </Grid>
+                                <Grid item xs={12} sm={4} md={4} lg={4} className={classes.casestudies_grid} >
+                                    <CardMedia image={labcantonImage} className={classes.casestudies_cardMedia}></CardMedia>
+                                    <h4 className={classes.casestudies_a}>The lab canton</h4>
+                                </Grid>
+                                <Grid item xs={12} sm={4} md={4} lg={4} className={classes.casestudies_grid}>
+                                    <CardMedia image={exultitImage} className={classes.casestudies_cardMedia}></CardMedia>
+                                    <h4 className={classes.casestudies_a}>Exult-it</h4>
+                                </Grid>
+                                <Grid item xs={12} sm={4} md={4} lg={4} className={classes.casestudies_grid}>
+                                    <CardMedia image={fyuzeImage} className={classes.casestudies_cardMedia}></CardMedia>
+                                    <h4 className={classes.casestudies_a}>Fyuze app</h4>
+                                </Grid>
+                                <Grid item xs={12} sm={4} md={4} lg={4} className={classes.casestudies_grid} >
+                                    <CardMedia image={eventalogImage} className={classes.casestudies_cardMedia}></CardMedia>
+                                    <h4 className={classes.casestudies_a}>Eventalog</h4>
+                                </Grid>
+                                <Grid item xs={12} sm={4} md={4} lg={4} className={classes.casestudies_grid}>
+                                    <CardMedia image={memoImage} className={classes.casestudies_cardMedia}></CardMedia>
+                                    <h4 className={classes.casestudies_a}>Memo maker</h4>
                                 </Grid>
                             </Grid>
                         </ExpansionPanelDetails>

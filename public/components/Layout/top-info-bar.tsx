@@ -6,12 +6,14 @@ import { Mail, Phone } from "@material-ui/icons";
 import TextField from '@material-ui/core/TextField';
 import DateTimePicker from 'react-datetime-picker';
 import * as skypeLogo from "../../images/skype.png";
+import * as whatsappLogo from "../../images/whatsapp.png";
 import * as plannerLogo from "../../images/planner.png";
 import { MailModel } from "../../models/MailModel";
 import { phoneNumber } from "../../providers/phone-number-provider";
 import * as INLogo from "../../images/IndiaFlag.png";
 import { isMobile } from "react-device-detect";
 import { centillionStyles } from "../styles/CentillionStyles";
+import "../../style.css";
 /**
  * interface to define properties for top info bar
  */
@@ -110,20 +112,25 @@ class TopInfoBar extends React.Component<Props> {
         const { open } = this.state;
         const { classes } = this.props;
         return (
-            <AppBar position="static" style={{ fontFamily: "Roboto", position: "fixed", height: "68px" }}>
-                <Toolbar className={classes.topbar_toolbar}>
-                    <Grid container className={classes.topbar_grid} >
+              <AppBar position="static" style={{ fontFamily: "Roboto", position: "fixed", height: "50px", backgroundColor: "#2a2f35"}}>
+                 <div  className="main-container-div">
+             <Toolbar className={classes.topbar_toolbar}>
+                    <Grid container>
                         <Grid xs={12} sm={8} lg={10} md={9}>
                             <IconButton className={classes.topbar_iconbtn}>
                                 <img src={INLogo} className={classes.contactus_firstdiv_image} />
                             </IconButton>
-                            <a className={classes.topbar_paddingleft}>{phoneNumber}</a>
+                            <a className="marginleft-5">{phoneNumber}</a>
                             <IconButton className={classes.topbar_iconbtn}>
-
-                            <a  href="skype:chintan.suthar90?chat" >
+                            <a href="skype:chintan.suthar90?chat">
                                 <img src={skypeLogo} className={classes.contactus_skype_logo} /></a>
                             </IconButton>
-                            <a className={classes.topbar_paddingleft}> Chintan Suthar</a>
+                            <a className="marginleft-5">Chintan Suthar</a>
+                            <IconButton className={classes.topbar_iconbtn}>
+                            <a  href="//api.whatsapp.com/send?phone=8401053246" target="_blank">
+                                <img src={whatsappLogo} className={classes.contactus_skype_logo} /></a>
+                            </IconButton>
+                            <a className="marginleft-5">Chintan Suthar</a>
                         </Grid>
                         <Grid item xs={12} sm={4} lg={2} md={3}>
                             <FormControl className={classes.topbar_formctrl} onClick={this.handleOpen}>
@@ -151,7 +158,7 @@ class TopInfoBar extends React.Component<Props> {
                             </ListItem>
                         </DialogContent>
                         <DialogActions>
-                            <Button variant="contained" size="medium" color="primary" onClick={this.handleSave}>
+                            <Button variant="contained" size="medium" color="inherit" className="contactus-seconddiv-formgrp-grid2-btn" onClick={this.handleSave}>
                                 Schedule Event
                         </Button>
                             <Button variant="contained" size="medium" color="default" onClick={this.handleClose}>
@@ -160,7 +167,8 @@ class TopInfoBar extends React.Component<Props> {
                         </DialogActions>
                     </Dialog>
                 </Toolbar>
-            </AppBar>
+                </div>
+            </AppBar>         
         )
     }
 }

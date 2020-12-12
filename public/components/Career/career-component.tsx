@@ -8,6 +8,7 @@ import * as infrastructureLogo from "../../images/infrastructure.png";
 import * as environmentLogo from "../../images/environment.png";
 import * as exposureLogo from "../../images/exposure.png";
 import * as cultureLogo from "../../images/culture.png";
+import "../../style.css";
 /**
 * interface to define properties for career 
 */
@@ -106,9 +107,9 @@ class CareerComponent extends React.Component<Props> {
                         <img src={careerLogo} className={classes.contactus_firstdiv_grid_image}></img>
                     </Grid >
                 </Grid>
-                <Grid container spacing={24} className={classes.footer_seconddiv_padding}>
+                <Grid container spacing={24} className="main-container-div">
                     <Grid item xs={12}>
-                        <h3 className={classes.grid_dash_second_h3}>WE BELIEVE IN BUILDING A TEAM OF ENGINEERS AND NOT JUST DEVELOPERS, AND THEN HELP THEM DO THEIR BEST BY REMOVING ANY BARRIER THAT COMES BETWEEN THEM AND THEIR WORK!</h3>
+                        <h3 className={classes.grid_dash_second_h3_career}>WE BELIEVE IN BUILDING A TEAM OF ENGINEERS AND NOT JUST DEVELOPERS, AND THEN HELP THEM DO THEIR BEST BY REMOVING ANY BARRIER THAT COMES BETWEEN THEM AND THEIR WORK!</h3>
                         <hr className={classes.hr_border}></hr>
                     </Grid>
                     <Grid item xs={12} sm={6} lg={3} md={3}>
@@ -156,37 +157,37 @@ Grow your professional career without compromising your technical focus & intere
                     {/* <h1 className={classes.grid_dash_second_h1}>Open Positions.</h1>
                     <hr className={classes.hr_border}></hr> */}
                 </Grid>
-                <Grid container spacing={24} className={classes.contactus_seconddiv_padding}>
+                <Grid container spacing={24} className="main-container-div margin-top-70">
                     <Grid item xs={12} sm={12} md={12} lg={12}>
                         <h2 className={classes.contactus_seconddiv_color}>Let's Network.</h2>
                         <Paper>
                             <FormGroup>
                                 <Grid container>
-                                    <Grid item xs={6} className={classes.contactus_seconddiv_formgrp_grid}>
-                                        <input className={classes.contactus_seconddiv_formgrp_input} onChange={this.handleChangeName} placeholder="Your name"></input>
+                                    <Grid item xs={6} className="carrer-seconddiv-formgrp-grid">
+                                        <input className="career-input-text" onChange={this.handleChangeName} placeholder="Your name"></input>
                                     </Grid>
-                                    <Grid item xs={6} className={classes.contactus_seconddiv_formgrp_grid}>
-                                        <input className={classes.contactus_seconddiv_formgrp_input} onChange={this.handleChangeEmail} placeholder="Your e-mail"></input>
+                                    <Grid item xs={6} className="carrer-seconddiv-formgrp-grid1">
+                                        <input className="career-input-text" onChange={this.handleChangeEmail} placeholder="Your e-mail"></input>
                                     </Grid>
-                                    <Grid item xs={6} className={classes.contactus_seconddiv_formgrp_grid}>
-                                        <input className={classes.contactus_seconddiv_formgrp_input} onChange={this.handleChangePhoneNumber} placeholder="Your phone number"></input>
+                                    <Grid item xs={6} className="carrer-seconddiv-formgrp-grid">
+                                        <input className="career-input-text" onChange={this.handleChangePhoneNumber} placeholder="Your phone number"></input>
                                     </Grid>
-                                    <Grid item xs={6} className={classes.contactus_seconddiv_formgrp_grid}>
-                                        <select className={classes.contactus_seconddiv_formgrp_select} onChange={this.handleChangeYear}>
+                                    <Grid item xs={6} className="carrer-seconddiv-formgrp-grid1">
+                                        <select className="career-select-drp" onChange={this.handleChangeYear}>
                                             {yearlist}
                                         </select>
                                     </Grid>
-                                    <Grid item xs={12} className={classes.contactus_seconddiv_formgrp_grid }>
-                                   <div className={classes.upload_btn_wrapper}>  
-                                   <button className={classes.btnfileSelect}>Upload a file</button>
-                                   <input type="file" name="myfile" className={classes.inputblock} />
-                                        </div> 
-                                          </Grid>
-                                    <Grid item xs={12} className={classes.contactus_seconddiv_formgrp_grid}>
-                                        <textarea onChange={this.handleChangeComments} className={classes.contactus_seconddiv_formgrp_txtarea} placeholder="Youe comments"></textarea>
+                                    <Grid item xs={12} className="carrer-seconddiv-formgrp-grid">
+                                        <div className="career-upload-btn-wrapper">
+                                            <button className={classes.btnfileSelect}>Upload a file</button>
+                                            <input type="file" name="myfile" className={classes.inputblock} />
+                                        </div>
                                     </Grid>
-                                    <Grid item xs={12} className={classes.contactus_seconddiv_formgrp_grid2}>
-                                        <Button color="inherit" className={classes.contactus_seconddiv_formgrp_grid2_btn}>
+                                    <Grid item xs={12} className="carrer-seconddiv-formgrp-grid">
+                                        <textarea onChange={this.handleChangeComments} className="career-textarea" placeholder="Youe comments"></textarea>
+                                    </Grid>
+                                    <Grid item xs={12} className="carrer-seconddiv-formgrp-grid text-align-center">
+                                        <Button color="inherit" className="career-seconddiv-formgrp-grid2-btn">
                                             Submit
                                              </Button>
                                     </Grid>

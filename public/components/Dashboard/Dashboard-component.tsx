@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {IconButton, Button, Grid, Theme, withStyles, CardMedia, FormGroup, Paper, CardContent, Typography, Avatar } from "@material-ui/core";
+import { IconButton, Button, Grid, Theme, withStyles, CardMedia, FormGroup, Paper, CardContent, Typography, Avatar } from "@material-ui/core";
 import { LoadingInterface, MessageInterface } from '../../interface-properties-actions';
 import * as landingoneLogo from "../../images/main-banner-1.jpg";
 import * as headeroneLogo from "../../images/headerone.png";
@@ -11,7 +11,12 @@ import * as clienticonLogo from "../../images/clienticonlightblue.png";
 import * as homeillustrationLogo from "../../images/ithome_illustration.png";
 import * as atxBoatsImage from "../../images/atxboats.png";
 import * as niftyCartImage from "../../images/niftycart.png";
-import * as doctymeImage from "../../images/doctyme.png"
+import * as doctymeImage from "../../images/doctyme.png";
+import * as labcantonImage from "../../images/labcanton.png";
+import * as exultitImage from "../../images/exultit.png";
+import * as fyuzeImage from "../../images/fyuzeapp.png";
+import * as memoImage from "../../images/memomaker.png";
+import * as eventalogImage from "../../images/eventalog.png";
 import makeCarousel from 'react-reveal/makeCarousel';
 // we'll need the Slide component for sliding animations
 // but you can use any other effect
@@ -22,7 +27,7 @@ import styled, { css } from 'styled-components';
 import { companyName } from '../../providers/comp-name-provider';
 import { isMobile } from "react-device-detect";
 import { centillionStyles } from "../styles/CentillionStyles";
-import { Computer , Build, PanTool, Code, AccessTime, Business, SupervisorAccount} from "@material-ui/icons";
+import { Computer, Build, PanTool, Code, AccessTime, Business, SupervisorAccount, Add, ChevronRight } from "@material-ui/icons";
 import "../../style.css";
 
 
@@ -56,7 +61,7 @@ const Dot = styled.span`
   cursor: pointer;
   user-select: none;
   backgroundColor: rgba(74, 196, 243, 0.9);
-  color: #5f9ea0;
+  color: #2a2f35;
 `;
 const Dots = styled.span`
   text-align: center;
@@ -65,8 +70,8 @@ const Dots = styled.span`
   left: 48%;
   position: relative;    
   bottom: 30px;
-  backgroundColor: #5f9ea0;
-  color: #5f9ea0;
+  backgroundColor: #2a2f35;
+  color: #2a2f35;
 `;
 
 const CarouselUI = ({ position, total, handleClick, children }) => <Container>
@@ -127,7 +132,8 @@ class DashboardComponentList extends React.Component<Props> {
       <div className={classes.main_div}>
         <div className={classes.hide_div}></div>
         {/* Dashboard Slider */}
-        <Grid container >
+        <div className="bg-2a2f35">
+          <Grid container  className="container-div-tab" >
           <Carousel defaultWait={10000} /*wait for 1000 milliseconds*/ >
             <Slide right>
               <div>
@@ -168,113 +174,186 @@ class DashboardComponentList extends React.Component<Props> {
           </Carousel>
         </Grid>
         {/* Dashboard second div */}
-        <Grid container spacing={24} className={classes.grid_dashboard_second}>
+        <Grid container spacing={24} className="grid-dashboard-second">
           <Grid item xs={12}>
             <h1 className={classes.grid_dash_second_h1}>Perfect Products are Reflection of Organised Efforts</h1>
             <hr className={classes.hr_border}></hr>
-            <h3 className={classes.grid_dash_second_h3}>Our rich portfolio justifies the fact that {companyName} functions as a World-Class Software Development Company.</h3>
+            <h3 className={classes.grid_dash_second_h3_home}>Our rich portfolio justifies the fact that {companyName} functions as a World-Class Software Development Company.</h3>
           </Grid>
         </Grid>
-        <Grid container spacing={24} className="grid_dashboard_second-two">
-          {/* <Grid className={classes.grid_dash_second_main}></Grid> */}
-          <Grid item xs={12} sm={6} lg={4} md={4} className="grid-dash-second-main-paper">
-            <Paper>
-              <FormGroup>
-                <CardMedia image={niftyCartImage} className="image-perfect"> </CardMedia>
-                <div className="image-perfect-div">
-                  <div className="grid-Dash-second-main-h2">Nifty Cart</div>
-                </div>
-              </FormGroup>
-            </Paper>
-          </Grid>
-          <Grid item xs={12} sm={6} lg={4} md={4} className="grid-dash-second-main-paper">
-            <Paper>
-              <FormGroup>
-                <CardMedia image={atxBoatsImage} className="image-perfect"> </CardMedia>
-                <div className="image-perfect-div">
-                  <div className="grid-Dash-second-main-h2">ATX Boat</div>
-                </div>
-              </FormGroup>
-            </Paper>
-          </Grid>
-          <Grid item xs={12} sm={6} lg={4} md={4} className="grid-dash-second-main-paper">
-            <Paper>
-              <FormGroup>
-                <CardMedia image={doctymeImage} className="image-perfect"> </CardMedia>
-                <div className="image-perfect-div">
-                  <div className="grid-Dash-second-main-h2">Doctyme</div>
-                </div>
-              </FormGroup>
-            </Paper>
-          </Grid>
-          {/* <Grid style={{ width: "12%" }}></Grid> */}
-        </Grid>
-        {/* Dashboard third div */}
-        <div className="bg-black">
-        <Grid >
-          <Typography component="h1" className="grid-dash-third-typography" >Why Work with Centillion Softech?</Typography>
-        </Grid>
-<div className={classes.grid_dash_third_main}>
-        <Grid container spacing={24} >       
 
-        
-          <Grid item xs={12} sm={4} lg={6} md={6} className="why-work-main-div">
-            <div>
-            <IconButton title="Computer" > <Computer className="why-work-image-div"/> </IconButton>
-            <hr className="why-work-border"></hr>
-              <Typography component="h3" className="grid-dash-flippy-front-title">Masterly experienced in technologies</Typography>
-              <Typography component="h4" className="grid-dash-flippy-front-h4">Our clients have always trusted us without any second thought because we have more than a decade of experience in delivering various successful projects.</Typography>
+        <Grid container spacing={24} className="main-container-div padding-bottom-50">
+          <Grid item xs={12} sm={12} lg={4} md={4} className="grid-dash-second-main-paper">
+            <CardMedia image={niftyCartImage} className="image-perfect"> </CardMedia>
+            <div className="image-perfect-div">              
+              <a href="https://niftycart.co/#/" target="_blank"> <Add className="perfect-image-div" /> </a>
             </div>
+            <h3 className="grid-dash-second-main-h2">Nifty Cart</h3>
           </Grid>
-          <Grid item xs={12} sm={4} lg={6} md={6} className="why-work-main-div">
-            <div>
-            <IconButton title="Code" > <Code  className="why-work-image-div"/> </IconButton>
-            <hr className="why-work-border"></hr>
-              <Typography component="h3" className="grid-dash-flippy-front-title">Expertise on Multiple Platforms</Typography>
-              <Typography component="h4" className="grid-dash-flippy-front-h4">{companyName} has elite development team which has proficient expertise on the cutting-edge technologies and tools.</Typography>
+          <Grid item xs={12} sm={12} lg={4} md={4} className="grid-dash-second-main-paper">
+            <CardMedia image={atxBoatsImage} className="image-perfect"> </CardMedia>
+            <div className="image-perfect-div">              
+              <a href="http://atxboats-design.com/" target="_blank"> <Add className="perfect-image-div" /> </a>
             </div>
+            <h3 className="grid-dash-second-main-h2">ATX Boat</h3>
           </Grid>
-          
-          <Grid item xs={12} sm={4} lg={6} md={6} className="why-work-main-div">
-            <div>
-            <IconButton title="Build" > <Build className="why-work-image-div" /> </IconButton>
-            <hr className="why-work-border"></hr>
-              <Typography component="h3" className="grid-dash-flippy-front-title">Best Project Management Tool</Typography>
-              <Typography component="h4" className="grid-dash-flippy-front-h4">To maintain the top notch services we have hands of experience on best project management tools available in the market.</Typography>
+          <Grid item xs={12} sm={12} lg={4} md={4} className="grid-dash-second-main-paper">
+            <CardMedia image={doctymeImage} className="image-perfect"> </CardMedia>  
+            <div className="image-perfect-div">              
+              <a href="http://doctyme.com/" target="_blank"> <Add className="perfect-image-div" /> </a>
             </div>
+            <h3 className="grid-dash-second-main-h2">Doctyme</h3>
           </Grid>
-          <Grid item xs={12} sm={4} lg={6} md={6} className="why-work-main-div">
-            <div>
-              
-            <IconButton title="AccessTime" > <AccessTime className="why-work-image-div"/> </IconButton>
-            <hr className="why-work-border"></hr>
-              <Typography component="h3" className="grid-dash-flippy-front-title">24×7 Availability</Typography>
-              <Typography component="h4" className="grid-dash-flippy-front-h4">We know that our client's time is valuable and so we strive for them to make use of their time in the most efficient manner.</Typography>
+          <Grid item xs={12} sm={12} lg={4} md={4} className="grid-dash-second-main-paper">
+            <CardMedia image={labcantonImage} className="image-perfect"> </CardMedia>
+            <div className="image-perfect-div">              
+              <a href="http://thelabcanton.com/" target="_blank"> <Add className="perfect-image-div" /> </a>
             </div>
+            <h3 className="grid-dash-second-main-h2">The lab canton</h3>
           </Grid>
-         
-          <Grid item xs={12} sm={4} lg={6} md={6} className="why-work-main-div">
-            <div>
-            <IconButton title="Business"> <Business  className="why-work-image-div"/> </IconButton>
-            <hr className="why-work-border"></hr>
-              <Typography component="h3" className="grid-dash-flippy-front-title">Longterm Business Relationship</Typography>
-              <Typography component="h4" className="grid-dash-flippy-front-h4">We strive to be your trusted long term partner and leave no stone unturned to achieve the trustworthy relationship where our client can rely on us as a trusted IT company.</Typography>
+          <Grid item xs={12} sm={12} lg={4} md={4} className="grid-dash-second-main-paper">
+            <CardMedia image={exultitImage} className="image-perfect"> </CardMedia>
+            <div className="image-perfect-div">              
+              <a href="http://exultitsolution.com/#/" target="_blank"> <Add className="perfect-image-div" /> </a>
             </div>
+            <h3 className="grid-dash-second-main-h2">Exult-it</h3>
           </Grid>
-          <Grid item xs={12} sm={4} lg={6} md={6} className="why-work-main-div">
-            <div>
-            <IconButton title="SupervisorAccount" > <SupervisorAccount  className="why-work-image-div"/> </IconButton>
-            <hr className="why-work-border"></hr>
-              <Typography component="h3" className="grid-dash-flippy-front-title">We are serving best to our happy clients</Typography>
-              <Typography component="h4" className="grid-dash-flippy-front-h4">{companyName} is growing exponentially in its global outreach as well as quality work in all directions.</Typography>
+          <Grid item xs={12} sm={12} lg={4} md={4} className="grid-dash-second-main-paper">
+            <CardMedia image={fyuzeImage} className="image-perfect"> </CardMedia>
+            <div className="image-perfect-div">              
+              <a href="https://fyuze.app/" target="_blank"> <Add className="perfect-image-div" /> </a>
             </div>
+            <h3 className="grid-dash-second-main-h2">Fyuze app</h3>
           </Grid>
-          
+          <Grid item xs={12} sm={12} lg={4} md={4} className="grid-dash-second-main-paper">
+            <CardMedia image={eventalogImage} className="image-perfect"> </CardMedia>
+            <div className="image-perfect-div">              
+              <a href="https://www.eventalog.com/" target="_blank"> <Add className="perfect-image-div" /> </a>
+            </div>
+            <h3 className="grid-dash-second-main-h2">Eventalog</h3>
+          </Grid>
+          <Grid item xs={12} sm={12} lg={4} md={4} className="grid-dash-second-main-paper">
+            <CardMedia image={memoImage} className="image-perfect"> </CardMedia>
+            <div className="image-perfect-div">              
+              <a href="https://memomaker.app/" target="_blank"> <Add className="perfect-image-div" /> </a>
+            </div>
+            <h3 className="grid-dash-second-main-h2">Memo maker</h3>
+          </Grid>
         </Grid>
-</div>
         </div>
+        {/* <Grid container spacing={24}>
+          <Grid item xs={4} className="grid-dash-second-main-paper">
+            <CardMedia image={niftyCartImage} className="image-perfect"> </CardMedia>
+            <div className="image-perfect-div">
+              <hr className="hr-border-card"></hr>
+              <div className="grid-Dash-second-main-h2">Nifty Cart</div>
+              <a href="" target="_blank"> <Add className="perfect-image-div" /> </a>
+            </div>
+          </Grid>
+          <Grid item xs={4} className="grid-dash-second-main-paper">
+            <CardMedia image={atxBoatsImage} className="image-perfect"> </CardMedia>
+            <div className="image-perfect-div">
+              <hr className="hr-border-card"></hr>
+              <div className="grid-Dash-second-main-h2">ATX Boat</div>
+              <a href="" target="_blank"> <Add className="perfect-image-div" /> </a>
+            </div>
+          </Grid>
+          <Grid item xs={4} className="grid-dash-second-main-paper">
+            <CardMedia image={doctymeImage} className="image-perfect"> </CardMedia>
+            <div className="image-perfect-div">
+              <hr className="hr-border-card"></hr>
+              <div className="grid-Dash-second-main-h2">Doctyme</div>
+              <a href="" target="_blank"> <Add className="perfect-image-div" /> </a>
+            </div>
+          </Grid>
+          <Grid item xs={4} className="grid-dash-second-main-paper margin-bottom-50">
+            <CardMedia image={labcantonImage} className="image-perfect"> </CardMedia>
+            <div className="image-perfect-div">
+              <hr className="hr-border-card"></hr>
+              <div className="grid-Dash-second-main-h2">The lab canton</div>
+              <a href="" target="_blank"> <Add className="perfect-image-div" /> </a>
+            </div>
+          </Grid>
+          <Grid item xs={4} className="grid-dash-second-main-paper margin-bottom-50">
+            <CardMedia image={exultitImage} className="image-perfect"> </CardMedia>
+            <div className="image-perfect-div">
+              <hr className="hr-border-card"></hr>
+              <div className="grid-Dash-second-main-h2">Exult-it</div>
+              <a href="" target="_blank"> <Add className="perfect-image-div" /> </a>
+            </div>
+          </Grid>
+        </Grid> */}
 
 
+        {/* Dashboard third div */}
+        <div className="bg-b7c500-dash">
+          <Grid >
+            <Typography component="h1" className="grid-dash-third-typography" >Why Work with Centillion Softech?</Typography>
+          </Grid>
+          <div className="grid-dash-third-main">
+            <Grid container spacing={24} className="main-container-div" >
+
+
+              <Grid item xs={12} sm={12} lg={4} md={4} className="why-work-main-div">
+                <div>
+                  <IconButton className="why-work-image-div-btn" title="Computer" > <Computer className="why-work-image-div" /> </IconButton>
+                  <Typography component="h3" className="grid-dash-flippy-front-title">Masterly experienced in technologies</Typography>
+                  <hr className="why-work-border-dashboard"></hr>
+                  <Typography component="h4" className="grid-dash-flippy-front-h4">Our clients have always trusted us without any second thought because we have more than a decade of experience in delivering various successful projects.</Typography>
+                </div>
+                <IconButton className="left-arrow-why-work-div"> <ChevronRight /></IconButton>
+              </Grid>
+              <Grid item xs={12} sm={12} lg={4} md={4} className="why-work-main-div">
+                <div>
+                  <IconButton className="why-work-image-div-btn" title="Code" > <Code className="why-work-image-div " /> </IconButton>
+                  <Typography component="h3" className="grid-dash-flippy-front-title">Expertise on Multiple Platforms</Typography>
+                  <hr className="why-work-border-dashboard"></hr>
+                  <Typography component="h4" className="grid-dash-flippy-front-h4">{companyName} has elite development team which has proficient expertise on the cutting-edge technologies and tools.</Typography>
+                </div>
+                <IconButton className="left-arrow-why-work-div bottom-94"> <ChevronRight /></IconButton>
+              </Grid>
+
+              <Grid item xs={12} sm={12} lg={4} md={4} className="why-work-main-div">
+                <div>
+                  <IconButton className="why-work-image-div-btn" title="Build" > <Build className="why-work-image-div" /> </IconButton>
+                  <Typography component="h3" className="grid-dash-flippy-front-title">Best Project Management Tool</Typography>
+                  <hr className="why-work-border-dashboard"></hr>
+                  <Typography component="h4" className="grid-dash-flippy-front-h4">To maintain the top notch services we have hands of experience on best project management tools available in the market.</Typography>
+                </div>
+                <IconButton className="left-arrow-why-work-div bottom-94"> <ChevronRight /></IconButton>
+              </Grid>
+              <Grid item xs={12} sm={12} lg={4} md={4} className="why-work-main-div">
+                <div>
+                  <IconButton className="why-work-image-div-btn" title="AccessTime" > <AccessTime className="why-work-image-div" /> </IconButton>
+                  <Typography component="h3" className="grid-dash-flippy-front-title">24×7 Availability</Typography>
+                  <hr className="why-work-border-dashboard"></hr>
+                  <Typography component="h4" className="grid-dash-flippy-front-h4">We know that our client's time is valuable and so we strive for them to make use of their time in the most efficient manner.</Typography>
+                </div>
+                <IconButton className="left-arrow-why-work-div bottom-143"> <ChevronRight /></IconButton>
+              </Grid>
+
+              <Grid item xs={12} sm={12} lg={4} md={4} className="why-work-main-div">
+                <div>
+                  <IconButton className="why-work-image-div-btn" title="Business"> <Business className="why-work-image-div" /> </IconButton>
+                  <Typography component="h3" className="grid-dash-flippy-front-title">Longterm Business Relationship</Typography>
+                  <hr className="why-work-border-dashboard"></hr>
+                  <Typography component="h4" className="grid-dash-flippy-front-h4">We strive to be your trusted long term partner and leave no stone unturned to achieve the trustworthy relationship where our client can rely on us as a trusted IT company.</Typography>
+                </div>
+                <IconButton className="left-arrow-why-work-div bottom-75"> <ChevronRight /></IconButton>
+              </Grid>
+              <Grid item xs={12} sm={12} lg={4} md={4} className="why-work-main-div">
+                <div>
+                  <IconButton className="why-work-image-div-btn" title="SupervisorAccount" > <SupervisorAccount className="why-work-image-div" /> </IconButton>
+                  <Typography component="h3" className="grid-dash-flippy-front-title">We are serving best to our happy clients</Typography>
+                  <hr className="why-work-border-dashboard"></hr>
+                  <Typography component="h4" className="grid-dash-flippy-front-h4">{companyName} is growing exponentially in its global outreach as well as quality work in all directions.</Typography>
+                </div>
+                <IconButton className="left-arrow-why-work-div bottom-112"> <ChevronRight /></IconButton>
+              </Grid>
+
+            </Grid>
+          </div>
+        </div>
 
       </div>
     );

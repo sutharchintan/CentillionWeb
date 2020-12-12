@@ -54,7 +54,7 @@ class DesclaimerComponent extends React.Component<Props> {
                     <h3>Services</h3>
                         <ExpansionPanel className={classes.aboutus_expension_width}>
                             <ExpansionPanelSummary
-                                expandIcon={<ExpandMoreIcon />}
+                                expandIcon={<ExpandMoreIcon className="color-white" />}
                                 aria-controls="panel1a-content"
                                 id="panel1a-header"
                                 className={classes.aboutus_expensionsummary}>
@@ -77,7 +77,7 @@ class DesclaimerComponent extends React.Component<Props> {
                         </ExpansionPanel>
                         <ExpansionPanel className={classes.aboutus_expension_width}>
                             <ExpansionPanelSummary
-                                expandIcon={<ExpandMoreIcon />}
+                                expandIcon={<ExpandMoreIcon className="color-black" />}
                                 aria-controls="panel2a-content"
                                 id="panel2a-header">
                                 <Typography className={classes.aboutus_expensionsummary_typography_second}>Mobile Application Developement</Typography>
@@ -102,7 +102,7 @@ class DesclaimerComponent extends React.Component<Props> {
                         </ExpansionPanel>
                         <ExpansionPanel className={classes.aboutus_expension_width}>
                             <ExpansionPanelSummary
-                                expandIcon={<ExpandMoreIcon />}
+                                expandIcon={<ExpandMoreIcon className="color-white" />}
                                 aria-controls="panel1a-content"
                                 id="panel1a-header"
                                 className={classes.aboutus_expensionsummary}>
@@ -127,7 +127,7 @@ class DesclaimerComponent extends React.Component<Props> {
                         </ExpansionPanel>
                         <ExpansionPanel className={classes.aboutus_expension_width}>
                             <ExpansionPanelSummary
-                                expandIcon={<ExpandMoreIcon />}
+                                expandIcon={<ExpandMoreIcon className="color-black" />}
                                 aria-controls="panel2a-content"
                                 id="panel2a-header">
                                 <Typography className={classes.aboutus_expensionsummary_typography_second}>Support</Typography>
